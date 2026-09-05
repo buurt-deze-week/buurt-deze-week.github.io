@@ -73,10 +73,9 @@
 <div class="eyebrow">Zuidoost deze week · prototype v2</div>
 <h1>In één oogopslag wat er deze week speelt in jouw buurt.</h1>
 <p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p>
-<div class="meta"><span>Maandag-editie</span><span>± 1 minuut scannen</span><span>Gratis</span></div>
+<div class="meta"><span>Donderdag-editie</span><span>± 1 minuut scannen</span><span>Gratis</span></div>
 </header>
 <main class="wrap">
-
 <div aria-label="Filter onderwerpen" class="filterbar">
 <div class="filters">
 <button aria-pressed="true" class="filter active" data-filter="all" type="button">Alles</button>
@@ -97,10 +96,10 @@
 <article class="item"><a href="https://www.speeltuin-varvik.nl/" rel="noopener" target="_blank"><div class="topline"><div class="title">Knutselen, gamen of koffie bij ’t Varvik</div><div class="arrow">›</div></div><div class="summary">Huiskamer van de buurt, gameavond en creatieve middag voor kinderen.</div><span class="label green">Buurtactiviteit</span></a></article>
 <article class="item"><a href="https://www.wooldrikpark.nl/het-park/kinderboerderij/" rel="noopener" target="_blank"><div class="topline"><div class="title">Even naar de kinderboerderij in het Wooldrikpark?</div><div class="arrow">›</div></div><div class="summary">Dagelijks open in de zomer. Daarnaast is er maandelijks een kindermiddag.</div><span class="label green">Met de kinderen</span></a></article>
 </section><section class="signup" id="inschrijven">
-<h2>Iedere maandag in je inbox</h2>
-<p>Alleen wat deze week relevant is voor jouw buurt.</p>
-<form class="signup-form" id="signupForm"><input id="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
-<div id="signupMessage">Prototype: je adres wordt nog niet opgeslagen. Deze knop is klaar om later aan een echte nieuwsbriefdienst te koppelen.</div><div class="fineprint">Nog geen echte inschrijving in deze versie.</div>
+<h2>Iedere donderdag in je inbox</h2>
+<p>Alleen wat de komende dagen relevant is voor jouw buurt.</p>
+<form action="https://buttondown.com/api/emails/embed-subscribe/mijnbuurt" class="signup-form" method="post"><input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
+<div class="fineprint">Je ontvangt na inschrijving een bevestigingsmail via Buttondown.</div>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
 <article class="item"><a href="https://www.dewoonplaats.nl/projecten/hogeland/" rel="noopener" target="_blank"><div class="topline"><div class="title">Wat moet er beter in Hogeland?</div><div class="arrow">›</div></div><div class="summary">Bewoners zijn gevraagd wat goed gaat en wat beter kan. We volgen welke plannen hieruit ontstaan.</div><span class="label">Hogeland</span></a></article>
@@ -112,7 +111,6 @@
 <section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><a class="button" href="mailto:?subject=Tip%20voor%20Zuidoost%20deze%20week&amp;body=Mijn%20tip%3A%0A%0ALocatie%3A%0A%0ADatum%3A%0A%0ALink%20of%20meer%20informatie%3A">Stuur een tip</a><a class="button secondary" href="#inschrijven">Volg de pilot</a></div></section>
 <footer>Zuidoost deze week · onafhankelijk prototype voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</footer>
 </main>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const filters = document.querySelectorAll('.filter');
@@ -156,14 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const signupForm = document.getElementById('signupForm');
-  if (signupForm) {
-    signupForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      const msg = document.getElementById('signupMessage');
-      if (msg) msg.style.display = 'block';
-    });
-  }
-});
-</script></body>
+
+});</script></body>
 </html>
