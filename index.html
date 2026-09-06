@@ -288,6 +288,38 @@
       color:var(--muted);
     }
     .signup-note strong{color:var(--text)}
+
+    .signup .signup-intro{
+      margin:0 0 14px;
+      color:#cdd5dc;
+    }
+    .signup .signup-confirm{
+      margin:10px 0 0;
+      max-width:none;
+      color:#aeb9c3;
+      font-size:.78rem;
+      line-height:1.45;
+      text-align:left;
+    }
+    .signup .signup-confirm strong{
+      color:#ffffff;
+      font-weight:800;
+    }
+    .signup-form{
+      align-items:stretch;
+    }
+    .signup-form .button{
+      white-space:nowrap;
+    }
+    @media (max-width:640px){
+      .signup-form{
+        flex-direction:column;
+      }
+      .signup-form input,
+      .signup-form .button{
+        width:100%;
+      }
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -420,14 +452,13 @@ window.sa_event = window.sa_event || function () {
 </a>
 </article></section><section class="signup" id="inschrijven">
 <h2>Iedere donderdag in je inbox</h2>
-<p>Gratis en zonder ruis. Alleen wat relevant is voor jouw buurt.</p>
-<p class="signup-note"><strong>Nog één stap na inschrijven:</strong> je ontvangt een bevestigingsmail. Klik daarin op de bevestigingslink om je inschrijving af te ronden.</p>
+<p class="signup-intro">Gratis en zonder ruis. Alleen wat relevant is voor jouw buurt.</p>
 <form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post">
 <input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/>
 <input name="embed" type="hidden" value="1"/>
 <button class="button" type="submit">Schrijf me in</button>
 </form>
-<div class="fineprint">Je bent pas definitief ingeschreven nadat je je e-mailadres via de mail hebt bevestigd.</div>
+<p class="signup-confirm"><strong>Let op:</strong> na inschrijven ontvang je een bevestigingsmail. Klik daarin nog één keer om je inschrijving af te ronden.</p>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
 <article class="item">
