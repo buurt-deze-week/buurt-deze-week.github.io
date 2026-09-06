@@ -66,6 +66,50 @@
     .section[hidden]{
       display:none !important;
     }
+
+    .tip-form-wrap{
+      display:none;
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid #cbe6d5;
+    }
+    .tip-form-wrap.open{display:block}
+    .tip-form{
+      display:grid;
+      gap:10px;
+    }
+    .tip-form label{
+      font-size:.82rem;
+      font-weight:800;
+      color:#355344;
+    }
+    .tip-form input,
+    .tip-form textarea{
+      width:100%;
+      border:1px solid #bfdcca;
+      background:#fff;
+      border-radius:11px;
+      padding:12px 13px;
+      font:inherit;
+      color:var(--text);
+    }
+    .tip-form textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+    .tip-form-actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .tip-status{
+      display:none;
+      margin-top:10px;
+      font-size:.86rem;
+      color:#365443;
+    }
+    .tip-status.show{display:block}
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -114,7 +158,33 @@ window.sa_event = window.sa_event || function () {
 <section class="section" data-category="regelen"><div class="section-head"><h2>Regelen</h2></div>
 <article class="item"><a href="https://www.overheid.nl/berichten-over-uw-buurt" rel="noopener" target="_blank"><div class="topline"><div class="title">Plannen, besluiten en vergunningen in je buurt</div><div class="arrow">›</div></div><div class="summary">Alleen relevante zaken nemen we op, zoals verkeersmaatregelen, bouwplannen en bezwaar- of inspraakmogelijkheden.</div><span class="label orange">Praktisch</span></a></article>
 </section>
-<section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><a class="button" href="mailto:?subject=Tip%20voor%20Zuidoost%20deze%20week&amp;body=Mijn%20tip%3A%0A%0ALocatie%3A%0A%0ADatum%3A%0A%0ALink%20of%20meer%20informatie%3A">Stuur een tip</a><a class="button secondary" href="#inschrijven">Volg de pilot</a></div></section>
+<section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><button class="button" id="openTipForm" type="button">Stuur een tip</button><a class="button secondary" href="#inschrijven" id="followPilotButton">Volg de pilot</a></div>
+<div class="tip-form-wrap" id="tipFormWrap">
+<form class="tip-form" id="tipForm">
+<div>
+<label for="tip-title">Waar gaat je tip over?</label>
+<input id="tip-title" name="title" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" required="" type="text"/>
+</div>
+<div>
+<label for="tip-location">Waar?</label>
+<input id="tip-location" name="location" placeholder="Straat, locatie of buurt" type="text"/>
+</div>
+<div>
+<label for="tip-date">Wanneer?</label>
+<input id="tip-date" name="date" placeholder="Datum of periode" type="text"/>
+</div>
+<div>
+<label for="tip-details">Meer informatie</label>
+<textarea id="tip-details" name="details" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe."></textarea>
+</div>
+<div class="tip-form-actions">
+<button class="button" type="submit">Tip klaarzetten</button>
+<button class="button secondary" id="closeTipForm" type="button">Annuleren</button>
+</div>
+</form>
+<div class="tip-status" id="tipStatus"></div>
+</div>
+</section>
 <footer>Zuidoost deze week · onafhankelijk prototype voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</footer>
 </main>
 <script>
@@ -161,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-});</script>  
+});</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   // Filtergebruik
@@ -204,7 +274,84 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+<script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const openTip = document.getElementById('openTipForm');
+  const closeTip = document.getElementById('closeTipForm');
+  const tipWrap = document.getElementById('tipFormWrap');
+  const tipForm = document.getElementById('tipForm');
+  const tipStatus = document.getElementById('tipStatus');
+  const followButton = document.getElementById('followPilotButton');
 
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-</body>
+  if (openTip && tipWrap) {
+    openTip.addEventListener('click', function () {
+      tipWrap.classList.add('open');
+      const firstField = document.getElementById('tip-title');
+      if (firstField) firstField.focus();
+    });
+  }
+
+  if (closeTip && tipWrap) {
+    closeTip.addEventListener('click', function () {
+      tipWrap.classList.remove('open');
+    });
+  }
+
+  if (followButton) {
+    followButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      const signup = document.getElementById('inschrijven');
+      const email = document.getElementById('bd-email');
+      if (signup) signup.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.setTimeout(function () {
+        if (email) email.focus();
+      }, 450);
+    });
+  }
+
+  if (tipForm) {
+    tipForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const title = document.getElementById('tip-title')?.value.trim() || '';
+      const location = document.getElementById('tip-location')?.value.trim() || '';
+      const date = document.getElementById('tip-date')?.value.trim() || '';
+      const details = document.getElementById('tip-details')?.value.trim() || '';
+
+      const body =
+`Hoi Tom,
+
+Ik heb een tip voor Buurt deze week.
+
+Onderwerp: ${title}
+Locatie: ${location || '-'}
+Wanneer: ${date || '-'}
+
+Meer informatie:
+${details || '-'}`;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(body);
+        }
+      } catch (err) {}
+
+      sa_event('tip_submitted', {
+        has_location: location ? 'yes' : 'no',
+        has_date: date ? 'yes' : 'no'
+      });
+
+      if (tipStatus) {
+        tipStatus.textContent = 'Je tip is klaargezet. Je mailprogramma wordt geopend. Werkt dat niet, dan staat de tekst al op je klembord.';
+        tipStatus.classList.add('show');
+      }
+
+      const subject = encodeURIComponent('Tip voor Buurt deze week: ' + title);
+      const mailbody = encodeURIComponent(body);
+      window.location.href = `mailto:tom.dehaas@gmail.com?subject=${subject}&body=${mailbody}`;
+    });
+  }
+});
+</script></body>
 </html>
