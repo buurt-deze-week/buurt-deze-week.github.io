@@ -205,6 +205,80 @@
         margin-left:10px;
       }
     }
+
+    .edition-header{
+      padding:38px 0 24px;
+    }
+    .edition-date{
+      font-size:1rem;
+      color:#21483b;
+      margin-bottom:18px;
+    }
+    .edition-brand{
+      font-size:.84rem;
+      font-weight:800;
+      color:var(--blue-dark);
+      margin-bottom:10px;
+      text-transform:none;
+      letter-spacing:.01em;
+    }
+    .edition-title{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(3.2rem,8vw,6.2rem);
+      line-height:.92;
+      letter-spacing:-.045em;
+      font-weight:700;
+      max-width:900px;
+      color:#111714;
+    }
+    .edition-title .dot{
+      color:#d89b2b;
+    }
+    .edition-intro{
+      margin:24px 0 0;
+      max-width:840px;
+      font-size:clamp(1.15rem,2.2vw,1.55rem);
+      line-height:1.45;
+      color:#37413c;
+    }
+    .edition-rule{
+      margin:28px 0 16px;
+      border:0;
+      border-top:1px solid #bfc7c1;
+    }
+    .edition-meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px 24px;
+      flex-wrap:wrap;
+      color:#6b736e;
+      font-size:.95rem;
+    }
+    .edition-meta-left,
+    .edition-meta-right{
+      display:flex;
+      gap:0;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .edition-meta span{
+      display:inline-flex;
+      align-items:center;
+    }
+    .edition-meta span:not(:last-child)::after{
+      content:"·";
+      margin:0 10px;
+      color:#8a918d;
+    }
+    @media (max-width:640px){
+      .edition-header{padding:24px 0 16px}
+      .edition-title{font-size:clamp(2.9rem,16vw,4.5rem)}
+      .edition-intro{font-size:1.08rem;margin-top:18px}
+      .edition-meta{font-size:.86rem}
+      .edition-meta-right{width:100%}
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -214,7 +288,26 @@ window.sa_event = window.sa_event || function () {
 </script>
 <link href="https://www.buurtdezeweek.nl/" rel="canonical"/><meta content="Zuidoost deze week" property="og:title"/><meta content="In één oogopslag wat er deze week speelt in Wooldrik, Hogeland-Zuid en Varvik-Diekman." property="og:description"/><meta content="https://www.buurtdezeweek.nl/" property="og:url"/><meta content="website" property="og:type"/><meta content="#f6f2e9" name="theme-color"/></head>
 <body>
-<header class="wrap"><div class="eyebrow">Zuidoost deze week · pilot</div><h1>Dit speelt er deze week in jouw buurt.</h1><p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p><div class="meta"><span>Bijgewerkt 6 september 2026</span><span>Donderdag-editie</span><span>Gratis</span><span id="sourceCount">Lokale bronnen worden geteld…</span></div></header>
+<header class="wrap edition-header">
+<div class="edition-date">Zondag 6 september 2026</div>
+<div class="edition-brand">Buurt deze week · Zuidoost-Enschede</div>
+<h1 class="edition-title">Dit speelt er deze week<span class="dot">.</span></h1>
+<p class="edition-intro">
+  In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik,
+  Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.
+</p>
+<hr class="edition-rule"/>
+<div class="edition-meta">
+<div class="edition-meta-left">
+<span>Donderdag-editie</span>
+<span>Gratis</span>
+</div>
+<div class="edition-meta-right">
+<span id="sourceCount">Lokale bronnen worden geteld…</span>
+<span id="storyCount">Berichten worden geteld…</span>
+</div>
+</div>
+</header>
 <main class="wrap">
 <div aria-label="Filter onderwerpen" class="filterbar">
 <div class="filters">
@@ -574,7 +667,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script><script>
 document.addEventListener('DOMContentLoaded', function () {
   var sourceCount = document.getElementById('sourceCount');
-  if (!sourceCount) return;
+  var storyCount = document.getElementById('storyCount');
 
   var sources = Array.from(document.querySelectorAll('.source-name'))
     .map(function (el) {
@@ -583,12 +676,22 @@ document.addEventListener('DOMContentLoaded', function () {
     .filter(Boolean);
 
   var uniqueSources = Array.from(new Set(sources));
-  var count = uniqueSources.length;
+  var sourceTotal = uniqueSources.length;
+  var storyTotal = document.querySelectorAll('.section[data-category] .item').length;
 
-  sourceCount.textContent =
-    count === 1
-      ? 'Samengesteld uit 1 lokale bron'
-      : 'Samengesteld uit ' + count + ' lokale bronnen';
+  if (sourceCount) {
+    sourceCount.textContent =
+      sourceTotal === 1
+        ? '1 lokale bron'
+        : sourceTotal + ' lokale bronnen';
+  }
+
+  if (storyCount) {
+    storyCount.textContent =
+      storyTotal === 1
+        ? '1 bericht'
+        : storyTotal + ' berichten';
+  }
 });
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
