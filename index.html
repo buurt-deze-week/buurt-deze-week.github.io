@@ -110,6 +110,23 @@
       color:#365443;
     }
     .tip-status.show{display:block}
+
+    #bd-email{scroll-margin-top:110px}
+    .tip-details{display:inline-block}
+    .tip-details summary{
+      list-style:none;
+      cursor:pointer;
+      user-select:none;
+    }
+    .tip-details summary::-webkit-details-marker{display:none}
+    .tip-details[open]{display:block;width:100%}
+    .tip-details[open] summary{width:max-content}
+    .tip-details .tip-form-wrap{
+      display:block;
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid #cbe6d5;
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -158,32 +175,36 @@ window.sa_event = window.sa_event || function () {
 <section class="section" data-category="regelen"><div class="section-head"><h2>Regelen</h2></div>
 <article class="item"><a href="https://www.overheid.nl/berichten-over-uw-buurt" rel="noopener" target="_blank"><div class="topline"><div class="title">Plannen, besluiten en vergunningen in je buurt</div><div class="arrow">›</div></div><div class="summary">Alleen relevante zaken nemen we op, zoals verkeersmaatregelen, bouwplannen en bezwaar- of inspraakmogelijkheden.</div><span class="label orange">Praktisch</span></a></article>
 </section>
-<section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><button class="button" id="openTipForm" type="button">Stuur een tip</button><a class="button secondary" href="#inschrijven" id="followPilotButton">Volg de pilot</a></div>
-<div class="tip-form-wrap" id="tipFormWrap">
-<form class="tip-form" id="tipForm">
+<section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
+<summary class="button" id="tipSummary">Stuur een tip</summary>
+<div class="tip-form-wrap">
+<div class="tip-form">
 <div>
 <label for="tip-title">Waar gaat je tip over?</label>
-<input id="tip-title" name="title" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" required="" type="text"/>
+<input id="tip-title" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" type="text"/>
 </div>
 <div>
 <label for="tip-location">Waar?</label>
-<input id="tip-location" name="location" placeholder="Straat, locatie of buurt" type="text"/>
+<input id="tip-location" placeholder="Straat, locatie of buurt" type="text"/>
 </div>
 <div>
 <label for="tip-date">Wanneer?</label>
-<input id="tip-date" name="date" placeholder="Datum of periode" type="text"/>
+<input id="tip-date" placeholder="Datum of periode" type="text"/>
 </div>
 <div>
-<label for="tip-details">Meer informatie</label>
-<textarea id="tip-details" name="details" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe."></textarea>
+<label for="tip-details-text">Meer informatie</label>
+<textarea id="tip-details-text" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe."></textarea>
 </div>
 <div class="tip-form-actions">
-<button class="button" type="submit">Tip klaarzetten</button>
-<button class="button secondary" id="closeTipForm" type="button">Annuleren</button>
+<a class="button" href="mailto:tom.dehaas@gmail.com?subject=Tip%20voor%20Buurt%20deze%20week" id="tipMailLink">
+           Verstuur tip via e-mail
+        </a>
 </div>
-</form>
-<div class="tip-status" id="tipStatus"></div>
+<div class="tip-status show">Je mailprogramma opent met je tip. De ingevulde tekst wordt automatisch meegenomen.</div>
 </div>
+</div>
+</details><a class="button secondary" href="#bd-email">Volg de pilot</a></div>
+
 </section>
 <footer>Zuidoost deze week · onafhankelijk prototype voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</footer>
 </main>
@@ -256,10 +277,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Tipfunctie
-  var tipLink = document.querySelector('.tipbox a[href^="mailto:"]');
-  if (tipLink) {
-    tipLink.addEventListener('click', function () {
+  var tipSummary = document.getElementById('tipSummary');
+  if (tipSummary) {
+    tipSummary.addEventListener('click', function () {
       sa_event('tip_clicked');
+    });
+  }
+
+  var followLink = document.querySelector('.tipbox a[href="#bd-email"]');
+  if (followLink) {
+    followLink.addEventListener('click', function () {
+      sa_event('follow_pilot_clicked');
     });
   }
 
@@ -274,84 +302,53 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
-<script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const openTip = document.getElementById('openTipForm');
-  const closeTip = document.getElementById('closeTipForm');
-  const tipWrap = document.getElementById('tipFormWrap');
-  const tipForm = document.getElementById('tipForm');
-  const tipStatus = document.getElementById('tipStatus');
-  const followButton = document.getElementById('followPilotButton');
+  var mailLink = document.getElementById('tipMailLink');
+  var fields = ['tip-title', 'tip-location', 'tip-date', 'tip-details-text']
+    .map(function (id) { return document.getElementById(id); });
 
-  if (openTip && tipWrap) {
-    openTip.addEventListener('click', function () {
-      tipWrap.classList.add('open');
-      const firstField = document.getElementById('tip-title');
-      if (firstField) firstField.focus();
-    });
-  }
+  function updateTipMail() {
+    if (!mailLink) return;
 
-  if (closeTip && tipWrap) {
-    closeTip.addEventListener('click', function () {
-      tipWrap.classList.remove('open');
-    });
-  }
+    var title = document.getElementById('tip-title')?.value.trim() || '';
+    var location = document.getElementById('tip-location')?.value.trim() || '';
+    var date = document.getElementById('tip-date')?.value.trim() || '';
+    var details = document.getElementById('tip-details-text')?.value.trim() || '';
 
-  if (followButton) {
-    followButton.addEventListener('click', function (e) {
-      e.preventDefault();
-      const signup = document.getElementById('inschrijven');
-      const email = document.getElementById('bd-email');
-      if (signup) signup.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      window.setTimeout(function () {
-        if (email) email.focus();
-      }, 450);
-    });
-  }
-
-  if (tipForm) {
-    tipForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const title = document.getElementById('tip-title')?.value.trim() || '';
-      const location = document.getElementById('tip-location')?.value.trim() || '';
-      const date = document.getElementById('tip-date')?.value.trim() || '';
-      const details = document.getElementById('tip-details')?.value.trim() || '';
-
-      const body =
+    var body =
 `Hoi Tom,
 
 Ik heb een tip voor Buurt deze week.
 
-Onderwerp: ${title}
+Onderwerp: ${title || '-'}
 Locatie: ${location || '-'}
 Wanneer: ${date || '-'}
 
 Meer informatie:
 ${details || '-'}`;
 
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(body);
-        }
-      } catch (err) {}
+    var subject = 'Tip voor Buurt deze week' + (title ? ': ' + title : '');
+    mailLink.href =
+      'mailto:tom.dehaas@gmail.com?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  }
 
-      sa_event('tip_submitted', {
-        has_location: location ? 'yes' : 'no',
-        has_date: date ? 'yes' : 'no'
-      });
+  fields.forEach(function (field) {
+    if (field) field.addEventListener('input', updateTipMail);
+  });
 
-      if (tipStatus) {
-        tipStatus.textContent = 'Je tip is klaargezet. Je mailprogramma wordt geopend. Werkt dat niet, dan staat de tekst al op je klembord.';
-        tipStatus.classList.add('show');
+  if (mailLink) {
+    mailLink.addEventListener('click', function () {
+      updateTipMail();
+      if (typeof sa_event === 'function') {
+        sa_event('tip_submitted');
       }
-
-      const subject = encodeURIComponent('Tip voor Buurt deze week: ' + title);
-      const mailbody = encodeURIComponent(body);
-      window.location.href = `mailto:tom.dehaas@gmail.com?subject=${subject}&body=${mailbody}`;
     });
   }
+
+  updateTipMail();
 });
-</script></body>
+</script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
 </html>
