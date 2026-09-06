@@ -320,6 +320,68 @@
         width:100%;
       }
     }
+
+    /* Definitieve nieuwsbrief-layout */
+    .signup{
+      padding:22px 20px 18px;
+    }
+    .signup > h2{
+      margin:0 0 4px;
+    }
+    .signup > .signup-intro{
+      margin:0 0 16px !important;
+      color:#d4dbe2 !important;
+      text-align:left !important;
+    }
+    .signup > .signup-form{
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) auto !important;
+      gap:8px !important;
+      align-items:stretch !important;
+      width:100% !important;
+    }
+    .signup > .signup-form input[type="email"]{
+      width:100% !important;
+      min-width:0 !important;
+      margin:0 !important;
+    }
+    .signup > .signup-form .button{
+      width:auto !important;
+      min-width:122px;
+      margin:0 !important;
+      white-space:nowrap;
+    }
+    .signup > .signup-confirm{
+      display:flex !important;
+      align-items:baseline;
+      gap:8px;
+      margin:10px 0 0 !important;
+      padding:0 !important;
+      color:#aeb9c3 !important;
+      font-size:.78rem !important;
+      line-height:1.45 !important;
+      text-align:left !important;
+    }
+    .signup > .signup-confirm .signup-confirm-label{
+      flex:none;
+      color:#ffffff !important;
+      font-weight:800;
+    }
+    @media (max-width:640px){
+      .signup > .signup-form{
+        grid-template-columns:1fr !important;
+      }
+      .signup > .signup-form .button{
+        width:100% !important;
+      }
+      .signup > .signup-confirm{
+        display:block !important;
+      }
+      .signup > .signup-confirm .signup-confirm-label{
+        display:block;
+        margin-bottom:2px;
+      }
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -458,7 +520,10 @@ window.sa_event = window.sa_event || function () {
 <input name="embed" type="hidden" value="1"/>
 <button class="button" type="submit">Schrijf me in</button>
 </form>
-<p class="signup-confirm"><strong>Let op:</strong> na inschrijven ontvang je een bevestigingsmail. Klik daarin nog één keer om je inschrijving af te ronden.</p>
+<div class="signup-confirm">
+<span class="signup-confirm-label">Bevestigen via e-mail</span>
+<span>Na inschrijven ontvang je een bevestigingsmail. Klik daarin op de link om je inschrijving af te ronden.</span>
+</div>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
 <article class="item">
