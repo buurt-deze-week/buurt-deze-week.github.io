@@ -195,7 +195,7 @@ window.sa_event = window.sa_event || function () {
 </script>
 <link href="https://www.buurtdezeweek.nl/" rel="canonical"/><meta content="Zuidoost deze week" property="og:title"/><meta content="In één oogopslag wat er deze week speelt in Wooldrik, Hogeland-Zuid en Varvik-Diekman." property="og:description"/><meta content="https://www.buurtdezeweek.nl/" property="og:url"/><meta content="website" property="og:type"/><meta content="#f6f2e9" name="theme-color"/></head>
 <body>
-<header class="wrap"><div class="eyebrow">Zuidoost deze week · pilot</div><h1>Dit speelt er deze week in jouw buurt.</h1><p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p><div class="meta"><span>Bijgewerkt 6 september 2026</span><span>Donderdag-editie</span><span>Gratis</span></div></header>
+<header class="wrap"><div class="eyebrow">Zuidoost deze week · pilot</div><h1>Dit speelt er deze week in jouw buurt.</h1><p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p><div class="meta"><span>Bijgewerkt 6 september 2026</span><span>Donderdag-editie</span><span>Gratis</span><span id="sourceCount">Lokale bronnen worden geteld…</span></div></header>
 <main class="wrap">
 <div aria-label="Filter onderwerpen" class="filterbar">
 <div class="filters">
@@ -551,6 +551,25 @@ document.addEventListener('DOMContentLoaded', function () {
       if (status) status.textContent = 'Kopiëren lukte niet. Selecteer: buurtdezeweek@buttondown.email';
     }
   });
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var sourceCount = document.getElementById('sourceCount');
+  if (!sourceCount) return;
+
+  var sources = Array.from(document.querySelectorAll('.source-name'))
+    .map(function (el) {
+      return el.textContent.replace(/^\s*·\s*/, '').trim();
+    })
+    .filter(Boolean);
+
+  var uniqueSources = Array.from(new Set(sources));
+  var count = uniqueSources.length;
+
+  sourceCount.textContent =
+    count === 1
+      ? 'Samengesteld uit 1 lokale bron'
+      : 'Samengesteld uit ' + count + ' lokale bronnen';
 });
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
