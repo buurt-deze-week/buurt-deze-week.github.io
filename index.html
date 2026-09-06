@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Zuidoost deze week | V2 prototype</title>
-<meta content="In één oogopslag zien wat er deze week speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman." name="description"/>
+<title>Zuidoost deze week | Buurt deze week</title>
+<meta content="In één oogopslag wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman." name="description"/>
 <style>
     :root{--bg:#f6f2e9;--paper:#fffdf8;--text:#132230;--muted:#6b7280;--line:#ddd7ca;--blue:#155eef;--blue-dark:#0d3f9b;--green:#2f7d59;--orange:#b65f20;--soft-blue:#eaf1ff;--soft-green:#edf7f1;--soft-orange:#fff1e7;--shadow:0 8px 26px rgba(19,34,48,.06);--radius:18px;--max:760px}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45} a{color:inherit}
@@ -127,6 +127,36 @@
       padding-top:16px;
       border-top:1px solid #cbe6d5;
     }
+
+    .info-block{
+      margin:26px 0 8px;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+      color:var(--muted);
+      font-size:.88rem;
+    }
+    .info-block details{
+      border-bottom:1px solid var(--line);
+      padding:11px 0;
+    }
+    .info-block summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--text);
+      list-style:none;
+    }
+    .info-block summary::-webkit-details-marker{display:none}
+    .info-block details p{margin:8px 0 2px;max-width:650px}
+    .info-block a{color:var(--blue-dark);font-weight:700}
+    .source-name{
+      display:inline-block;
+      margin-left:7px;
+      color:var(--muted);
+      font-size:.72rem;
+      font-weight:700;
+      text-transform:none;
+      letter-spacing:0;
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -134,14 +164,9 @@ window.sa_event = window.sa_event || function () {
   window.sa_event.q ? window.sa_event.q.push(a) : window.sa_event.q = [a];
 };
 </script>
-</head>
+<link href="https://www.buurtdezeweek.nl/" rel="canonical"/><meta content="Zuidoost deze week" property="og:title"/><meta content="In één oogopslag wat er deze week speelt in Wooldrik, Hogeland-Zuid en Varvik-Diekman." property="og:description"/><meta content="https://www.buurtdezeweek.nl/" property="og:url"/><meta content="website" property="og:type"/><meta content="#f6f2e9" name="theme-color"/></head>
 <body>
-<header class="wrap">
-<div class="eyebrow">Zuidoost deze week · prototype v2</div>
-<h1>In één oogopslag wat er deze week speelt in jouw buurt.</h1>
-<p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p>
-<div class="meta"><span>Donderdag-editie</span><span>± 1 minuut scannen</span><span>Gratis</span></div>
-</header>
+<header class="wrap"><div class="eyebrow">Zuidoost deze week · pilot</div><h1>Dit speelt er deze week in jouw buurt.</h1><p class="intro">Kort, lokaal en zonder ruis. Voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p><div class="meta"><span>Bijgewerkt 6 september 2026</span><span>Donderdag-editie</span><span>Gratis</span></div></header>
 <main class="wrap">
 <div aria-label="Filter onderwerpen" class="filterbar">
 <div class="filters">
@@ -151,30 +176,99 @@ window.sa_event = window.sa_event || function () {
 <button aria-pressed="false" class="filter" data-filter="meedoen" type="button">Meedoen</button>
 </div>
 </div>
-<div class="filter-note">Filters verschijnen alleen als er genoeg relevante berichten in een categorie staan.</div>
+
 <section class="section" data-category="weten"><div class="section-head"><h2>Weten</h2></div>
-<article class="item"><a href="https://www.enschede.nl/wegwerkzaamheden-28-augustus-2026-week-36" rel="noopener" target="_blank"><div class="topline"><div class="title">Werkzaamheden op meerdere plekken in Zuidoost</div><div class="arrow">›</div></div><div class="summary">Schultenhofstraat, Meester Cornelisstraat, Tegalstraat en Spaansland blijven deze week aandachtspunten.</div><span class="label orange">Verkeer &amp; wijk</span></a></article>
-<article class="item"><a href="https://www.enschede.nl/wegwerkzaamheden-28-augustus-2026-week-36" rel="noopener" target="_blank"><div class="topline"><div class="title">Zondag straatfeest in de Palembangstraat</div><div class="arrow">›</div></div><div class="summary">Tussen Malangstraat en Niasstraat. Handig om rekening mee te houden als je daar woont of rijdt.</div><span class="label orange">Zondag</span></a></article>
-<article class="item"><a href="https://www.enschede.nl/grond-topsport-campus-diekman-officieel-overgedragen" rel="noopener" target="_blank"><div class="topline"><div class="title">Het Diekman verandert de komende jaren flink</div><div class="arrow">›</div></div><div class="summary">De Topsport Campus is in ontwikkeling. We nemen dit dossier alleen opnieuw op als er echt iets nieuws gebeurt.</div><span class="label">Dossier Diekman</span></a></article>
+<article class="item">
+<a href="https://www.enschede.nl/wegwerkzaamheden-4-september-2026-week-37" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Brinkstraat krijgt vanaf 14 september tijdelijke afzettingen</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Tussen de Zuid Esmarkerrondweg en Varviksingel zijn buiten de spits asfaltboringen. Ook werkzaamheden aan Schultenhofstraat, Spaansland, Meester Cornelisstraat en Tegalstraat lopen door.</div>
+<span class="label orange">Verkeer &amp; wijk</span><span class="source-name">· Gemeente Enschede</span>
+</a>
+</article>
+<article class="item">
+<a href="https://www.enschedecamii.nl/voortgang/" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Nieuwe moskee: aanvraag loopt, bouw nog voorzien in 2026</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Voor het Islamitisch cultureel centrum met moskee bij Wethouder Beversstraat/Kuipersdijk is eind 2025 een omgevingsaanvraag ingediend. De projectsite meldt dat de aanvraag en Bibob-procedure lopen en dat de bouw volgens de afspraken in 2026 moet starten.</div>
+<span class="label">Dossier</span><span class="source-name">· Nieuwe Moskee Enschede</span>
+</a>
+</article>
 </section>
 <section class="section" data-category="doen"><div class="section-head"><h2>Doen</h2></div>
-<article class="item"><a href="https://www.tvhetwooldrik.nl/events" rel="noopener" target="_blank"><div class="topline"><div class="title">Vrijdag begint het Open Toernooi van Het Wooldrik</div><div class="arrow">›</div></div><div class="summary">Vanaf 4 september aan de Tegelerweg. Het toernooi loopt ruim een week.</div><span class="label green">Sport</span></a></article>
-<article class="item"><a href="https://tubanters.nl/" rel="noopener" target="_blank"><div class="topline"><div class="title">De Tubanters trapt zaterdag het nieuwe seizoen af</div><div class="arrow">›</div></div><div class="summary">De eerste van twee Kick Off-dagen op Diekman-Oost.</div><span class="label green">Zaterdag</span></a></article>
-<article class="item"><a href="https://www.speeltuin-varvik.nl/" rel="noopener" target="_blank"><div class="topline"><div class="title">Knutselen, gamen of koffie bij ’t Varvik</div><div class="arrow">›</div></div><div class="summary">Huiskamer van de buurt, gameavond en creatieve middag voor kinderen.</div><span class="label green">Buurtactiviteit</span></a></article>
-<article class="item"><a href="https://www.wooldrikpark.nl/het-park/kinderboerderij/" rel="noopener" target="_blank"><div class="topline"><div class="title">Even naar de kinderboerderij in het Wooldrikpark?</div><div class="arrow">›</div></div><div class="summary">Dagelijks open in de zomer. Daarnaast is er maandelijks een kindermiddag.</div><span class="label green">Met de kinderen</span></a></article>
+<article class="item">
+<a href="https://www.tvhetwooldrik.nl/events" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Open Toernooi Het Wooldrik loopt nog tot zondag</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Het Gruba Autobanden Open aan de Tegelerweg is bezig en loopt tot en met zondag 13 september.</div>
+<span class="label green">Sport</span><span class="source-name">· T.V. Het Wooldrik</span>
+</a>
+</article>
+<article class="item">
+<a href="https://tubanters.nl/" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Zaterdag tweede Kick Off-dag bij De Tubanters</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">De Tubanters trapt op zaterdag 12 september opnieuw gezamenlijk het seizoen af op Diekman-Oost.</div>
+<span class="label green">Zaterdag 12 september</span><span class="source-name">· De Tubanters</span>
+</a>
+</article>
+<article class="item">
+<a href="https://www.openmonumentendag.nl/monument/theehuis-in-wooldrikspark/" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Theetuin Wooldrikpark open tijdens Open Monumentendag</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Zaterdag 12 en zondag 13 september zijn de openbare delen van het monumentale koetshuis, de tuin en de theehuiskamer te bekijken.</div>
+<span class="label green">12 &amp; 13 september</span><span class="source-name">· Open Monumentendag</span>
+</a>
+</article>
+<article class="item">
+<a href="https://www.speeltuin-varvik.nl/" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Deze week bij ’t Varvik: ontmoeten, creatief en jongereninloop</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Op doordeweekse ochtenden is er de Huiskamer van de buurt. Dinsdag is er jongereninloop en woensdagmiddag creatief voor basisschoolkinderen.</div>
+<span class="label green">Buurtactiviteit</span><span class="source-name">· Speeltuin ’t Varvik</span>
+</a>
+</article>
 </section><section class="signup" id="inschrijven">
 <h2>Iedere donderdag in je inbox</h2>
-<p>Alleen wat de komende dagen relevant is voor jouw buurt.</p>
+<p>Alleen wat relevant is voor jouw buurt. Geen ruis, geen eindeloze nieuwsfeed.</p>
 <form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post"><input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
-<div class="fineprint">Je ontvangt na inschrijving een bevestigingsmail via Buttondown.</div>
+<div class="fineprint">Na inschrijving ontvang je een bevestigingsmail via Buttondown.</div>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
-<article class="item"><a href="https://www.dewoonplaats.nl/projecten/hogeland/" rel="noopener" target="_blank"><div class="topline"><div class="title">Wat moet er beter in Hogeland?</div><div class="arrow">›</div></div><div class="summary">Bewoners zijn gevraagd wat goed gaat en wat beter kan. We volgen welke plannen hieruit ontstaan.</div><span class="label">Hogeland</span></a></article>
-<article class="item"><a href="https://jijmaaktenschede.nl/wijkbudget/alle-wijken" rel="noopener" target="_blank"><div class="topline"><div class="title">Zelf een idee voor de wijk? Er is wijkbudget beschikbaar</div><div class="arrow">›</div></div><div class="summary">Voor bewonersinitiatieven rond ontmoeting, leefbaarheid, groen of activiteiten.</div><span class="label">Bewonersinitiatief</span></a></article>
+<article class="item">
+<a href="https://www.dewoonplaats.nl/projecten/hogeland/" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Bewoners van Hogeland denken mee over de toekomst van hun buurt</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">De Woonplaats verzamelt ervaringen en ideeën van bewoners en lokale organisaties. Wij blijven volgen welke concrete plannen uit de buurtaanpak voortkomen.</div>
+<span class="label">Hogeland</span><span class="source-name">· De Woonplaats</span>
+</a>
+</article>
+<article class="item">
+<a href="https://jijmaaktenschede.nl/wijkbudget/alle-wijken" rel="noopener" target="_blank">
+<div class="topline">
+<div class="title">Een idee voor Zuid-Oost? Er is €27.200 wijkbudget beschikbaar</div>
+<div class="arrow">›</div>
+</div>
+<div class="summary">Bewoners kunnen budget gebruiken voor initiatieven rond ontmoeting, leefbaarheid, groen en activiteiten in de wijk.</div>
+<span class="label">Bewonersinitiatief</span><span class="source-name">· Jij Maakt Enschede</span>
+</a>
+</article>
 </section>
-<section class="section" data-category="regelen"><div class="section-head"><h2>Regelen</h2></div>
-<article class="item"><a href="https://www.overheid.nl/berichten-over-uw-buurt" rel="noopener" target="_blank"><div class="topline"><div class="title">Plannen, besluiten en vergunningen in je buurt</div><div class="arrow">›</div></div><div class="summary">Alleen relevante zaken nemen we op, zoals verkeersmaatregelen, bouwplannen en bezwaar- of inspraakmogelijkheden.</div><span class="label orange">Praktisch</span></a></article>
-</section>
+
 <section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
 <summary class="button" id="tipSummary">Stuur een tip</summary>
 <div class="tip-form-wrap">
@@ -204,9 +298,21 @@ window.sa_event = window.sa_event || function () {
 </div>
 </div>
 </details><a class="button secondary" href="#bd-email">Volg de pilot</a></div>
-
 </section>
-<footer>Zuidoost deze week · onafhankelijk prototype voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</footer>
+<section aria-label="Over en contact" class="info-block">
+<details>
+<summary>Over deze pilot</summary>
+<p><strong>Buurt deze week</strong> onderzoekt of lokale informatie eenvoudiger en actueler bij bewoners kan komen. De eerste pilot draait in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Het initiatief is onafhankelijk en is niet verbonden aan de gemeente Enschede.</p>
+</details>
+<details>
+<summary>Privacy</summary>
+<p>Voor de nieuwsbrief wordt je e-mailadres verwerkt via Buttondown. We gebruiken Simple Analytics om privacyvriendelijk te meten hoe de site wordt gebruikt. We plaatsen zelf geen advertentiecookies. Een tip wordt alleen verstuurd als je die zelf via e-mail verzendt.</p>
+</details>
+<details>
+<summary>Contact</summary>
+<p>Vraag, suggestie of interesse in de pilot? <a href="mailto:tom.dehaas@gmail.com?subject=Buurt%20deze%20week">Stuur een e-mail</a>.</p>
+</details>
+</section><footer>Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a></footer>
 </main>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -348,6 +454,24 @@ ${details || '-'}`;
   }
 
   updateTipMail();
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.info-block details').forEach(function (detail) {
+    detail.addEventListener('toggle', function () {
+      if (detail.open && typeof sa_event === 'function') {
+        var label = detail.querySelector('summary')?.textContent.trim() || 'unknown';
+        sa_event('info_opened', { section: label });
+      }
+    });
+  });
+
+  var contactLink = document.querySelector('.info-block a[href^="mailto:"]');
+  if (contactLink) {
+    contactLink.addEventListener('click', function () {
+      if (typeof sa_event === 'function') sa_event('contact_clicked');
+    });
+  }
 });
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
