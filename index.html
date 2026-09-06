@@ -279,6 +279,15 @@
       .edition-meta{font-size:.86rem}
       .edition-meta-right{width:100%}
     }
+
+    .signup-note{
+      margin:10px 0 14px;
+      max-width:650px;
+      font-size:.93rem;
+      line-height:1.5;
+      color:var(--muted);
+    }
+    .signup-note strong{color:var(--text)}
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -411,9 +420,14 @@ window.sa_event = window.sa_event || function () {
 </a>
 </article></section><section class="signup" id="inschrijven">
 <h2>Iedere donderdag in je inbox</h2>
-<p>Alleen wat relevant is voor jouw buurt. Geen ruis, geen eindeloze nieuwsfeed.</p>
-<form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post"><input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
-<div class="fineprint">Na inschrijving ontvang je een bevestigingsmail via Buttondown.</div>
+<p>Gratis en zonder ruis. Alleen wat relevant is voor jouw buurt.</p>
+<p class="signup-note"><strong>Nog één stap na inschrijven:</strong> je ontvangt een bevestigingsmail. Klik daarin op de bevestigingslink om je inschrijving af te ronden.</p>
+<form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post">
+<input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/>
+<input name="embed" type="hidden" value="1"/>
+<button class="button" type="submit">Schrijf me in</button>
+</form>
+<div class="fineprint">Je bent pas definitief ingeschreven nadat je je e-mailadres via de mail hebt bevestigd.</div>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
 <article class="item">
