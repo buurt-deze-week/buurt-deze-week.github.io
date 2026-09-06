@@ -186,6 +186,25 @@
       color:var(--green);
       min-height:1em;
     }
+
+    .meta span{
+      display:inline-flex;
+      align-items:center;
+    }
+    .meta span:not(:last-child)::after{
+      content:"·";
+      margin-left:16px;
+      color:var(--muted);
+    }
+    .meta{
+      column-gap:0;
+      row-gap:8px;
+    }
+    @media (max-width:640px){
+      .meta span:not(:last-child)::after{
+        margin-left:10px;
+      }
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
