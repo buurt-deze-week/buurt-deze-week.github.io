@@ -67,6 +67,12 @@
       display:none !important;
     }
 </style>
+<script>
+window.sa_event = window.sa_event || function () {
+  var a = [].slice.call(arguments);
+  window.sa_event.q ? window.sa_event.q.push(a) : window.sa_event.q = [a];
+};
+</script>
 </head>
 <body>
 <header class="wrap">
@@ -98,7 +104,7 @@
 </section><section class="signup" id="inschrijven">
 <h2>Iedere donderdag in je inbox</h2>
 <p>Alleen wat de komende dagen relevant is voor jouw buurt.</p>
-<form action="https://buttondown.com/api/emails/embed-subscribe/mijnbuurt" class="signup-form" method="post"><input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
+<form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post"><input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/><button class="button" type="submit">Schrijf me in</button></form>
 <div class="fineprint">Je ontvangt na inschrijving een bevestigingsmail via Buttondown.</div>
 </section>
 <section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
@@ -155,6 +161,50 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-});</script>  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+});</script>  
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Filtergebruik
+  document.querySelectorAll('.filter[data-filter]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      sa_event('filter_used', {
+        filter: button.dataset.filter || 'unknown'
+      });
+    });
+  });
+
+  // Kliks op inhoudsberichten
+  document.querySelectorAll('.section[data-category] .item a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var section = link.closest('.section[data-category]');
+      var titleEl = link.querySelector('.title');
+      sa_event('article_clicked', {
+        category: section ? section.dataset.category : 'unknown',
+        title: titleEl ? titleEl.textContent.trim() : 'unknown'
+      });
+    });
+  });
+
+  // Tipfunctie
+  var tipLink = document.querySelector('.tipbox a[href^="mailto:"]');
+  if (tipLink) {
+    tipLink.addEventListener('click', function () {
+      sa_event('tip_clicked');
+    });
+  }
+
+  // Nieuwsbriefinschrijving gestart
+  var signupForm = document.querySelector(
+    'form[action*="buttondown.com/api/emails/embed-subscribe"]'
+  );
+  if (signupForm) {
+    signupForm.addEventListener('submit', function () {
+      sa_event('newsletter_signup_started');
+    });
+  }
+});
+</script>
+
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
