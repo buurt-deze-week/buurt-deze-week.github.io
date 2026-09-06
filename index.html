@@ -157,6 +157,35 @@
       text-transform:none;
       letter-spacing:0;
     }
+
+    .contact-line{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:8px;
+    }
+    .contact-email{
+      color:var(--blue-dark);
+      font-weight:800;
+      word-break:break-all;
+    }
+    .copy-email{
+      border:1px solid #d5d0c5;
+      background:var(--paper);
+      color:var(--text);
+      border-radius:9px;
+      padding:7px 10px;
+      font:inherit;
+      font-size:.8rem;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .copy-status{
+      font-size:.78rem;
+      color:var(--green);
+      min-height:1em;
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -176,7 +205,6 @@ window.sa_event = window.sa_event || function () {
 <button aria-pressed="false" class="filter" data-filter="meedoen" type="button">Meedoen</button>
 </div>
 </div>
-
 <section class="section" data-category="weten"><div class="section-head"><h2>Weten</h2></div>
 <article class="item">
 <a href="https://www.enschede.nl/wegwerkzaamheden-4-september-2026-week-37" rel="noopener" target="_blank">
@@ -268,7 +296,6 @@ window.sa_event = window.sa_event || function () {
 </a>
 </article>
 </section>
-
 <section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
 <summary class="button" id="tipSummary">Stuur een tip</summary>
 <div class="tip-form-wrap">
@@ -290,7 +317,7 @@ window.sa_event = window.sa_event || function () {
 <textarea id="tip-details-text" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe."></textarea>
 </div>
 <div class="tip-form-actions">
-<a class="button" href="mailto:tom.dehaas@gmail.com?subject=Tip%20voor%20Buurt%20deze%20week" id="tipMailLink">
+<a class="button" href="mailto:buurtdezeweek@buttondown.email?subject=Tip%20voor%20Buurt%20deze%20week" id="tipMailLink">
            Verstuur tip via e-mail
         </a>
 </div>
@@ -310,7 +337,14 @@ window.sa_event = window.sa_event || function () {
 </details>
 <details>
 <summary>Contact</summary>
-<p>Vraag, suggestie of interesse in de pilot? <a href="mailto:tom.dehaas@gmail.com?subject=Buurt%20deze%20week">Stuur een e-mail</a>.</p>
+<p>Vraag, suggestie, tip of interesse in de pilot? Neem contact op via:</p>
+<div class="contact-line">
+<a class="contact-email" href="mailto:buurtdezeweek@buttondown.email?subject=Buurt%20deze%20week">
+          buurtdezeweek@buttondown.email
+        </a>
+<button class="copy-email" id="copyEmail" type="button">Kopieer e-mailadres</button>
+</div>
+<div aria-live="polite" class="copy-status" id="copyEmailStatus"></div>
 </details>
 </section><footer>Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a></footer>
 </main>
@@ -436,7 +470,7 @@ ${details || '-'}`;
 
     var subject = 'Tip voor Buurt deze week' + (title ? ': ' + title : '');
     mailLink.href =
-      'mailto:tom.dehaas@gmail.com?subject=' + encodeURIComponent(subject) +
+      'mailto:buurtdezeweek@buttondown.email?subject=' + encodeURIComponent(subject) +
       '&body=' + encodeURIComponent(body);
   }
 
@@ -472,6 +506,22 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof sa_event === 'function') sa_event('contact_clicked');
     });
   }
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var copyButton = document.getElementById('copyEmail');
+  var status = document.getElementById('copyEmailStatus');
+  if (!copyButton) return;
+
+  copyButton.addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText('buurtdezeweek@buttondown.email');
+      if (status) status.textContent = 'Gekopieerd.';
+      if (typeof sa_event === 'function') sa_event('contact_email_copied');
+    } catch (err) {
+      if (status) status.textContent = 'Kopiëren lukte niet. Selecteer: buurtdezeweek@buttondown.email';
+    }
+  });
 });
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
