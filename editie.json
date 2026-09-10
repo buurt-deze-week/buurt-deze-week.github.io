@@ -12,12 +12,12 @@
       "title": "Weten",
       "items": [
         {
-          "title": "Zondag verkeershinder op Hogelandsingel en Varviksingel door Singelloop",
-          "summary": "De Singelloop loopt zondag 13 september over de singels, waaronder de Hogelandsingel en Varviksingel. Tussen 10.00 en 12.00 uur is de binnenring tijdelijk beperkt toegankelijk; oversteken richting centrum kan slechts beperkt en op aanwijzing van verkeersregelaars.",
-          "label": "Zondag 13 september",
-          "label_style": "orange",
-          "source": "Singelloop Enschede",
-          "url": "https://www.singelloop-enschede.nl/nieuws-item/toegankelijkheid-singels-en-centrum/"
+          "title": "Deze week bij ’t Varvik: huiskamer, creatief, meideninloop en wijkspreekuur",
+          "summary": "Bij Speeltuin ’t Varvik zijn doordeweeks meerdere vaste buurtactiviteiten. Er is onder meer de Huiskamer van de buurt, woensdagmiddag creatief en op donderdag het wijkspreekuur en de meideninloop.",
+          "label": "Buurtactiviteit",
+          "label_style": "green",
+          "source": "Stichting Enschedese Speeltuinen",
+          "url": "https://www.perfectmanage.eu/sites/16/3215/0/activiteiten"
         },
         {
           "title": "Vanaf maandag tijdelijke afzettingen op de Brinkstraat",
@@ -50,12 +50,12 @@
           "url": "https://www.tvhetwooldrik.nl/events"
         },
         {
-          "title": "Deze week bij ’t Varvik: huiskamer, meideninloop, gameavond en creatief",
-          "summary": "Speeltuin ’t Varvik heeft meerdere vaste activiteiten: doordeweeks de Huiskamer van de buurt, dinsdagavond gameavond, woensdagmiddag creatief en donderdag onder meer wijkspreekuur en meideninloop.",
+          "title": "Deze week bij ’t Varvik: huiskamer, creatief, meideninloop en wijkspreekuur",
+          "summary": "Bij Speeltuin ’t Varvik zijn doordeweeks meerdere vaste buurtactiviteiten. Er is onder meer de Huiskamer van de buurt, woensdagmiddag creatief en op donderdag het wijkspreekuur en de meideninloop.",
           "label": "Buurtactiviteit",
           "label_style": "green",
-          "source": "Speeltuin ’t Varvik",
-          "url": "https://www.speeltuinvarvik.nl/activiteiten/"
+          "source": "Stichting Enschedese Speeltuinen",
+          "url": "https://www.perfectmanage.eu/sites/16/3215/0/activiteiten"
         },
         {
           "title": "Spontaan met kinderen: Kinderboerderij Erve ’t Wooldrik",
