@@ -98,15 +98,19 @@ def email_item(item):
       <tr>
         <td style="padding:0 0 20px 0;">
           <a href="{esc(item["url"])}"
-             style="display:block;text-decoration:none;color:#132230;">
+             style="display:block;text-decoration:none;color:#132230 !important;-webkit-text-fill-color:#132230;">
             <div style="font-family:Arial,Helvetica,sans-serif;
                         font-size:17px;line-height:1.28;font-weight:800;
-                        letter-spacing:-.2px;margin:0 0 6px 0;">
-              {esc(item["title"])}
-              <span style="color:#155eef;">›</span>
+                        letter-spacing:-.2px;margin:0 0 6px 0;
+                        color:#132230 !important;-webkit-text-fill-color:#132230;">
+              <span style="color:#132230 !important;-webkit-text-fill-color:#132230;">
+                {esc(item["title"])}
+              </span>
+              <span style="color:#155eef !important;-webkit-text-fill-color:#155eef;">›</span>
             </div>
             <div style="font-family:Arial,Helvetica,sans-serif;
-                        font-size:14px;line-height:1.5;color:#5a6570;
+                        font-size:14px;line-height:1.5;
+                        color:#5a6570 !important;-webkit-text-fill-color:#5a6570;
                         margin:0 0 2px 0;">
               {esc(item["summary"])}
             </div>
