@@ -1,0 +1,114 @@
+name: Editie archiveren
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "editie.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-editie
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Editie archiveren
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          source = Path("editie.json")
+          data = json.loads(source.read_text(encoding="utf-8"))
+
+          edition = data.get("edition") or {}
+          date = edition.get("date", "")
+          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+              raise SystemExit("Ongeldige of ontbrekende edition.date in editie.json")
+
+          sections = data.get("sections")
+          if not isinstance(sections, list) or not sections:
+              raise SystemExit("Geen geldige sections in editie.json")
+
+          archive_dir = Path("edities")
+          archive_dir.mkdir(exist_ok=True)
+
+          archive_file = archive_dir / f"{date}.json"
+          archive_file.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+
+          items = [
+              item
+              for section in sections
+              for item in (section.get("items") or [])
+          ]
+          sources = sorted({
+              (item.get("source") or "").strip()
+              for item in items
+              if (item.get("source") or "").strip()
+          })
+
+          index_file = archive_dir / "index.json"
+          if index_file.exists():
+              try:
+                  index = json.loads(index_file.read_text(encoding="utf-8"))
+              except Exception:
+                  index = []
+          else:
+              index = []
+
+          if not isinstance(index, list):
+              index = []
+
+          entry = {
+              "date": date,
+              "title": edition.get("title", "Buurt deze week"),
+              "stories": len(items),
+              "sources": len(sources),
+              "file": f"edities/{date}.json"
+          }
+
+          index = [x for x in index if x.get("date") != date]
+          index.append(entry)
+          index.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+          index_file.write_text(
+              json.dumps(index, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Editie {date} gearchiveerd: {len(items)} berichten, {len(sources)} bronnen.")
+          PY
+
+      - name: Archief committen
+        run: |
+          if git diff --quiet -- edities; then
+            echo "Geen archiefwijzigingen."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add edities/
+          git commit -m "Archiveer editie $(python -c 'import json; print(json.load(open(\"editie.json\"))[\"edition\"][\"date\"])')"
+          git push
