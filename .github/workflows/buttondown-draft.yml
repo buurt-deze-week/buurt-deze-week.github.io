@@ -1,0 +1,36 @@
+name: Buttondown draft maken
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "editie.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: buttondown-editie
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Benodigdheden installeren
+        run: pip install requests
+
+      - name: Buttondown-draft maken of bijwerken
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python scripts/buttondown_draft.py --edition editie.json
