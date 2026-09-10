@@ -417,6 +417,108 @@
       opacity:.7;
       cursor:wait;
     }
+
+    /* Definitieve tipformulier-layout */
+    .tipbox details{
+      margin-top:14px;
+    }
+
+    .tipbox details > summary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      list-style:none;
+      cursor:pointer;
+      background:var(--blue);
+      color:#fff;
+      font-weight:800;
+      padding:12px 16px;
+      border-radius:12px;
+      user-select:none;
+    }
+
+    .tipbox details > summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .tipbox details[open] > summary{
+      margin-bottom:18px;
+    }
+
+    .tipbox #tipForm{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:8px;
+      width:100%;
+      padding-top:2px;
+    }
+
+    .tipbox #tipForm label{
+      display:block;
+      margin-top:4px;
+      font-size:.84rem;
+      line-height:1.35;
+      font-weight:800;
+      color:#315442;
+    }
+
+    .tipbox #tipForm input[type="text"],
+    .tipbox #tipForm textarea{
+      display:block;
+      width:100%;
+      min-width:0;
+      margin:0;
+      padding:12px 14px;
+      border:1px solid #bdd8c9;
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      font:inherit;
+      font-size:.95rem;
+      line-height:1.45;
+      outline:none;
+    }
+
+    .tipbox #tipForm textarea{
+      min-height:118px;
+      resize:vertical;
+    }
+
+    .tipbox #tipForm input:focus,
+    .tipbox #tipForm textarea:focus{
+      border-color:var(--blue);
+      box-shadow:0 0 0 3px rgba(18,103,244,.10);
+    }
+
+    .tipbox #tipForm .button{
+      justify-self:start;
+      width:auto;
+      margin-top:8px;
+      border:0;
+      cursor:pointer;
+    }
+
+    .tipbox #tipForm .tip-note,
+    .tipbox #tipForm .tip-error{
+      margin:6px 0 0;
+      max-width:680px;
+    }
+
+    .tipbox .follow-link{
+      display:inline-flex;
+      margin-top:14px;
+    }
+
+    @media (max-width:640px){
+      .tipbox details > summary{
+        width:auto;
+      }
+
+      .tipbox #tipForm .button{
+        width:100%;
+        justify-self:stretch;
+      }
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -475,7 +577,7 @@ window.sa_event = window.sa_event || function () {
 <p class="tip-note">Je tip wordt rechtstreeks verstuurd. Er opent geen mailprogramma.</p>
 <p class="tip-error" hidden="" id="tipError">Versturen lukt nu niet. Probeer het later nog eens.</p>
 </form>
-</details><a class="button secondary" href="#bd-email">Volg de pilot</a></div>
+</details><a class="follow-link button secondary" href="#bd-email">Volg de pilot</a></div>
 </section>
 <section aria-label="Over en contact" class="info-block">
 <details>
