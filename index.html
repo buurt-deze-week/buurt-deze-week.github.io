@@ -399,6 +399,24 @@
       font-size:.9rem;
     }
     [hidden]{display:none !important}
+
+    .tipbox form .tip-note{
+      margin:10px 0 0;
+      font-size:.82rem;
+      line-height:1.45;
+      color:var(--muted);
+    }
+    .tipbox form .tip-error{
+      margin:10px 0 0;
+      font-size:.82rem;
+      line-height:1.45;
+      color:#9b2c2c;
+      font-weight:700;
+    }
+    .tipbox form button[disabled]{
+      opacity:.7;
+      cursor:wait;
+    }
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -440,37 +458,23 @@ window.sa_event = window.sa_event || function () {
 <span>Na inschrijven ontvang je een bevestigingsmail. Klik daarin op de link om je inschrijving af te ronden.</span>
 </div>
 </section>
-
-
-
 <section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
-<summary class="button" id="tipSummary">Stuur een tip</summary>
-<div class="tip-form-wrap">
-<div class="tip-form">
-<div>
-<label for="tip-title">Waar gaat je tip over?</label>
-<input id="tip-title" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" type="text"/>
-</div>
-<div>
-<label for="tip-location">Waar?</label>
-<input id="tip-location" placeholder="Straat, locatie of buurt" type="text"/>
-</div>
-<div>
-<label for="tip-date">Wanneer?</label>
-<input id="tip-date" placeholder="Datum of periode" type="text"/>
-</div>
-<div>
-<label for="tip-details-text">Meer informatie</label>
-<textarea id="tip-details-text" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe."></textarea>
-</div>
-<div class="tip-form-actions">
-<a class="button" href="mailto:buurtdezeweek@buttondown.email?subject=Tip%20voor%20Buurt%20deze%20week" id="tipMailLink">
-           Verstuur tip via e-mail
-        </a>
-</div>
-<div class="tip-status show">Je mailprogramma opent met je tip. De ingevulde tekst wordt automatisch meegenomen.</div>
-</div>
-</div>
+<summary id="tipSummary">Stuur een tip</summary>
+<form action="https://formspree.io/f/mljeazya" id="tipForm" method="POST">
+<input name="_subject" type="hidden" value="Nieuwe tip via Buurt deze week"/>
+<input name="_next" type="hidden" value="https://www.buurtdezeweek.nl/tip-ontvangen/"/>
+<label for="tipSubject">Waar gaat je tip over?</label>
+<input id="tipSubject" name="onderwerp" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" required="" type="text"/>
+<label for="tipLocation">Waar?</label>
+<input id="tipLocation" name="locatie" placeholder="Straat, locatie of buurt" required="" type="text"/>
+<label for="tipDate">Wanneer?</label>
+<input id="tipDate" name="wanneer" placeholder="Datum of periode" type="text"/>
+<label for="tipDetails">Meer informatie</label>
+<textarea id="tipDetails" name="informatie" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe." required="" rows="5"></textarea>
+<button class="button" type="submit">Verstuur tip</button>
+<p class="tip-note">Je tip wordt rechtstreeks verstuurd. Er opent geen mailprogramma.</p>
+<p class="tip-error" hidden="" id="tipError">Versturen lukt nu niet. Probeer het later nog eens.</p>
+</form>
 </details><a class="button secondary" href="#bd-email">Volg de pilot</a></div>
 </section>
 <section aria-label="Over en contact" class="info-block">
@@ -497,7 +501,6 @@ window.sa_event = window.sa_event || function () {
 </details>
 </section><footer>Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a></footer>
 </main>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var tipSummary = document.getElementById('tipSummary');
@@ -525,71 +528,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var mailLink = document.getElementById('tipMailLink');
-  var fields = ['tip-title', 'tip-location', 'tip-date', 'tip-details-text']
-    .map(function (id) { return document.getElementById(id); });
-
-  function updateTipMail() {
-    if (!mailLink) return;
-
-    var title = document.getElementById('tip-title')?.value.trim() || '';
-    var location = document.getElementById('tip-location')?.value.trim() || '';
-    var date = document.getElementById('tip-date')?.value.trim() || '';
-    var details = document.getElementById('tip-details-text')?.value.trim() || '';
-
-    var body =
-`Hoi Tom,
-
-Ik heb een tip voor Buurt deze week.
-
-Onderwerp: ${title || '-'}
-Locatie: ${location || '-'}
-Wanneer: ${date || '-'}
-
-Meer informatie:
-${details || '-'}`;
-
-    var subject = 'Tip voor Buurt deze week' + (title ? ': ' + title : '');
-    mailLink.href =
-      'mailto:buurtdezeweek@buttondown.email?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
-  }
-
-  fields.forEach(function (field) {
-    if (field) field.addEventListener('input', updateTipMail);
-  });
-
-  if (mailLink) {
-    mailLink.addEventListener('click', function () {
-      updateTipMail();
-      if (typeof sa_event === 'function') {
-        sa_event('tip_submitted');
-      }
-    });
-  }
-
-  updateTipMail();
-});
-</script><script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.info-block details').forEach(function (detail) {
-    detail.addEventListener('toggle', function () {
-      if (detail.open && typeof sa_event === 'function') {
-        var label = detail.querySelector('summary')?.textContent.trim() || 'unknown';
-        sa_event('info_opened', { section: label });
-      }
-    });
-  });
-
-  var contactLink = document.querySelector('.info-block a[href^="mailto:"]');
-  if (contactLink) {
-    contactLink.addEventListener('click', function () {
-      if (typeof sa_event === 'function') sa_event('contact_clicked');
-    });
-  }
-});
-</script><script>
 document.addEventListener('DOMContentLoaded', function () {
   var copyButton = document.getElementById('copyEmail');
   var status = document.getElementById('copyEmailStatus');
@@ -815,6 +753,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('DOMContentLoaded', loadEdition);
 })();
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('tipForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    var button = form.querySelector('button[type="submit"]');
+    var error = document.getElementById('tipError');
+    var originalText = button.textContent;
+
+    button.disabled = true;
+    button.textContent = 'Versturen…';
+    if (error) error.hidden = true;
+
+    try {
+      var response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Formspree response ' + response.status);
+
+      if (typeof sa_event === 'function') {
+        sa_event('tip_submitted');
+      }
+
+      window.location.href = '/tip-ontvangen/';
+    } catch (err) {
+      console.error(err);
+      if (error) error.hidden = false;
+      button.disabled = false;
+      button.textContent = originalText;
+    }
+  });
+});
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
