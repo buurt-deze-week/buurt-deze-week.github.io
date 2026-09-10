@@ -382,6 +382,23 @@
         margin-bottom:2px;
       }
     }
+
+    .edition-loading{
+      margin:28px 0;
+      padding:18px 0;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .edition-error{
+      margin:28px 0;
+      padding:18px;
+      border:1px solid #e0b9b9;
+      background:#fff7f7;
+      border-radius:14px;
+      color:#7f2f2f;
+      font-size:.9rem;
+    }
+    [hidden]{display:none !important}
 </style>
 <script>
 window.sa_event = window.sa_event || function () {
@@ -392,127 +409,25 @@ window.sa_event = window.sa_event || function () {
 <link href="https://www.buurtdezeweek.nl/" rel="canonical"/><meta content="Zuidoost deze week" property="og:title"/><meta content="In één oogopslag wat er deze week speelt in Wooldrik, Hogeland-Zuid en Varvik-Diekman." property="og:description"/><meta content="https://www.buurtdezeweek.nl/" property="og:url"/><meta content="website" property="og:type"/><meta content="#f6f2e9" name="theme-color"/></head>
 <body>
 <header class="wrap edition-header">
-<div class="edition-date">Zondag 6 september 2026</div>
-<div class="edition-brand">Buurt deze week · Zuidoost-Enschede</div>
-<h1 class="edition-title">Dit speelt er deze week in jouw buurt<span class="dot">.</span></h1>
-<p class="edition-intro">
-  In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik,
-  Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.
-</p>
+<div class="edition-date" id="editionDate">Zondag 6 september 2026</div>
+<div class="edition-brand" id="editionBrand">Buurt deze week · Zuidoost-Enschede</div>
+<h1 class="edition-title"><span id="editionTitle">Dit speelt er deze week in jouw buurt</span><span class="dot">.</span></h1>
+<p class="edition-intro" id="editionIntro">In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.</p>
 <hr class="edition-rule"/>
 <div class="edition-meta">
 <div class="edition-meta-left">
-<span>Donderdag-editie</span>
-<span>Gratis</span>
+<span id="freeLabel">Gratis</span>
 </div>
 <div class="edition-meta-right">
-<span id="sourceCount">Lokale bronnen worden geteld…</span>
-<span id="storyCount">Berichten worden geteld…</span>
+<span id="sourceCount">11 lokale bronnen</span>
+<span id="storyCount">11 berichten</span>
 </div>
 </div>
 </header>
 <main class="wrap">
-<div aria-label="Filter onderwerpen" class="filterbar">
-<div class="filters">
-<button aria-pressed="true" class="filter active" data-filter="all" type="button">Alles</button>
-<button aria-pressed="false" class="filter" data-filter="weten" type="button">Weten</button>
-<button aria-pressed="false" class="filter" data-filter="doen" type="button">Doen</button>
-<button aria-pressed="false" class="filter" data-filter="meedoen" type="button">Meedoen</button>
-</div>
-</div>
-<section class="section" data-category="weten"><div class="section-head"><h2>Weten</h2></div>
-<article class="item">
-<a href="https://www.enschede.nl/wegwerkzaamheden-4-september-2026-week-37" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Brinkstraat krijgt vanaf 14 september tijdelijke afzettingen</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Tussen de Zuid Esmarkerrondweg en Varviksingel zijn buiten de spits asfaltboringen. Ook werkzaamheden aan Schultenhofstraat, Spaansland, Meester Cornelisstraat, Tegalstraat en Het Eeftink lopen door.</div>
-<span class="label orange">Verkeer &amp; wijk</span><span class="source-name">· Gemeente Enschede</span>
-</a>
-</article>
-<article class="item">
-<a href="https://www.enschedecamii.nl/voortgang/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Nieuwe moskee: aanvraag loopt, bouw nog voorzien in 2026</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Voor het Islamitisch cultureel centrum met moskee bij Wethouder Beversstraat/Kuipersdijk is eind 2025 een omgevingsaanvraag ingediend. De projectsite meldt dat de aanvraag en Bibob-procedure lopen en dat de bouw volgens de afspraken in 2026 moet starten.</div>
-<span class="label">Dossier</span><span class="source-name">· Nieuwe Moskee Enschede</span>
-</a>
-</article>
-</section>
-<section class="section" data-category="doen"><div class="section-head"><h2>Doen</h2></div><article class="item">
-<a href="https://parkeninenschede.nl/parken/kinderboerderijen/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Spontaan op pad: gratis naar Kinderboerderij ’t Wooldrik</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">
-              Elke dag open aan de Lorentzlaan. Naast de dieren is er een speelweide en speelplek, dus handig voor een klein uitstapje zonder veel planning.
-            </div>
-<span class="label green">Elke dag</span><span class="source-name">· Parken in Enschede</span>
-</a>
-</article>
-<article class="item">
-<a href="https://www.tvhetwooldrik.nl/events" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Open Toernooi Het Wooldrik loopt nog tot zondag</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Het Gruba Autobanden Open aan de Tegelerweg is bezig en loopt tot en met zondag 13 september.</div>
-<span class="label green">Sport</span><span class="source-name">· T.V. Het Wooldrik</span>
-</a>
-</article>
-<article class="item">
-<a href="https://tubanters.nl/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Zaterdag tweede Kick Off-dag bij De Tubanters</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">De Tubanters trapt op zaterdag 12 september opnieuw gezamenlijk het seizoen af op Diekman-Oost.</div>
-<span class="label green">Zaterdag 12 september</span><span class="source-name">· De Tubanters</span>
-</a>
-</article>
-<article class="item">
-<a href="https://www.openmonumentendag.nl/monument/theehuis-in-wooldrikspark/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Theetuin Wooldrikpark open tijdens Open Monumentendag</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Zaterdag 12 en zondag 13 september zijn de openbare delen van het monumentale koetshuis, de tuin en de theehuiskamer te bekijken.</div>
-<span class="label green">12 &amp; 13 september</span><span class="source-name">· Open Monumentendag</span>
-</a>
-</article>
-<article class="item">
-<a href="https://www.speeltuin-varvik.nl/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Deze week bij ’t Varvik: ontmoeten, creatief en jongereninloop</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Op doordeweekse ochtenden is er de Huiskamer van de buurt. Dinsdag is er jongereninloop en woensdagmiddag creatief voor basisschoolkinderen.</div>
-<span class="label green">Buurtactiviteit</span><span class="source-name">· Speeltuin ’t Varvik</span>
-</a>
-</article>
-<article class="item">
-<a href="https://www.huisvoortaalenmeedoen.nl/week-van-lezen-en-schrijven-2026/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Gratis proefles Nederlands bij ROC van Twente</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Dinsdag 8 september van 19.00 tot 20.00 uur aan de Wethouder Beversstraat 165. Een laagdrempelige kennismaking tijdens de Week van lezen en schrijven.</div>
-<span class="label green">Dinsdag 8 september</span><span class="source-name">· Huis voor Taal en Meedoen</span>
-</a>
-</article><article class="item">
-<a href="https://www.alifa.nl/activiteiten" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Huiskamer voor jongeren bij Stedelijk Diekman</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Maandag en donderdag van 14.30 tot 16.30 uur kunnen jongeren binnenlopen bij Het Stedelijk Diekman aan de J.J. van Deinselaan.</div>
-<span class="label green">Jongeren</span><span class="source-name">· Alifa</span>
-</a>
-</article></section><section class="signup" id="inschrijven">
+<div aria-label="Filter onderwerpen" class="filterbar" hidden="hidden" id="filterbar">
+<div class="filters" id="filters"></div>
+</div><div id="editionContent"><div class="edition-loading">Editie laden…</div></div><section class="signup" id="inschrijven">
 <h2>Iedere donderdag in je inbox</h2>
 <p class="signup-intro">Gratis en zonder ruis. Alleen wat relevant is voor jouw buurt.</p>
 <form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post">
@@ -525,28 +440,9 @@ window.sa_event = window.sa_event || function () {
 <span>Na inschrijven ontvang je een bevestigingsmail. Klik daarin op de link om je inschrijving af te ronden.</span>
 </div>
 </section>
-<section class="section" data-category="meedoen"><div class="section-head"><h2>Meedoen</h2></div>
-<article class="item">
-<a href="https://www.dewoonplaats.nl/projecten/hogeland/" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Bewoners van Hogeland denken mee over de toekomst van hun buurt</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">De Woonplaats verzamelt ervaringen en ideeën van bewoners en lokale organisaties. Wij blijven volgen welke concrete plannen uit de buurtaanpak voortkomen.</div>
-<span class="label">Hogeland</span><span class="source-name">· De Woonplaats</span>
-</a>
-</article>
-<article class="item">
-<a href="https://jijmaaktenschede.nl/wijkbudget/alle-wijken" rel="noopener" target="_blank">
-<div class="topline">
-<div class="title">Een idee voor Zuid-Oost? Er is €27.200 wijkbudget beschikbaar</div>
-<div class="arrow">›</div>
-</div>
-<div class="summary">Bewoners kunnen budget gebruiken voor initiatieven rond ontmoeting, leefbaarheid, groen en activiteiten in de wijk.</div>
-<span class="label">Bewonersinitiatief</span><span class="source-name">· Jij Maakt Enschede</span>
-</a>
-</article>
-</section>
+
+
+
 <section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
 <summary class="button" id="tipSummary">Stuur een tip</summary>
 <div class="tip-form-wrap">
@@ -601,75 +497,9 @@ window.sa_event = window.sa_event || function () {
 </details>
 </section><footer>Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a></footer>
 </main>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const filters = document.querySelectorAll('.filter');
-  const sections = document.querySelectorAll('.section[data-category]');
-  const signup = document.querySelector('.signup');
-  const doenSection = document.querySelector('.section[data-category="doen"]');
-  const signupOriginalParent = signup ? signup.parentNode : null;
-
-  function restoreSignup() {
-    if (signup && doenSection) {
-      doenSection.insertAdjacentElement('afterend', signup);
-    }
-  }
-
-  filters.forEach(button => {
-    button.addEventListener('click', function () {
-      const selected = this.dataset.filter;
-
-      filters.forEach(btn => {
-        const active = btn === this;
-        btn.classList.toggle('active', active);
-        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-      });
-
-      sections.forEach(section => {
-        if (selected === 'all') {
-          section.hidden = false;
-        } else {
-          section.hidden = section.dataset.category !== selected;
-        }
-      });
-
-      if (selected === 'all') {
-        restoreSignup();
-      } else {
-        const activeSection = document.querySelector('.section[data-category="' + selected + '"]');
-        if (signup && activeSection) {
-          activeSection.insertAdjacentElement('afterend', signup);
-        }
-      }
-    });
-  });
-
-
-});</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Filtergebruik
-  document.querySelectorAll('.filter[data-filter]').forEach(function (button) {
-    button.addEventListener('click', function () {
-      sa_event('filter_used', {
-        filter: button.dataset.filter || 'unknown'
-      });
-    });
-  });
-
-  // Kliks op inhoudsberichten
-  document.querySelectorAll('.section[data-category] .item a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      var section = link.closest('.section[data-category]');
-      var titleEl = link.querySelector('.title');
-      sa_event('article_clicked', {
-        category: section ? section.dataset.category : 'unknown',
-        title: titleEl ? titleEl.textContent.trim() : 'unknown'
-      });
-    });
-  });
-
-  // Tipfunctie
   var tipSummary = document.getElementById('tipSummary');
   if (tipSummary) {
     tipSummary.addEventListener('click', function () {
@@ -684,7 +514,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Nieuwsbriefinschrijving gestart
   var signupForm = document.querySelector(
     'form[action*="buttondown.com/api/emails/embed-subscribe"]'
   );
@@ -777,34 +606,215 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script><script>
-document.addEventListener('DOMContentLoaded', function () {
-  var sourceCount = document.getElementById('sourceCount');
-  var storyCount = document.getElementById('storyCount');
+(function () {
+  const MONTHS = [
+    'januari','februari','maart','april','mei','juni',
+    'juli','augustus','september','oktober','november','december'
+  ];
+  const DAYS = [
+    'zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'
+  ];
 
-  var sources = Array.from(document.querySelectorAll('.source-name'))
-    .map(function (el) {
-      return el.textContent.replace(/^\s*·\s*/, '').trim();
-    })
-    .filter(Boolean);
-
-  var uniqueSources = Array.from(new Set(sources));
-  var sourceTotal = uniqueSources.length;
-  var storyTotal = document.querySelectorAll('.section[data-category] .item').length;
-
-  if (sourceCount) {
-    sourceCount.textContent =
-      sourceTotal === 1
-        ? '1 lokale bron'
-        : sourceTotal + ' lokale bronnen';
+  function formatDutchDate(isoDate) {
+    const parts = isoDate.split('-').map(Number);
+    const d = new Date(parts[0], parts[1] - 1, parts[2]);
+    return DAYS[d.getDay()].charAt(0).toUpperCase() + DAYS[d.getDay()].slice(1)
+      + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
   }
 
-  if (storyCount) {
-    storyCount.textContent =
-      storyTotal === 1
-        ? '1 bericht'
-        : storyTotal + ' berichten';
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
-});
+
+  function sectionHtml(section) {
+    const items = section.items.map(function (item) {
+      const labelClass =
+        item.label_style === 'green' ? ' green'
+        : item.label_style === 'orange' ? ' orange'
+        : '';
+
+      return `
+        <article class="item">
+          <a href="${escapeHtml(item.url)}" rel="noopener" target="_blank">
+            <div class="topline">
+              <div class="title">${escapeHtml(item.title)}</div>
+              <div class="arrow">›</div>
+            </div>
+            <div class="summary">${escapeHtml(item.summary)}</div>
+            ${item.label ? `<span class="label${labelClass}">${escapeHtml(item.label)}</span>` : ''}
+            ${item.source ? `<span class="source-name">· ${escapeHtml(item.source)}</span>` : ''}
+          </a>
+        </article>
+      `;
+    }).join('');
+
+    return `
+      <section class="section" data-category="${escapeHtml(section.id)}">
+        <div class="section-head"><h2>${escapeHtml(section.title)}</h2></div>
+        ${items}
+      </section>
+    `;
+  }
+
+  function setCounts(data) {
+    const items = data.sections.flatMap(s => s.items || []);
+    const sources = new Set(items.map(i => (i.source || '').trim()).filter(Boolean));
+
+    document.getElementById('sourceCount').textContent =
+      sources.size === 1 ? '1 lokale bron' : sources.size + ' lokale bronnen';
+
+    document.getElementById('storyCount').textContent =
+      items.length === 1 ? '1 bericht' : items.length + ' berichten';
+  }
+
+  function renderFilters(data) {
+    const filterbar = document.getElementById('filterbar');
+    const filters = document.getElementById('filters');
+    const filterable = data.sections.filter(s => (s.items || []).length >= 2);
+
+    filters.innerHTML = '';
+    if (!filterable.length) {
+      filterbar.hidden = true;
+      return;
+    }
+
+    const all = document.createElement('button');
+    all.type = 'button';
+    all.className = 'filter active';
+    all.dataset.filter = 'all';
+    all.setAttribute('aria-pressed', 'true');
+    all.textContent = 'Alles';
+    filters.appendChild(all);
+
+    filterable.forEach(function (section) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'filter';
+      button.dataset.filter = section.id;
+      button.setAttribute('aria-pressed', 'false');
+      button.textContent = section.title;
+      filters.appendChild(button);
+    });
+
+    filterbar.hidden = false;
+  }
+
+  function positionSignup(selected) {
+    const signup = document.querySelector('.signup');
+    if (!signup) return;
+
+    if (selected === 'all') {
+      const doen = document.querySelector('.section[data-category="doen"]');
+      if (doen) {
+        doen.insertAdjacentElement('afterend', signup);
+      } else {
+        document.getElementById('editionContent').appendChild(signup);
+      }
+      return;
+    }
+
+    const active = document.querySelector(
+      '.section[data-category="' + CSS.escape(selected) + '"]'
+    );
+    if (active) active.insertAdjacentElement('afterend', signup);
+  }
+
+  function bindFilters() {
+    const buttons = document.querySelectorAll('.filter[data-filter]');
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const selected = button.dataset.filter;
+
+        buttons.forEach(function (btn) {
+          const active = btn === button;
+          btn.classList.toggle('active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+
+        document.querySelectorAll('.section[data-category]').forEach(function (section) {
+          section.hidden = selected !== 'all' && section.dataset.category !== selected;
+        });
+
+        positionSignup(selected);
+
+        if (typeof sa_event === 'function') {
+          sa_event('filter_used', { filter: selected || 'unknown' });
+        }
+      });
+    });
+  }
+
+  function bindArticleTracking() {
+    document.getElementById('editionContent').addEventListener('click', function (event) {
+      const link = event.target.closest('.section[data-category] .item a');
+      if (!link) return;
+
+      const section = link.closest('.section[data-category]');
+      const titleEl = link.querySelector('.title');
+
+      if (typeof sa_event === 'function') {
+        sa_event('article_clicked', {
+          category: section ? section.dataset.category : 'unknown',
+          title: titleEl ? titleEl.textContent.trim() : 'unknown'
+        });
+      }
+    });
+  }
+
+  async function loadEdition() {
+    const content = document.getElementById('editionContent');
+
+    try {
+      const response = await fetch('./editie.json?v=' + Date.now(), { cache: 'no-store' });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+
+      const data = await response.json();
+      if (!data.edition || !data.edition.date || !Array.isArray(data.sections)) {
+        throw new Error('editie.json heeft niet de verwachte structuur');
+      }
+
+      document.getElementById('editionDate').textContent = formatDutchDate(data.edition.date);
+      document.getElementById('editionBrand').textContent =
+        data.edition.brand || 'Buurt deze week · Zuidoost-Enschede';
+      document.getElementById('editionTitle').textContent =
+        data.edition.title || 'Dit speelt er deze week in jouw buurt';
+      document.getElementById('editionIntro').textContent = data.edition.intro || '';
+      document.getElementById('freeLabel').textContent =
+        data.edition.free === false ? '' : 'Gratis';
+
+      content.innerHTML = data.sections.map(sectionHtml).join('');
+      setCounts(data);
+      renderFilters(data);
+      bindFilters();
+      bindArticleTracking();
+      positionSignup('all');
+
+      document.title = 'Buurt deze week · ' + formatDutchDate(data.edition.date);
+
+      const description = document.querySelector('meta[name="description"]');
+      if (description && data.edition.intro) description.setAttribute('content', data.edition.intro);
+
+      if (typeof sa_event === 'function') {
+        sa_event('edition_viewed', { edition: data.edition.date });
+      }
+    } catch (error) {
+      console.error(error);
+      content.innerHTML = `
+        <div class="edition-error">
+          De editie kon niet worden geladen. Probeer de pagina over een paar minuten opnieuw.
+        </div>
+      `;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadEdition);
+})();
 </script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
