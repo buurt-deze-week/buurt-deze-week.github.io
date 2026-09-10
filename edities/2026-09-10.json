@@ -1,0 +1,101 @@
+{
+  "edition": {
+    "date": "2026-09-10",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
+    "free": true
+  },
+  "sections": [
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "Zondag verkeershinder op Hogelandsingel en Varviksingel door Singelloop",
+          "summary": "De Singelloop loopt zondag 13 september over de singels, waaronder de Hogelandsingel en Varviksingel. Tussen 10.00 en 12.00 uur is de binnenring tijdelijk beperkt toegankelijk; oversteken richting centrum kan slechts beperkt en op aanwijzing van verkeersregelaars.",
+          "label": "Zondag 13 september",
+          "label_style": "orange",
+          "source": "Singelloop Enschede",
+          "url": "https://www.singelloop-enschede.nl/nieuws-item/toegankelijkheid-singels-en-centrum/"
+        },
+        {
+          "title": "Vanaf maandag tijdelijke afzettingen op de Brinkstraat",
+          "summary": "Tussen de Zuid Esmarkerrondweg en Varviksingel zijn van maandag 14 tot en met donderdag 17 september buiten de spits rijdende afzettingen voor asfaltboringen. Ook op 23 en 24 september wordt daar gewerkt.",
+          "label": "Vanaf 14 september",
+          "label_style": "orange",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-4-september-2026-week-37"
+        }
+      ]
+    },
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Open Monumentendag in het Wooldrikspark",
+          "summary": "De theetuin en openbare ruimtes van het monumentale koetshuis zijn dit weekend te bezoeken. Zaterdag van 12.00 tot 17.30 uur en zondag van 11.00 tot 17.30 uur.",
+          "label": "12 & 13 september",
+          "label_style": "green",
+          "source": "Open Monumentendag",
+          "url": "https://www.openmonumentendag.nl/monument/theehuis-in-wooldrikspark/"
+        },
+        {
+          "title": "Laatste weekend van het Open Toernooi bij T.V. Het Wooldrik",
+          "summary": "Het Gruba Autobanden Open Toernooi aan de Tegelerweg loopt nog tot en met zondag 13 september. Een makkelijke buurtoptie om even tennis te kijken.",
+          "label": "T/m zondag",
+          "label_style": "green",
+          "source": "T.V. Het Wooldrik",
+          "url": "https://www.tvhetwooldrik.nl/events"
+        },
+        {
+          "title": "Deze week bij ’t Varvik: huiskamer, meideninloop, gameavond en creatief",
+          "summary": "Speeltuin ’t Varvik heeft meerdere vaste activiteiten: doordeweeks de Huiskamer van de buurt, dinsdagavond gameavond, woensdagmiddag creatief en donderdag onder meer wijkspreekuur en meideninloop.",
+          "label": "Buurtactiviteit",
+          "label_style": "green",
+          "source": "Speeltuin ’t Varvik",
+          "url": "https://www.speeltuinvarvik.nl/activiteiten/"
+        },
+        {
+          "title": "Spontaan met kinderen: Kinderboerderij Erve ’t Wooldrik",
+          "summary": "Aan de Lorentzlaan ligt Kinderboerderij Erve ’t Wooldrik, met dieren, speeltoestellen en het Wooldrikspark eromheen. Een laagdrempelige optie voor een kort uitje dichtbij huis.",
+          "label": "Dichtbij",
+          "label_style": "green",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/kinderboerderijen"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Vanaf zaterdag: een week lang vaker de fiets pakken",
+          "summary": "Van 12 tot en met 18 september is de Enschedese Fietsweek. Bewoners kunnen zich aanmelden, korte ritten per fiets bijhouden en meedoen aan tips en acties van Enschede Fietsstad.",
+          "label": "12–18 september",
+          "label_style": "blue",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/enschedese-fietsweek-elke-korte-rit-op-de-fiets"
+        },
+        {
+          "title": "Bewoners van Hogeland denken mee over de toekomst van hun buurt",
+          "summary": "De Woonplaats verzamelt ervaringen en ideeën van bewoners en lokale organisaties voor de buurtaanpak in Hogeland. Interessant voor wie wil meepraten over wonen en leefbaarheid.",
+          "label": "Hogeland",
+          "label_style": "blue",
+          "source": "De Woonplaats",
+          "url": "https://www.dewoonplaats.nl/projecten/hogeland/"
+        },
+        {
+          "title": "Een idee voor Zuid-Oost? Er is €27.200 wijkbudget beschikbaar",
+          "summary": "Voor Zuid-Oost Enschede is in 2026 €27.200 wijkbudget beschikbaar. Bewoners kunnen geld aanvragen voor initiatieven rond bijvoorbeeld ontmoeting, leefbaarheid, groen en activiteiten.",
+          "label": "Bewonersinitiatief",
+          "label_style": "blue",
+          "source": "Jij Maakt Enschede",
+          "url": "https://jijmaaktenschede.nl/wijkbudget/alle-wijken/zuid-oost-enschede"
+        }
+      ]
+    }
+  ]
+}
