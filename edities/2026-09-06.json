@@ -1,0 +1,117 @@
+{
+  "edition": {
+    "date": "2026-09-06",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
+    "free": true
+  },
+  "sections": [
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "Brinkstraat krijgt vanaf 14 september tijdelijke afzettingen",
+          "summary": "Tussen de Zuid Esmarkerrondweg en Varviksingel zijn buiten de spits asfaltboringen. Ook werkzaamheden aan Schultenhofstraat, Spaansland, Meester Cornelisstraat, Tegalstraat en Het Eeftink lopen door.",
+          "label": "Verkeer & wijk",
+          "label_style": "orange",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-4-september-2026-week-37"
+        },
+        {
+          "title": "Nieuwe moskee: aanvraag loopt, bouw nog voorzien in 2026",
+          "summary": "Voor het Islamitisch cultureel centrum met moskee bij Wethouder Beversstraat/Kuipersdijk is eind 2025 een omgevingsaanvraag ingediend. De projectsite meldt dat de aanvraag en Bibob-procedure lopen en dat de bouw volgens de afspraken in 2026 moet starten.",
+          "label": "Dossier",
+          "label_style": "blue",
+          "source": "Nieuwe Moskee Enschede",
+          "url": "https://www.enschedecamii.nl/voortgang/"
+        }
+      ]
+    },
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Spontaan op pad: gratis naar Kinderboerderij ’t Wooldrik",
+          "summary": "Elke dag open aan de Lorentzlaan. Naast de dieren is er een speelweide en speelplek, dus handig voor een klein uitstapje zonder veel planning.",
+          "label": "Elke dag",
+          "label_style": "green",
+          "source": "Parken in Enschede",
+          "url": "https://parkeninenschede.nl/parken/kinderboerderijen/"
+        },
+        {
+          "title": "Open Toernooi Het Wooldrik loopt nog tot zondag",
+          "summary": "Het Gruba Autobanden Open aan de Tegelerweg is bezig en loopt tot en met zondag 13 september.",
+          "label": "Sport",
+          "label_style": "green",
+          "source": "T.V. Het Wooldrik",
+          "url": "https://www.tvhetwooldrik.nl/events"
+        },
+        {
+          "title": "Zaterdag tweede Kick Off-dag bij De Tubanters",
+          "summary": "De Tubanters trapt op zaterdag 12 september opnieuw gezamenlijk het seizoen af op Diekman-Oost.",
+          "label": "Zaterdag 12 september",
+          "label_style": "green",
+          "source": "De Tubanters",
+          "url": "https://tubanters.nl/"
+        },
+        {
+          "title": "Theetuin Wooldrikpark open tijdens Open Monumentendag",
+          "summary": "Zaterdag 12 en zondag 13 september zijn de openbare delen van het monumentale koetshuis, de tuin en de theehuiskamer te bekijken.",
+          "label": "12 & 13 september",
+          "label_style": "green",
+          "source": "Open Monumentendag",
+          "url": "https://www.openmonumentendag.nl/monument/theehuis-in-wooldrikspark/"
+        },
+        {
+          "title": "Deze week bij ’t Varvik: ontmoeten, creatief en jongereninloop",
+          "summary": "Op doordeweekse ochtenden is er de Huiskamer van de buurt. Dinsdag is er jongereninloop en woensdagmiddag creatief voor basisschoolkinderen.",
+          "label": "Buurtactiviteit",
+          "label_style": "green",
+          "source": "Speeltuin ’t Varvik",
+          "url": "https://www.speeltuin-varvik.nl/"
+        },
+        {
+          "title": "Gratis proefles Nederlands bij ROC van Twente",
+          "summary": "Dinsdag 8 september van 19.00 tot 20.00 uur aan de Wethouder Beversstraat 165. Een laagdrempelige kennismaking tijdens de Week van lezen en schrijven.",
+          "label": "Dinsdag 8 september",
+          "label_style": "green",
+          "source": "Huis voor Taal en Meedoen",
+          "url": "https://www.huisvoortaalenmeedoen.nl/week-van-lezen-en-schrijven-2026/"
+        },
+        {
+          "title": "Huiskamer voor jongeren bij Stedelijk Diekman",
+          "summary": "Maandag en donderdag van 14.30 tot 16.30 uur kunnen jongeren binnenlopen bij Het Stedelijk Diekman aan de J.J. van Deinselaan.",
+          "label": "Jongeren",
+          "label_style": "green",
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/activiteiten"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Bewoners van Hogeland denken mee over de toekomst van hun buurt",
+          "summary": "De Woonplaats verzamelt ervaringen en ideeën van bewoners en lokale organisaties. Wij blijven volgen welke concrete plannen uit de buurtaanpak voortkomen.",
+          "label": "Hogeland",
+          "label_style": "blue",
+          "source": "De Woonplaats",
+          "url": "https://www.dewoonplaats.nl/projecten/hogeland/"
+        },
+        {
+          "title": "Een idee voor Zuid-Oost? Er is €27.200 wijkbudget beschikbaar",
+          "summary": "Bewoners kunnen budget gebruiken voor initiatieven rond ontmoeting, leefbaarheid, groen en activiteiten in de wijk.",
+          "label": "Bewonersinitiatief",
+          "label_style": "blue",
+          "source": "Jij Maakt Enschede",
+          "url": "https://jijmaaktenschede.nl/wijkbudget/alle-wijken"
+        }
+      ]
+    }
+  ]
+}
