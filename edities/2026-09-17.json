@@ -1,0 +1,93 @@
+{
+  "edition": {
+    "date": "2026-09-17",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
+    "free": true,
+    "email_subject": "Dit weekend in Zuidoost: zwemmen, wegwerk en 5 andere dingen",
+    "email_preheader": "Ook: jongerenhuiskamer, Wijkwijzer, vrijwilligers gezocht en €27.200 wijkbudget."
+  },
+  "sections": [
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "Wegwerk in Varvik-Diekman: drie plekken om rekening mee te houden",
+          "summary": "Aan Het Eeftink wordt nog tot 9 oktober gewerkt, de herinrichting van de Schultenhofstraat loopt tot 2 oktober en op de Brinkstraat zijn op 23 en 24 september buiten de spits opnieuw asfaltboringen.",
+          "label": "Verkeer",
+          "label_style": "orange",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-11-september-2026-week-38"
+        },
+        {
+          "title": "Rinske Hofste is wijkregisseur voor Hogeland, Wooldrik en Varvik-Diekman",
+          "summary": "Door de nieuwe wijkverdeling in Enschede Oost is Rinske Hofste het gemeentelijke aanspreekpunt voor onder meer Hogeland, Wooldrik en Varvik-Diekman. Bij de wijkregisseur kun je terecht met vragen, ideeën en plannen voor de buurt.",
+          "label": "Gemeente",
+          "label_style": "blue",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/stadsdeel-oost"
+        }
+      ]
+    },
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Vrijdagmiddag en zondag recreatief zwemmen bij Het Diekman",
+          "summary": "Zwembad Het Diekman heeft dit weekend weer recreatieve zwemmomenten. Handig voor een spontaan uitje dichtbij; check voor vertrek het actuele rooster op de officiële site.",
+          "label": "Dit weekend",
+          "label_style": "green",
+          "source": "Zwembad Het Diekman",
+          "url": "https://www.zwembadhetdiekman.nl/openingstijden-en-tarieven"
+        },
+        {
+          "title": "Huiskamer voor jongeren bij Het Stedelijk Diekman",
+          "summary": "Jongeren kunnen op maandag en donderdag van 14.30 tot 16.30 uur binnenlopen bij de Huiskamer van Het Stedelijk Diekman. Een laagdrempelige plek om na school even te zitten, praten of anderen te ontmoeten.",
+          "label": "Maandag & donderdag",
+          "label_style": "green",
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/activiteiten"
+        }
+      ]
+    },
+    {
+      "id": "regelen",
+      "title": "Regelen",
+      "items": [
+        {
+          "title": "Met een vraag over geld, wonen of regelzaken? Wijkwijzer zit dichtbij",
+          "summary": "De Wijkwijzer is op maandag van 9.00 tot 12.00 uur te vinden bij De Vrije Ruimte aan de Olympialaan 20 en op woensdag van 14.00 tot 17.00 uur in de Ontmoetingskerk. Je kunt er zonder afspraak terecht met praktische vragen.",
+          "label": "Dichtbij",
+          "label_style": "blue",
+          "source": "Wijkwijzer Enschede",
+          "url": "https://wijkwijzerenschede.nl/contact-en-openingstijden"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Wijkwijzer zoekt nieuwe vrijwilligers",
+          "summary": "Wie graag mensen helpt met vragen over bijvoorbeeld brieven, geldzaken, wonen of activiteiten kan vrijwilliger worden bij de Wijkwijzer. Je draait minimaal één dagdeel mee en krijgt een inwerkperiode en basistraining.",
+          "label": "Vrijwilligerswerk",
+          "label_style": "blue",
+          "source": "Wijkwijzer Enschede",
+          "url": "https://wijkwijzerenschede.nl/word-vrijwilliger-bij-de-wijkwijzer"
+        },
+        {
+          "title": "Een idee voor Zuid-Oost? Er is €27.200 wijkbudget beschikbaar",
+          "summary": "Bewoners van Zuid-Oost Enschede kunnen in 2026 wijkbudget aanvragen voor initiatieven die de buurt prettiger, groener of socialer maken. Denk aan ontmoeting, leefbaarheid of activiteiten.",
+          "label": "Bewonersinitiatief",
+          "label_style": "blue",
+          "source": "Jij Maakt Enschede",
+          "url": "https://jijmaaktenschede.nl/wijkbudget/alle-wijken"
+        }
+      ]
+    }
+  ]
+}
