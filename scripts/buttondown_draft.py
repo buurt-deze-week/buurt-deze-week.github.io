@@ -281,11 +281,14 @@ def headers(api_key):
 
 
 def find_existing(api_key, payload):
+    # The subject can change while editing an edition, so use the stable
+    # edition slug to find the existing Buttondown draft.
     response = requests.get(
         API_URL,
         headers=headers(api_key),
         params={
-            "subject": payload["subject"],
+            "status": "draft",
+            "ordering": "-modification_date",
             "page_size": 100,
         },
         timeout=30,
