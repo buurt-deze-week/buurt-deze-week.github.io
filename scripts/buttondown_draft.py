@@ -210,9 +210,12 @@ def build_body(data, parsed_date):
        style="color:#155eef;">buurtdezeweek@buttondown.email</a>.
   </div>
   <a href="{esc(online_url)}"
-     style="display:inline-block;background:#155eef;color:#fff;text-decoration:none;
+     style="display:inline-block;background:#155eef;color:#ffffff !important;
+            -webkit-text-fill-color:#ffffff;text-decoration:none;
             font-size:14px;font-weight:800;padding:11px 16px;border-radius:11px;">
-    Bekijk deze editie online
+    <span style="color:#ffffff !important;-webkit-text-fill-color:#ffffff;">
+      Bekijk deze editie online
+    </span>
   </a>
 </td>
 </tr>
@@ -235,12 +238,12 @@ def make_payload(data, parsed_date):
     date_label = f"{parsed_date.day} {MONTHS[parsed_date.month - 1]} {parsed_date.year}"
     slug = f"buurt-deze-week-{parsed_date:%Y-%m-%d}"
     return {
-        "subject": f"Buurt deze week · {date_label}",
+        "subject": data["edition"].get("email_subject") or f"Buurt deze week · {date_label}",
         "slug": slug,
         "body": build_body(data, parsed_date),
         "status": "draft",
         "canonical_url": SITE_URL,
-        "description": data["edition"].get("intro", ""),
+        "description": data["edition"].get("email_preheader") or data["edition"].get("intro", ""),
         "metadata": {
             "generator": "buurtdezeweek-github",
             "edition_date": parsed_date.isoformat(),
