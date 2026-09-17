@@ -200,6 +200,27 @@ def build_body(data, parsed_date):
 
 <tr>
 <td style="font-family:Arial,Helvetica,sans-serif;padding-top:28px;">
+  <div style="background:#f3f6f4;border-radius:14px;padding:18px 18px 17px 18px;">
+    <div style="font-size:17px;font-weight:800;color:#132230;margin-bottom:6px;">
+      Doorgestuurd gekregen?
+    </div>
+    <div style="font-size:14px;line-height:1.55;color:#59635d;margin-bottom:14px;">
+      Krijg Buurt deze week iedere donderdag gratis in je inbox.
+    </div>
+    <a href="https://www.buurtdezeweek.nl/"
+       style="display:inline-block;background:#155eef;color:#ffffff !important;
+              -webkit-text-fill-color:#ffffff;text-decoration:none;
+              font-size:14px;font-weight:800;padding:10px 15px;border-radius:10px;">
+      <span style="color:#ffffff !important;-webkit-text-fill-color:#ffffff;">
+        Schrijf je gratis in
+      </span>
+    </a>
+  </div>
+</td>
+</tr>
+
+<tr>
+<td style="font-family:Arial,Helvetica,sans-serif;padding-top:28px;">
   <div style="font-size:19px;font-weight:800;color:#132230;margin-bottom:7px;">
     Hebben we iets gemist?
   </div>
