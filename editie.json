@@ -5,8 +5,8 @@
     "title": "Dit speelt er deze week in jouw buurt",
     "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
     "free": true,
-    "email_subject": "Moskeevergunning, eiken in het Wooldrikspark + 8 andere buurtzaken",
-    "email_preheader": "Ook: wegwerk, gameavond, voetbal op Diekman-Oost, Wijkwijzer en €27.200 wijkbudget."
+    "email_subject": "Moskeevergunning, eiken in het Wooldrikspark + 7 andere buurtzaken",
+    "email_preheader": "Ook: wegwerk, gameavond, jongerenhuiskamer, Wijkwijzer en €27.200 wijkbudget."
   },
   "sections": [
     {
@@ -50,14 +50,6 @@
           "label_style": "green",
           "source": "Speeltuin ’t Varvik",
           "url": "https://www.speeltuinvarvik.nl/activiteiten/"
-        },
-        {
-          "title": "Zaterdag voetbal kijken op Sportpark Diekman-Oost",
-          "summary": "De Tubanters 1897 2 speelt zaterdag om 16.45 uur thuis tegen S.V. Losser 3 op Sportpark Diekman-Oost. Eerder op de dag worden op het sportpark ook meerdere jeugdwedstrijden gespeeld.",
-          "label": "Zaterdag 19 september",
-          "label_style": "green",
-          "source": "De Tubanters / wedstrijdprogramma",
-          "url": "https://www.ad69.nl/113/35583/uitslagen/wedstrijd-details/?tab=1"
         },
         {
           "title": "Huiskamer voor jongeren bij Het Stedelijk Diekman",
