@@ -164,7 +164,7 @@ def build_body(data, parsed_date):
 <tr>
 <td align="center" style="padding:30px 16px 44px 16px;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
-       style="width:100%;max-width:680px;border-collapse:collapse;">
+       style="width:100%;max-width:860px;border-collapse:collapse;">
 
 <tr>
 <td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:26px;">
