@@ -1,0 +1,101 @@
+{
+  "edition": {
+    "date": "2026-09-24",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
+    "free": true,
+    "email_subject": "Bingo vanavond, nieuwe woningen + 6 andere buurtzaken",
+    "email_preheader": "Ook: wegwerk, gratis filmavond, bodemdieren tellen, Wijkwijzer en een vrijwilligersplek in Wooldrik."
+  },
+  "sections": [
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "61 huishoudens krijgen de sleutel in vernieuwd Varvik-Diekman",
+          "summary": "De vernieuwing van Varvik-Diekman gaat een nieuwe fase in. Domijn meldt dat vanaf september de bewoners van 61 nieuwe woningen hun sleutel krijgen. Ook worden 16 studio’s voor jongeren opgeleverd en start de verduurzaming van 80 boven- en benedenwoningen.",
+          "label": "Wonen",
+          "label_style": "blue",
+          "source": "Domijn",
+          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/"
+        },
+        {
+          "title": "Nog wegwerk op meerdere plekken in Varvik-Diekman",
+          "summary": "De asfaltboringen op de Brinkstraat lopen vandaag af. Aan de Schultenhofstraat duurt de herinrichting nog tot 2 oktober en aan de Gasfabriekstraat wordt tot 9 oktober gewerkt aan asfalt en het woonrijp maken van de straat.",
+          "label": "Verkeer",
+          "label_style": "orange",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-18-september-2026-week-39"
+        }
+      ]
+    },
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Vanavond bingo bij Speeltuin ’t Varvik",
+          "summary": "De laatste donderdag van de maand betekent bingo aan de Hendrik Smeltweg 50. De zaal gaat om 18.30 uur open en de bingo begint om 19.30 uur.",
+          "label": "Vanavond",
+          "label_style": "green",
+          "source": "Speeltuin ’t Varvik",
+          "url": "https://www.speeltuin-varvik.nl/"
+        },
+        {
+          "title": "Dinsdag gratis filmavond over water in de Ontmoetingskerk",
+          "summary": "Op dinsdag 29 september wordt van 19.30 tot 22.00 uur de film ‘Water te koop’ vertoond in de Ontmoetingskerk aan de Varviksingel 139. De film gaat over de commercialisering van water en de conflicten die daaruit kunnen ontstaan. De entree is gratis; een vrijwillige bijdrage mag.",
+          "label": "Dinsdag 29 september",
+          "label_style": "green",
+          "source": "RK Twente Centraal",
+          "url": "https://rktwentecentraal.nl/levend-water-scheppingsperiode-2026/"
+        }
+      ]
+    },
+    {
+      "id": "regelen",
+      "title": "Regelen",
+      "items": [
+        {
+          "title": "Nieuwe huurwoningen in Varvik-Diekman komen de komende weken beschikbaar",
+          "summary": "Niet alle voormalige bewoners keren terug naar de nieuwbouw. Daardoor komen overgebleven woningen uit fase 2 de komende weken voor verhuur op WoningHuren.nl. De eerste woningen zijn inmiddels verhuurd.",
+          "label": "Woning zoeken",
+          "label_style": "blue",
+          "source": "Domijn",
+          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/"
+        },
+        {
+          "title": "Hulp nodig met geld, wonen of overheidszaken? Wijkwijzer zit dichtbij",
+          "summary": "Maandag van 9.00 tot 12.00 uur kun je terecht bij De Vrije Ruimte aan de Olympialaan 20. Woensdag is de Wijkwijzer van 14.00 tot 17.00 uur open in de Ontmoetingskerk aan de Doctor Wagenaarstraat 6; dan is ook Werk en Inkomen aanwezig.",
+          "label": "Maandag & woensdag",
+          "label_style": "blue",
+          "source": "Wijkwijzer Enschede",
+          "url": "https://wijkwijzerenschede.nl/contact-en-openingstijden"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Vanaf vrijdag: tel bodemdieren in je eigen buurt",
+          "summary": "Van 25 september tot en met 12 oktober zijn de Bodemdierendagen. Ook Enschede doet mee. Zoek in je tuin, op je balkon of in de openbare ruimte naar bijvoorbeeld regenwormen en pissebedden en geef je waarnemingen door.",
+          "label": "Vanaf vrijdag",
+          "label_style": "green",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/help-enschede-bodemdierenstad-van-het-jaar-te-worden"
+        },
+        {
+          "title": "OBS het Wooldrik zoekt praktische ondersteuning op school",
+          "summary": "De basisschool aan de Celsiusstraat zoekt een vrijwilliger die onder meer gasten ontvangt, materialen en keuken bijhoudt, boodschappen doet en andere praktische klussen oppakt. De uren zijn flexibel en er is een vrijwilligersvergoeding.",
+          "label": "Vrijwilligerswerk",
+          "label_style": "blue",
+          "source": "M-Pact / OBS het Wooldrik",
+          "url": "https://www.m-pact.nl/o/OBShetWooldrik/activiteiten/Vrijwilliger-Praktische-Ondersteuning-op-School/111894"
+        }
+      ]
+    }
+  ]
+}
