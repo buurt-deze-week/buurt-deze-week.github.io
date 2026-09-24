@@ -5,8 +5,8 @@
     "title": "Dit speelt er deze week in jouw buurt",
     "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
     "free": true,
-    "email_subject": "Bingo vanavond, nieuwe woningen + 6 andere buurtzaken",
-    "email_preheader": "Ook: wegwerk, gratis filmavond, bodemdieren tellen, Wijkwijzer en een vrijwilligersplek in Wooldrik."
+    "email_subject": "Nieuwe woningen, gratis filmavond + 6 andere buurtzaken",
+    "email_preheader": "Ook: wegwerk, jongerenhuiskamer, bodemdieren tellen, Wijkwijzer en een vrijwilligersplek in Wooldrik."
   },
   "sections": [
     {
@@ -36,12 +36,12 @@
       "title": "Doen",
       "items": [
         {
-          "title": "Vanavond bingo bij Speeltuin ’t Varvik",
-          "summary": "De laatste donderdag van de maand betekent bingo aan de Hendrik Smeltweg 50. De zaal gaat om 18.30 uur open en de bingo begint om 19.30 uur.",
-          "label": "Vanavond",
+          "title": "Na school gratis chillen bij de Huiskamer van Stedelijk Diekman",
+          "summary": "Jongeren kunnen maandag en donderdag van 14.30 tot 16.30 uur binnenlopen bij de Huiskamer van Stedelijk Diekman. Je kunt er chillen, gamen, praten of nog even met schoolwerk bezig; er is ook een jongerenwerker aanwezig.",
+          "label": "Maandag & donderdag",
           "label_style": "green",
-          "source": "Speeltuin ’t Varvik",
-          "url": "https://www.speeltuin-varvik.nl/"
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/dienst/106/huiskamers"
         },
         {
           "title": "Dinsdag gratis filmavond over water in de Ontmoetingskerk",
