@@ -55,6 +55,31 @@ def dutch_date(d):
     return f"{DAYS[d.weekday()].capitalize()} {d.day} {MONTHS[d.month - 1]} {d.year}"
 
 
+def slugify(text):
+    text = str(text or "").lower().strip()
+    replacements = {
+        "à":"a", "á":"a", "ä":"a", "â":"a",
+        "è":"e", "é":"e", "ë":"e", "ê":"e",
+        "ì":"i", "í":"i", "ï":"i", "î":"i",
+        "ò":"o", "ó":"o", "ö":"o", "ô":"o",
+        "ù":"u", "ú":"u", "ü":"u", "û":"u",
+        "ç":"c", "ñ":"n", "’":"", "‘":"", "'":"",
+        "&":" en "
+    }
+    for source, target in replacements.items():
+        text = text.replace(source, target)
+    text = re.sub(r"[^a-z0-9]+", "-", text)
+    return re.sub(r"-+", "-", text).strip("-")
+
+
+def article_url(item, edition_date):
+    page_url = (item.get("page_url") or "").lstrip("/")
+    if not page_url:
+        slug = (item.get("slug") or slugify(item.get("title"))).strip()
+        page_url = f"berichten/{edition_date.isoformat()}-{slug}.html"
+    return SITE_URL.rstrip("/") + "/" + page_url
+
+
 def add_utm(url, campaign):
     p = urlsplit(url)
     q = dict(parse_qsl(p.query, keep_blank_values=True))
@@ -70,7 +95,7 @@ def esc(value):
     return html.escape(str(value or ""), quote=True)
 
 
-def email_item(item):
+def email_item(item, parsed_date):
     style = item.get("label_style", "blue")
     palette = {
         "blue": ("#0d3f9b", "#eaf1ff"),
@@ -97,7 +122,7 @@ def email_item(item):
     return f"""
       <tr>
         <td style="padding:0 0 20px 0;">
-          <a href="{esc(item["url"])}"
+          <a href="{esc(article_url(item, parsed_date))}"
              style="display:block;text-decoration:none;color:#132230 !important;-webkit-text-fill-color:#132230;">
             <div style="font-family:Arial,Helvetica,sans-serif;
                         font-size:17px;line-height:1.28;font-weight:800;
@@ -134,7 +159,7 @@ def build_body(data, parsed_date):
 
     sections_html = []
     for section in sections:
-        items_html = "".join(email_item(item) for item in section["items"])
+        items_html = "".join(email_item(item, parsed_date) for item in section["items"])
         sections_html.append(f"""
           <tr>
             <td style="padding:18px 0 12px 0;">
