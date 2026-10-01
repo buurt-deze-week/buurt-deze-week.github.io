@@ -133,28 +133,73 @@ def old_item_map():
     return result
 
 
-def get_pixabay_image(item, section_title, edition_date, slug, existing_item=None):
+def image_identity(image_page_url="", image_url=""):
+    """Maak een stabiele sleutel om dubbele afbeeldingen binnen één editie te voorkomen."""
+    page = str(image_page_url or "").strip()
+    if page:
+        return f"page:{page.rstrip('/')}"
+    url = str(image_url or "").strip()
+    if url:
+        return f"url:{url.split('?')[0]}"
+    return ""
+
+
+def remember_image(used_image_keys, image_page_url="", image_url=""):
+    key = image_identity(image_page_url, image_url)
+    if key:
+        used_image_keys.add(key)
+
+
+def get_pixabay_image(
+    item,
+    section_title,
+    edition_date,
+    slug,
+    existing_item=None,
+    used_image_keys=None,
+):
+    if used_image_keys is None:
+        used_image_keys = set()
+
     if existing_item:
         image_url = (existing_item.get("image_url") or "").strip()
         image_path = (existing_item.get("image_path") or "").strip()
-        if image_path and (ROOT / image_path).exists():
+        image_page_url = (existing_item.get("image_page_url") or "").strip()
+        existing_key = image_identity(image_page_url, image_url)
+
+        if (
+            image_path
+            and (ROOT / image_path).exists()
+            and (not existing_key or existing_key not in used_image_keys)
+        ):
+            remember_image(used_image_keys, image_page_url, image_url)
             return {
                 "image_url": image_url or f"/{image_path}",
                 "image_path": image_path,
                 "image_credit": existing_item.get("image_credit", ""),
-                "image_page_url": existing_item.get("image_page_url", ""),
+                "image_page_url": image_page_url,
                 "pixabay_query": existing_item.get("pixabay_query") or normalize_query(item, section_title),
             }
 
     manual_url = (item.get("image_url") or "").strip()
     if manual_url:
-        return {
-            "image_url": manual_url,
-            "image_path": item.get("image_path", ""),
-            "image_credit": item.get("image_credit", ""),
-            "image_page_url": item.get("image_page_url", ""),
-            "pixabay_query": item.get("pixabay_query") or normalize_query(item, section_title),
-        }
+        manual_page_url = (item.get("image_page_url") or "").strip()
+        manual_key = image_identity(manual_page_url, manual_url)
+
+        if not manual_key or manual_key not in used_image_keys:
+            remember_image(used_image_keys, manual_page_url, manual_url)
+            return {
+                "image_url": manual_url,
+                "image_path": item.get("image_path", ""),
+                "image_credit": item.get("image_credit", ""),
+                "image_page_url": manual_page_url,
+                "pixabay_query": item.get("pixabay_query") or normalize_query(item, section_title),
+            }
+
+        print(
+            f"Dubbele handmatige afbeelding overgeslagen voor "
+            f"'{item.get('title')}'"
+        )
 
     api_key = os.getenv("PIXABAY_API_KEY", "").strip()
     query = normalize_query(item, section_title)
@@ -184,18 +229,40 @@ def get_pixabay_image(item, section_title, edition_date, slug, existing_item=Non
         print(f"Geen Pixabay-resultaat voor '{query}'")
         return {"pixabay_query": query}
 
+    unique_hits = []
+    for candidate in hits:
+        candidate_url = candidate.get("webformatURL") or candidate.get("largeImageURL") or ""
+        candidate_key = image_identity(candidate.get("pageURL", ""), candidate_url)
+        if candidate_key and candidate_key in used_image_keys:
+            continue
+        unique_hits.append(candidate)
+
+    if not unique_hits:
+        print(
+            f"Alle Pixabay-resultaten voor '{query}' zijn al gebruikt in deze editie; "
+            f"geen dubbele afbeelding geplaatst."
+        )
+        return {"pixabay_query": query}
+
+    # Kies op populariteit/gebruik en gebruik resolutie alleen als laatste tie-breaker.
+    # De oude code zette breedte op 1, waardoor een grote maar inhoudelijk zwakke foto
+    # onbedoeld kon winnen.
     hit = max(
-        hits,
+        unique_hits,
         key=lambda value: (
-            int(value.get("webformatWidth") or 0),
             int(value.get("likes") or 0),
             int(value.get("downloads") or 0),
+            int(value.get("views") or 0),
+            int(value.get("webformatWidth") or 0),
         )
     )
 
     source_url = hit.get("webformatURL") or hit.get("largeImageURL")
     if not source_url:
         return {"pixabay_query": query}
+
+    selected_page_url = hit.get("pageURL", "")
+    remember_image(used_image_keys, selected_page_url, source_url)
 
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     filename = f"{edition_date}-{slug}.jpg"
@@ -209,7 +276,7 @@ def get_pixabay_image(item, section_title, edition_date, slug, existing_item=Non
             "image_url": source_url,
             "pixabay_query": query,
             "image_credit": hit.get("user", ""),
-            "image_page_url": hit.get("pageURL", ""),
+            "image_page_url": selected_page_url,
         }
 
     relative_path = destination.relative_to(ROOT).as_posix()
@@ -217,7 +284,7 @@ def get_pixabay_image(item, section_title, edition_date, slug, existing_item=Non
         "image_url": f"/{relative_path}",
         "image_path": relative_path,
         "image_credit": hit.get("user", ""),
-        "image_page_url": hit.get("pageURL", ""),
+        "image_page_url": selected_page_url,
         "pixabay_query": query,
     }
 
@@ -359,6 +426,8 @@ def main():
         path.unlink()
 
     total = 0
+    used_image_keys = set()
+
     for section in public["sections"]:
         for item in section.get("items", []):
             total += 1
@@ -377,7 +446,8 @@ def main():
                 section.get("title", ""),
                 date_string,
                 slug,
-                previous.get(key)
+                previous.get(key),
+                used_image_keys,
             )
             item.update({key: value for key, value in image_data.items() if value})
 
