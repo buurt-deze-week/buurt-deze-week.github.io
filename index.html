@@ -678,9 +678,12 @@ document.addEventListener('DOMContentLoaded', function () {
         : item.label_style === 'orange' ? ' orange'
         : '';
 
+      const href = item.page_url || item.url;
+      const externalAttrs = item.page_url ? '' : ' rel="noopener" target="_blank"';
+
       return `
         <article class="item">
-          <a href="${escapeHtml(item.url)}" rel="noopener" target="_blank">
+          <a href="${escapeHtml(href)}"${externalAttrs}>
             <div class="topline">
               <div class="title">${escapeHtml(item.title)}</div>
               <div class="arrow">›</div>
@@ -811,12 +814,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const content = document.getElementById('editionContent');
 
     try {
-      const response = await fetch('./editie.json?v=' + Date.now(), { cache: 'no-store' });
+      const response = await fetch('./editie-site.json?v=' + Date.now(), { cache: 'no-store' });
       if (!response.ok) throw new Error('HTTP ' + response.status);
 
       const data = await response.json();
       if (!data.edition || !data.edition.date || !Array.isArray(data.sections)) {
-        throw new Error('editie.json heeft niet de verwachte structuur');
+        throw new Error('editie-site.json heeft niet de verwachte structuur');
       }
 
       document.getElementById('editionDate').textContent = formatDutchDate(data.edition.date);
