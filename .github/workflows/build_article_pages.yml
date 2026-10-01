@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: buurt-publicatie
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +24,8 @@ jobs:
     steps:
       - name: Repository ophalen
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Python installeren
         uses: actions/setup-python@v5
@@ -44,4 +50,17 @@ jobs:
           fi
 
           git commit -m "Genereer artikelpagina's en Pixabay-afbeeldingen"
-          git push
+
+          for attempt in 1 2 3; do
+            echo "Pushpoging $attempt..."
+            git pull --rebase origin main
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            sleep 3
+          done
+
+          echo "Push is na 3 pogingen niet gelukt."
+          exit 1
