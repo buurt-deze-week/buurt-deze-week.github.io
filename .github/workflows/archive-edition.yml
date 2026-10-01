@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: archive-editie
+  group: buurt-publicatie
   cancel-in-progress: false
 
 jobs:
@@ -120,6 +120,18 @@ jobs:
           fi
 
           EDITION_DATE=$(python -c 'import json; print(json.load(open("editie.json"))["edition"]["date"])')
-
           git commit -m "Archiveer editie ${EDITION_DATE}"
-          git push
+
+          for attempt in 1 2 3; do
+            echo "Pushpoging $attempt..."
+            git pull --rebase origin main
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            sleep 3
+          done
+
+          echo "Push is na 3 pogingen niet gelukt."
+          exit 1
