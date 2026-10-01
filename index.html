@@ -577,12 +577,21 @@
       .nav a:not(.inbox) { display:none; }
       .hero { padding:30px 0 22px; }
       .story-link {
-        grid-template-columns:12px minmax(0,1fr) 116px;
-        gap:12px;
+        grid-template-columns:minmax(0,1fr);
+        gap:11px;
+        padding:17px 0;
       }
+      .story-bullet { display:none; }
       .story-thumb,
-      .story-thumb-placeholder { width:116px; }
+      .story-thumb-placeholder {
+        width:100%;
+        max-width:none;
+        aspect-ratio:16/9;
+        justify-self:stretch;
+        order:3;
+      }
       .story-title { font-size:1.22rem; }
+      .story-summary { max-width:100%; }
       .signup { grid-template-columns:1fr; gap:15px; }
       .signup-confirm { grid-column:1; margin-top:-7px; }
       .tipbox { grid-template-columns:1fr; gap:12px; }
@@ -597,17 +606,15 @@
       .hero-meta { font-size:.72rem; }
       .feed-head { align-items:flex-start; flex-direction:column; gap:8px; }
       .story-link {
-        grid-template-columns:minmax(0,1fr);
         gap:10px;
         padding:16px 0;
       }
-      .story-bullet { display:none; }
       .story-thumb,
       .story-thumb-placeholder {
         width:100%;
-        max-width:220px;
-        justify-self:start;
-        order:3;
+        max-width:none;
+        aspect-ratio:16/9;
+        justify-self:stretch;
       }
       .story-summary {
         max-width:100%;
