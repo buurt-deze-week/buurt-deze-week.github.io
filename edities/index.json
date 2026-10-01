@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-01",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "stories": 12,
+    "sources": 10,
+    "file": "edities/2026-10-01.json"
+  },
+  {
     "date": "2026-09-24",
     "title": "Dit speelt er deze week in jouw buurt",
     "stories": 8,
