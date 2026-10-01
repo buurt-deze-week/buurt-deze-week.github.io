@@ -1,12 +1,12 @@
 {
   "edition": {
-    "date": "2026-09-24",
+    "date": "2026-10-01",
     "brand": "Buurt deze week · Zuidoost-Enschede",
     "title": "Dit speelt er deze week in jouw buurt",
     "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
     "free": true,
-    "email_subject": "Nieuwe woningen, gratis filmavond + 6 andere buurtzaken",
-    "email_preheader": "Ook: wegwerk, jongerenhuiskamer, bodemdieren tellen, Wijkwijzer en een vrijwilligersplek in Wooldrik."
+    "email_subject": "Dierendag in Wooldrik, wegwerk vanaf maandag + 10 andere buurtzaken",
+    "email_preheader": "Ook: middag vrij bij Stedelijk Diekman, tekort aan zwemwater, kapaanvragen, Wijkwijzer en twee manieren om mee te doen."
   },
   "sections": [
     {
@@ -14,20 +14,54 @@
       "title": "Weten",
       "items": [
         {
-          "title": "61 huishoudens krijgen de sleutel in vernieuwd Varvik-Diekman",
-          "summary": "De vernieuwing van Varvik-Diekman gaat een nieuwe fase in. Domijn meldt dat vanaf september de bewoners van 61 nieuwe woningen hun sleutel krijgen. Ook worden 16 studio’s voor jongeren opgeleverd en start de verduurzaming van 80 boven- en benedenwoningen.",
-          "label": "Wonen",
-          "label_style": "blue",
-          "source": "Domijn",
-          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/"
-        },
-        {
-          "title": "Nog wegwerk op meerdere plekken in Varvik-Diekman",
-          "summary": "De asfaltboringen op de Brinkstraat lopen vandaag af. Aan de Schultenhofstraat duurt de herinrichting nog tot 2 oktober en aan de Gasfabriekstraat wordt tot 9 oktober gewerkt aan asfalt en het woonrijp maken van de straat.",
+          "title": "Vanaf maandag nieuwe werkzaamheden aan de Wethouder Elhorststraat",
+          "summary": "Van maandag 5 tot en met vrijdag 23 oktober worden tussen de Wethouder Beversstraat en Mariastraat drempels vervangen. De herinrichting van de Schultenhofstraat loopt nog tot vrijdag en renovatiewerk rond de Meester Cornelisstraat en Nieuw Guineastraat duurt tot 6 november.",
+          "page_summary": "Vanaf maandag 5 oktober begint nieuw wegwerk aan de Wethouder Elhorststraat, vanaf de kruising met de Wethouder Beversstraat tot en met de Mariastraat. Daar vervangt de gemeente verkeersdrempels tot en met 23 oktober. Tegelijk lopen in de buurt nog andere werkzaamheden: de Schultenhofstraat staat tot 2 oktober in het overzicht en rond de Meester Cornelisstraat en Nieuw Guineastraat wordt vanwege woningrenovatie nog tot 6 november gewerkt. Wie door Varvik-Diekman rijdt, doet er dus goed aan deze plekken de komende dagen in de gaten te houden.",
           "label": "Verkeer",
           "label_style": "orange",
           "source": "Gemeente Enschede",
-          "url": "https://www.enschede.nl/wegwerkzaamheden-18-september-2026-week-39"
+          "url": "https://www.enschede.nl/wegwerkzaamheden-25-september-2026-week-40",
+          "pixabay_query": "road works residential street Netherlands"
+        },
+        {
+          "title": "Nieuw zwembad Het Diekman blijkt minder zwemruimte te bieden dan gewenst",
+          "summary": "Enkele maanden na de opening blijkt de beschikbare zwemruimte krap voor verenigingen en recreanten. Sportaal denkt volgens 1Twente onder meer na over een tijdelijke overkapping van het buitenbad; begin volgend jaar volgt een evaluatie.",
+          "page_summary": "Het nieuwe zwembad op Het Diekman is open, maar de beschikbare zwemruimte blijkt in de praktijk krap voor verenigingen en recreanten. 1Twente meldt dat hierover in de gemeenteraad is gesproken en dat Sportaal naar mogelijkheden kijkt om de capaciteit beter te benutten, bijvoorbeeld met een opblaashal over het buitenbad. De gemeente wil de situatie begin volgend jaar evalueren. Voor buurtbewoners is dit vooral relevant omdat Het Diekman de centrale zwemvoorziening in de directe omgeving is.",
+          "label": "Diekman",
+          "label_style": "blue",
+          "source": "1Twente",
+          "url": "https://www.1twente.nl/artikel/6318606/enschede-heeft-een-tekort-aan-zwemwater-maar-de-wethouder-kan-water-niet-vermenigvuldigen",
+          "pixabay_query": "indoor swimming pool lanes"
+        },
+        {
+          "title": "Donderdagmiddag 8 oktober zijn leerlingen van Stedelijk Diekman vrij",
+          "summary": "Het Stedelijk heeft donderdagmiddag 8 oktober een gezamenlijke roostervrije middag. Dat geldt ook voor leerlingen van de locatie Diekman; voor medewerkers is het een werkmiddag.",
+          "page_summary": "Voor gezinnen met leerlingen op Het Stedelijk Diekman is donderdag 8 oktober een afwijkende schooldag. Die middag is voor alle locaties van Het Stedelijk roostervrij. Leerlingen zijn vrij, terwijl de medewerkers van school wel werken. De eerstvolgende herfstvakantie begint daarna op 10 oktober.",
+          "label": "Donderdag 8 oktober",
+          "label_style": "blue",
+          "source": "Het Stedelijk Diekman",
+          "url": "https://www.hetstedelijk.nl/locaties/diekman/roostervrije-dagen",
+          "pixabay_query": "secondary school classroom empty Netherlands"
+        },
+        {
+          "title": "Aanvraag voor kap van berk en treurwilg aan Zuid Esmarkerrondweg",
+          "summary": "Voor een berk en een treurwilg ter hoogte van Zuid Esmarkerrondweg 310 is een kapaanvraag ingediend. De gemeente ontving de aanvraag op 11 september en publiceerde de kennisgeving op 23 september; er is nog geen besluit genomen.",
+          "page_summary": "Aan de Zuid Esmarkerrondweg, ter hoogte van nummer 310 in Wooldrik, is een aanvraag ingediend om een berk en een treurwilg te kappen. De gemeente ontving die aanvraag op 11 september. De publicatie van 23 september is alleen de kennisgeving dat de aanvraag in behandeling is: de kap is daarmee nog niet goedgekeurd. De reguliere beslistermijn is in beginsel acht weken en kan worden verlengd.",
+          "label": "Wooldrik",
+          "label_style": "green",
+          "source": "OverUwBuurt / Gemeente Enschede",
+          "url": "https://www.overuwbuurt.nl/kennisgeving/kennisgeving-ontvangst-aanvraag-het-kappen-van-een-berk-en-een-treurwilg-zuid-esmarkerrondweg-t-h-v-nr-310/8943692",
+          "pixabay_query": "birch willow trees residential street"
+        },
+        {
+          "title": "Nieuwe boomzaken in Hogeland-Zuid: aanvraag aan Toernooistraat, vergunning aan Daalweg",
+          "summary": "Voor een lijsterbes bij Toernooistraat 29 is een kapaanvraag ingediend. Voor een conifeer aan Daalweg 87 is inmiddels wel een kapvergunning verleend; belanghebbenden kunnen tegen dat besluit bezwaar maken.",
+          "page_summary": "In Hogeland-Zuid zijn twee recente boomzaken gepubliceerd. Bij de Toernooistraat ter hoogte van nummer 29 ligt een aanvraag voor het kappen van één lijsterbes; daarover is nog geen besluit genomen. Voor een conifeer aan Daalweg 87 nam de gemeente op 10 september wél een besluit: de kapvergunning is verleend. Voor belanghebbenden loopt daarbij een bezwaartermijn van zes weken vanaf de dag na het besluit.",
+          "label": "Hogeland-Zuid",
+          "label_style": "green",
+          "source": "OverUwBuurt",
+          "url": "https://www.overuwbuurt.nl/enschede/wijk-01-hogeland---velve/hogeland-zuid",
+          "pixabay_query": "rowan conifer tree neighborhood"
         }
       ]
     },
@@ -36,20 +70,34 @@
       "title": "Doen",
       "items": [
         {
-          "title": "Na school gratis chillen bij de Huiskamer van Stedelijk Diekman",
-          "summary": "Jongeren kunnen maandag en donderdag van 14.30 tot 16.30 uur binnenlopen bij de Huiskamer van Stedelijk Diekman. Je kunt er chillen, gamen, praten of nog even met schoolwerk bezig; er is ook een jongerenwerker aanwezig.",
-          "label": "Maandag & donderdag",
+          "title": "Zondag is het Dierendag bij Kinderboerderij ’t Wooldrik",
+          "summary": "De kinderboerderij vermeldt dat kinderen op Dierendag hun eigen huisdier mogen laten keuren door de uitgenodigde dierenarts. ’t Wooldrik aan de Lorentzlaan is zondag open van 9.00 tot 16.00 uur; een apart tijdstip voor de dierenarts staat niet vermeld.",
+          "page_summary": "Zondag 4 oktober is het Dierendag. Kinderboerderij ’t Wooldrik vermeldt op de eigen website dat kinderen op Dierendag hun eigen huisdier mogen meenemen voor een keuring door de uitgenodigde dierenarts. De kinderboerderij aan de Lorentzlaan 22 is in deze periode dagelijks geopend van 9.00 tot 16.00 uur. De site noemt geen apart tijdstip voor de dierenarts, dus wie speciaal daarvoor komt kan vooraf even contact opnemen.",
+          "label": "Zondag 4 oktober",
           "label_style": "green",
-          "source": "Alifa",
-          "url": "https://www.alifa.nl/dienst/106/huiskamers"
+          "source": "Kinderboerderij ’t Wooldrik",
+          "url": "https://www.wooldrikpark.nl/het-park/kinderboerderij/",
+          "pixabay_query": "children pet veterinarian farm animals"
         },
         {
-          "title": "Dinsdag gratis filmavond over water in de Ontmoetingskerk",
-          "summary": "Op dinsdag 29 september wordt van 19.30 tot 22.00 uur de film ‘Water te koop’ vertoond in de Ontmoetingskerk aan de Varviksingel 139. De film gaat over de commercialisering van water en de conflicten die daaruit kunnen ontstaan. De entree is gratis; een vrijwillige bijdrage mag.",
-          "label": "Dinsdag 29 september",
+          "title": "Maandag na school gratis chillen bij Stedelijk Diekman",
+          "summary": "Jongeren kunnen maandag van 14.30 tot 16.30 uur terecht in de Huiskamer van Stedelijk Diekman. Je kunt er chillen, gamen, praten of schoolwerk doen; deelname is gratis en vrijblijvend.",
+          "page_summary": "Wie maandag na school niet meteen naar huis wil, kan bij Het Stedelijk Diekman binnenlopen bij de Huiskamer van Alifa. Tussen 14.30 en 16.30 uur kunnen jongeren er chillen, gamen, praten of nog even met schoolwerk bezig. Er is een jongerenwerker aanwezig en deelname is gratis en vrijblijvend. Normaal is de Huiskamer op maandag én donderdag open; omdat donderdag 8 oktober een roostervrije middag is, lichten we voor deze editie vooral maandag uit.",
+          "label": "Maandag 5 oktober",
           "label_style": "green",
-          "source": "RK Twente Centraal",
-          "url": "https://rktwentecentraal.nl/levend-water-scheppingsperiode-2026/"
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/dienst/106/huiskamers",
+          "pixabay_query": "teenagers youth center gaming homework"
+        },
+        {
+          "title": "Volgende donderdag gratis ontmoetingsgroep voor ouders met jonge kinderen bij ’t Varvik",
+          "summary": "Donderdag 8 oktober is er van 9.30 tot 11.30 uur bij Speeltuin ’t Varvik een gratis ontmoetingsgroep voor ouders met kinderen van 0 tot 4 jaar. Kinderopvang is inbegrepen en aanmelden hoeft niet.",
+          "page_summary": "Bij Speeltuin ’t Varvik aan de Hendrik Smeltweg 50 is volgende donderdag weer de wekelijkse ontmoetingsgroep voor ouders met kinderen van 0 tot 4 jaar. De groep loopt van 9.30 tot 11.30 uur, is gratis en vrijblijvend en kinderopvang is inbegrepen. Je hoeft geen afspraak te maken; binnenlopen is voldoende.",
+          "label": "Donderdag 8 oktober",
+          "label_style": "green",
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/dienst/40/ontmoetingsgroepen",
+          "pixabay_query": "parents toddlers community playgroup"
         }
       ]
     },
@@ -58,20 +106,24 @@
       "title": "Regelen",
       "items": [
         {
-          "title": "Nieuwe huurwoningen in Varvik-Diekman komen de komende weken beschikbaar",
-          "summary": "Niet alle voormalige bewoners keren terug naar de nieuwbouw. Daardoor komen overgebleven woningen uit fase 2 de komende weken voor verhuur op WoningHuren.nl. De eerste woningen zijn inmiddels verhuurd.",
-          "label": "Woning zoeken",
-          "label_style": "blue",
-          "source": "Domijn",
-          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/"
-        },
-        {
-          "title": "Hulp nodig met geld, wonen of overheidszaken? Wijkwijzer zit dichtbij",
-          "summary": "Maandag van 9.00 tot 12.00 uur kun je terecht bij De Vrije Ruimte aan de Olympialaan 20. Woensdag is de Wijkwijzer van 14.00 tot 17.00 uur open in de Ontmoetingskerk aan de Doctor Wagenaarstraat 6; dan is ook Werk en Inkomen aanwezig.",
+          "title": "Maandag en woensdag zonder afspraak naar de Wijkwijzer dichtbij",
+          "summary": "Maandag van 9.00 tot 12.00 uur zit de Wijkwijzer in De Vrije Ruimte aan de Olympialaan 20. Woensdag van 14.00 tot 17.00 uur kun je terecht in de Ontmoetingskerk; dan is ook Werk en Inkomen aanwezig.",
+          "page_summary": "Voor hulp bij bijvoorbeeld geldzaken, wonen, brieven of het regelen van zaken met de overheid kun je deze week dichtbij terecht bij de Wijkwijzer. Maandag is De Vrije Ruimte aan de Olympialaan 20 open van 9.00 tot 12.00 uur. Woensdag is de Wijkwijzer van 14.00 tot 17.00 uur in de Ontmoetingskerk aan de Doctor Wagenaarstraat 6. Op woensdag is daar ook Werk en Inkomen aanwezig.",
           "label": "Maandag & woensdag",
           "label_style": "blue",
           "source": "Wijkwijzer Enschede",
-          "url": "https://wijkwijzerenschede.nl/contact-en-openingstijden"
+          "url": "https://wijkwijzerenschede.nl/contact-en-openingstijden",
+          "pixabay_query": "community advice help desk paperwork"
+        },
+        {
+          "title": "Probleem met straat, groen of onderhoud? Dit is de wijkbeheerder voor de drie buurten",
+          "summary": "Barry ten Have is wijkbeheerder voor Diekman, Hogeland-Zuid, Varvik en Wooldrik. Stadsdeelbeheer Oost is het gemeentelijke aanspreekpunt voor beheer en onderhoud van de openbare ruimte.",
+          "page_summary": "Losse stoeptegel, openbaar groen, onderhoud of een ander probleem in de openbare ruimte? Voor Diekman, Hogeland-Zuid, Varvik en Wooldrik is Barry ten Have de wijkbeheerder van Stadsdeelbeheer Oost. De gemeente noemt Stadsdeelbeheer Oost als aanspreekpunt voor beheer en onderhoud in de wijk. Contact kan via 053-481 81 81 of stadsdeelbeheerNoordOost@enschede.nl.",
+          "label": "Handig om te weten",
+          "label_style": "blue",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/stadsdeel-oost",
+          "pixabay_query": "municipal worker street maintenance neighborhood"
         }
       ]
     },
@@ -80,20 +132,24 @@
       "title": "Meedoen",
       "items": [
         {
-          "title": "Vanaf vrijdag: tel bodemdieren in je eigen buurt",
-          "summary": "Van 25 september tot en met 12 oktober zijn de Bodemdierendagen. Ook Enschede doet mee. Zoek in je tuin, op je balkon of in de openbare ruimte naar bijvoorbeeld regenwormen en pissebedden en geef je waarnemingen door.",
-          "label": "Vanaf vrijdag",
-          "label_style": "green",
-          "source": "Gemeente Enschede",
-          "url": "https://www.enschede.nl/help-enschede-bodemdierenstad-van-het-jaar-te-worden"
-        },
-        {
-          "title": "OBS het Wooldrik zoekt praktische ondersteuning op school",
-          "summary": "De basisschool aan de Celsiusstraat zoekt een vrijwilliger die onder meer gasten ontvangt, materialen en keuken bijhoudt, boodschappen doet en andere praktische klussen oppakt. De uren zijn flexibel en er is een vrijwilligersvergoeding.",
+          "title": "Vrijwilligers gezocht voor de nieuwe bar bij Zwembad Het Diekman",
+          "summary": "Stichting EZC zoekt buurtbewoners die af en toe een bardienst willen draaien tijdens zwem- en waterpolowedstrijden. Het gaat om ongeveer drie uur per maand; ervaring is niet nodig en je hoeft geen lid van de zwemclub te zijn.",
+          "page_summary": "In de nieuwe kantine bij Zwembad Het Diekman zijn vrijwilligers nodig voor bardiensten tijdens zwem- en waterpolowedstrijden. Stichting EZC zoekt mensen uit de buurt die bezoekers ontvangen en koffie, thee en frisdrank schenken. De inzet begint vanaf ongeveer drie uur per maand en is flexibel: je kiest zelf wanneer je kunt. Ervaring is niet nodig en je hoeft geen lid van EZC te zijn.",
           "label": "Vrijwilligerswerk",
           "label_style": "blue",
-          "source": "M-Pact / OBS het Wooldrik",
-          "url": "https://www.m-pact.nl/o/OBShetWooldrik/activiteiten/Vrijwilliger-Praktische-Ondersteuning-op-School/111894"
+          "source": "Mediant / vrijwilligersplatform",
+          "url": "https://nl.volunteer.deedmob.com/o/Mediant/activiteiten/Bardienst-bij-EZC-Diekman-Enschede/125438",
+          "pixabay_query": "volunteer sports club canteen coffee"
+        },
+        {
+          "title": "Woensdag informatieavond voor nieuwe Enschedese uilenwerkgroep",
+          "summary": "Woensdag 7 oktober om 19.00 uur is in Servicecentrum Oost aan de Keppelerdijk 2 een gratis informatieavond over een nieuwe uilenwerkgroep. De initiatiefnemers zoeken vrijwilligers voor beheer en monitoring van uilen en nestkasten.",
+          "page_summary": "De gemeente Enschede en andere initiatiefnemers willen een uilenwerkgroep opzetten die helpt bij het beheer en de monitoring van uilen en nestkasten in de stad. Op woensdag 7 oktober is van 19.00 tot 21.00 uur een gratis informatieavond in Servicecentrum Oost, Keppelerdijk 2. De avond bevat een lezing over uilen en is bedoeld voor mensen die willen luisteren én voor mogelijke vrijwilligers. Aanmelden is verplicht.",
+          "label": "Woensdag 7 oktober",
+          "label_style": "green",
+          "source": "IVN Enschede",
+          "url": "https://www.ivn.nl/afdeling/enschede/natuuractiviteiten/uilenwerkgroep-informatieavond-en-vrijwilligers-gevraagd/",
+          "pixabay_query": "owl nest box volunteer nature"
         }
       ]
     }
