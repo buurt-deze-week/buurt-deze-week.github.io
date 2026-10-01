@@ -1,0 +1,165 @@
+{
+  "edition": {
+    "date": "2026-09-24",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Dit speelt er deze week in jouw buurt",
+    "intro": "In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.",
+    "free": true,
+    "email_subject": "Nieuwe woningen, gratis filmavond + 6 andere buurtzaken",
+    "email_preheader": "Ook: wegwerk, jongerenhuiskamer, bodemdieren tellen, Wijkwijzer en een vrijwilligersplek in Wooldrik."
+  },
+  "sections": [
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "61 huishoudens krijgen de sleutel in vernieuwd Varvik-Diekman",
+          "summary": "De vernieuwing van Varvik-Diekman gaat een nieuwe fase in. Domijn meldt dat vanaf september de bewoners van 61 nieuwe woningen hun sleutel krijgen. Ook worden 16 studio’s voor jongeren opgeleverd en start de verduurzaming van 80 boven- en benedenwoningen.",
+          "label": "Wonen",
+          "label_style": "blue",
+          "source": "Domijn",
+          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/",
+          "slug": "61-huishoudens-krijgen-de-sleutel-in-vernieuwd-varvik-diekman",
+          "page_url": "berichten/2026-09-24-61-huishoudens-krijgen-de-sleutel-in-vernieuwd-varvik-diekman.html",
+          "page_summary": "De vernieuwing van Varvik-Diekman gaat een nieuwe fase in. Domijn meldt dat vanaf september de bewoners van 61 nieuwe woningen hun sleutel krijgen. Ook worden 16 studio’s voor jongeren opgeleverd en start de verduurzaming van 80 boven- en benedenwoningen.",
+          "image_url": "/assets/berichten/2026-09-24-61-huishoudens-krijgen-de-sleutel-in-vernieuwd-varvik-diekman.jpg",
+          "image_path": "assets/berichten/2026-09-24-61-huishoudens-krijgen-de-sleutel-in-vernieuwd-varvik-diekman.jpg",
+          "image_credit": "Pexels",
+          "image_page_url": "https://pixabay.com/photos/house-garage-driveway-architecture-1867187/",
+          "pixabay_query": "housing neighborhood homes"
+        },
+        {
+          "title": "Nog wegwerk op meerdere plekken in Varvik-Diekman",
+          "summary": "De asfaltboringen op de Brinkstraat lopen vandaag af. Aan de Schultenhofstraat duurt de herinrichting nog tot 2 oktober en aan de Gasfabriekstraat wordt tot 9 oktober gewerkt aan asfalt en het woonrijp maken van de straat.",
+          "label": "Verkeer",
+          "label_style": "orange",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-18-september-2026-week-39",
+          "slug": "nog-wegwerk-op-meerdere-plekken-in-varvik-diekman",
+          "page_url": "berichten/2026-09-24-nog-wegwerk-op-meerdere-plekken-in-varvik-diekman.html",
+          "page_summary": "De asfaltboringen op de Brinkstraat lopen vandaag af. Aan de Schultenhofstraat duurt de herinrichting nog tot 2 oktober en aan de Gasfabriekstraat wordt tot 9 oktober gewerkt aan asfalt en het woonrijp maken van de straat.",
+          "image_url": "/assets/berichten/2026-09-24-nog-wegwerk-op-meerdere-plekken-in-varvik-diekman.jpg",
+          "image_path": "assets/berichten/2026-09-24-nog-wegwerk-op-meerdere-plekken-in-varvik-diekman.jpg",
+          "image_credit": "Momentmal",
+          "image_page_url": "https://pixabay.com/photos/bridge-steel-bridge-building-2934151/",
+          "pixabay_query": "road construction neighborhood"
+        }
+      ]
+    },
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Na school gratis chillen bij de Huiskamer van Stedelijk Diekman",
+          "summary": "Jongeren kunnen maandag en donderdag van 14.30 tot 16.30 uur binnenlopen bij de Huiskamer van Stedelijk Diekman. Je kunt er chillen, gamen, praten of nog even met schoolwerk bezig; er is ook een jongerenwerker aanwezig.",
+          "label": "Maandag & donderdag",
+          "label_style": "green",
+          "source": "Alifa",
+          "url": "https://www.alifa.nl/dienst/106/huiskamers",
+          "slug": "na-school-gratis-chillen-bij-de-huiskamer-van-stedelijk-diekman",
+          "page_url": "berichten/2026-09-24-na-school-gratis-chillen-bij-de-huiskamer-van-stedelijk-diekman.html",
+          "page_summary": "Jongeren kunnen maandag en donderdag van 14.30 tot 16.30 uur binnenlopen bij de Huiskamer van Stedelijk Diekman. Je kunt er chillen, gamen, praten of nog even met schoolwerk bezig; er is ook een jongerenwerker aanwezig.",
+          "image_url": "/assets/berichten/2026-09-24-na-school-gratis-chillen-bij-de-huiskamer-van-stedelijk-diekman.jpg",
+          "image_path": "assets/berichten/2026-09-24-na-school-gratis-chillen-bij-de-huiskamer-van-stedelijk-diekman.jpg",
+          "image_credit": "truthseeker08",
+          "image_page_url": "https://pixabay.com/photos/hands-team-united-together-people-1917895/",
+          "pixabay_query": "young people community center"
+        },
+        {
+          "title": "Dinsdag gratis filmavond over water in de Ontmoetingskerk",
+          "summary": "Op dinsdag 29 september wordt van 19.30 tot 22.00 uur de film ‘Water te koop’ vertoond in de Ontmoetingskerk aan de Varviksingel 139. De film gaat over de commercialisering van water en de conflicten die daaruit kunnen ontstaan. De entree is gratis; een vrijwillige bijdrage mag.",
+          "label": "Dinsdag 29 september",
+          "label_style": "green",
+          "source": "RK Twente Centraal",
+          "url": "https://rktwentecentraal.nl/levend-water-scheppingsperiode-2026/",
+          "slug": "dinsdag-gratis-filmavond-over-water-in-de-ontmoetingskerk",
+          "page_url": "berichten/2026-09-24-dinsdag-gratis-filmavond-over-water-in-de-ontmoetingskerk.html",
+          "page_summary": "Op dinsdag 29 september wordt van 19.30 tot 22.00 uur de film ‘Water te koop’ vertoond in de Ontmoetingskerk aan de Varviksingel 139. De film gaat over de commercialisering van water en de conflicten die daaruit kunnen ontstaan. De entree is gratis; een vrijwillige bijdrage mag.",
+          "image_url": "/assets/berichten/2026-09-24-dinsdag-gratis-filmavond-over-water-in-de-ontmoetingskerk.jpg",
+          "image_path": "assets/berichten/2026-09-24-dinsdag-gratis-filmavond-over-water-in-de-ontmoetingskerk.jpg",
+          "image_credit": "onkelglocke",
+          "image_page_url": "https://pixabay.com/photos/movie-theater-curtain-theatre-movie-4609877/",
+          "pixabay_query": "cinema film audience"
+        }
+      ]
+    },
+    {
+      "id": "regelen",
+      "title": "Regelen",
+      "items": [
+        {
+          "title": "Nieuwe huurwoningen in Varvik-Diekman komen de komende weken beschikbaar",
+          "summary": "Niet alle voormalige bewoners keren terug naar de nieuwbouw. Daardoor komen overgebleven woningen uit fase 2 de komende weken voor verhuur op WoningHuren.nl. De eerste woningen zijn inmiddels verhuurd.",
+          "label": "Woning zoeken",
+          "label_style": "blue",
+          "source": "Domijn",
+          "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/",
+          "slug": "nieuwe-huurwoningen-in-varvik-diekman-komen-de-komende-weken-beschikbaar",
+          "page_url": "berichten/2026-09-24-nieuwe-huurwoningen-in-varvik-diekman-komen-de-komende-weken-beschikbaar.html",
+          "page_summary": "Niet alle voormalige bewoners keren terug naar de nieuwbouw. Daardoor komen overgebleven woningen uit fase 2 de komende weken voor verhuur op WoningHuren.nl. De eerste woningen zijn inmiddels verhuurd.",
+          "image_url": "/assets/berichten/2026-09-24-nieuwe-huurwoningen-in-varvik-diekman-komen-de-komende-weken-beschikbaar.jpg",
+          "image_path": "assets/berichten/2026-09-24-nieuwe-huurwoningen-in-varvik-diekman-komen-de-komende-weken-beschikbaar.jpg",
+          "image_credit": "Pexels",
+          "image_page_url": "https://pixabay.com/photos/house-garage-driveway-architecture-1867187/",
+          "pixabay_query": "housing neighborhood homes"
+        },
+        {
+          "title": "Hulp nodig met geld, wonen of overheidszaken? Wijkwijzer zit dichtbij",
+          "summary": "Maandag van 9.00 tot 12.00 uur kun je terecht bij De Vrije Ruimte aan de Olympialaan 20. Woensdag is de Wijkwijzer van 14.00 tot 17.00 uur open in de Ontmoetingskerk aan de Doctor Wagenaarstraat 6; dan is ook Werk en Inkomen aanwezig.",
+          "label": "Maandag & woensdag",
+          "label_style": "blue",
+          "source": "Wijkwijzer Enschede",
+          "url": "https://wijkwijzerenschede.nl/contact-en-openingstijden",
+          "slug": "hulp-nodig-met-geld-wonen-of-overheidszaken-wijkwijzer-zit-dichtbij",
+          "page_url": "berichten/2026-09-24-hulp-nodig-met-geld-wonen-of-overheidszaken-wijkwijzer-zit-dichtbij.html",
+          "page_summary": "Maandag van 9.00 tot 12.00 uur kun je terecht bij De Vrije Ruimte aan de Olympialaan 20. Woensdag is de Wijkwijzer van 14.00 tot 17.00 uur open in de Ontmoetingskerk aan de Doctor Wagenaarstraat 6; dan is ook Werk en Inkomen aanwezig.",
+          "image_url": "/assets/berichten/2026-09-24-hulp-nodig-met-geld-wonen-of-overheidszaken-wijkwijzer-zit-dichtbij.jpg",
+          "image_path": "assets/berichten/2026-09-24-hulp-nodig-met-geld-wonen-of-overheidszaken-wijkwijzer-zit-dichtbij.jpg",
+          "image_credit": "Pexels",
+          "image_page_url": "https://pixabay.com/photos/house-garage-driveway-architecture-1867187/",
+          "pixabay_query": "housing neighborhood homes"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Vanaf vrijdag: tel bodemdieren in je eigen buurt",
+          "summary": "Van 25 september tot en met 12 oktober zijn de Bodemdierendagen. Ook Enschede doet mee. Zoek in je tuin, op je balkon of in de openbare ruimte naar bijvoorbeeld regenwormen en pissebedden en geef je waarnemingen door.",
+          "label": "Vanaf vrijdag",
+          "label_style": "green",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/help-enschede-bodemdierenstad-van-het-jaar-te-worden",
+          "slug": "vanaf-vrijdag-tel-bodemdieren-in-je-eigen-buurt",
+          "page_url": "berichten/2026-09-24-vanaf-vrijdag-tel-bodemdieren-in-je-eigen-buurt.html",
+          "page_summary": "Van 25 september tot en met 12 oktober zijn de Bodemdierendagen. Ook Enschede doet mee. Zoek in je tuin, op je balkon of in de openbare ruimte naar bijvoorbeeld regenwormen en pissebedden en geef je waarnemingen door.",
+          "image_url": "/assets/berichten/2026-09-24-vanaf-vrijdag-tel-bodemdieren-in-je-eigen-buurt.jpg",
+          "image_path": "assets/berichten/2026-09-24-vanaf-vrijdag-tel-bodemdieren-in-je-eigen-buurt.jpg",
+          "image_credit": "Pexels",
+          "image_page_url": "https://pixabay.com/photos/hands-macro-plant-soil-grow-life-1838658/",
+          "pixabay_query": "soil earthworm nature"
+        },
+        {
+          "title": "OBS het Wooldrik zoekt praktische ondersteuning op school",
+          "summary": "De basisschool aan de Celsiusstraat zoekt een vrijwilliger die onder meer gasten ontvangt, materialen en keuken bijhoudt, boodschappen doet en andere praktische klussen oppakt. De uren zijn flexibel en er is een vrijwilligersvergoeding.",
+          "label": "Vrijwilligerswerk",
+          "label_style": "blue",
+          "source": "M-Pact / OBS het Wooldrik",
+          "url": "https://www.m-pact.nl/o/OBShetWooldrik/activiteiten/Vrijwilliger-Praktische-Ondersteuning-op-School/111894",
+          "slug": "obs-het-wooldrik-zoekt-praktische-ondersteuning-op-school",
+          "page_url": "berichten/2026-09-24-obs-het-wooldrik-zoekt-praktische-ondersteuning-op-school.html",
+          "page_summary": "De basisschool aan de Celsiusstraat zoekt een vrijwilliger die onder meer gasten ontvangt, materialen en keuken bijhoudt, boodschappen doet en andere praktische klussen oppakt. De uren zijn flexibel en er is een vrijwilligersvergoeding.",
+          "image_url": "/assets/berichten/2026-09-24-obs-het-wooldrik-zoekt-praktische-ondersteuning-op-school.jpg",
+          "image_path": "assets/berichten/2026-09-24-obs-het-wooldrik-zoekt-praktische-ondersteuning-op-school.jpg",
+          "image_credit": "sasint",
+          "image_page_url": "https://pixabay.com/photos/sunset-men-silhouettes-helping-1807524/",
+          "pixabay_query": "community volunteers helping"
+        }
+      ]
+    }
+  ]
+}
