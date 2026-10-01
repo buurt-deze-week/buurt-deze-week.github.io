@@ -1,901 +1,1083 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Zuidoost deze week | Buurt deze week</title>
-<meta content="In één oogopslag wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman." name="description"/>
-<style>
-    :root{--bg:#f6f2e9;--paper:#fffdf8;--text:#132230;--muted:#6b7280;--line:#ddd7ca;--blue:#155eef;--blue-dark:#0d3f9b;--green:#2f7d59;--orange:#b65f20;--soft-blue:#eaf1ff;--soft-green:#edf7f1;--soft-orange:#fff1e7;--shadow:0 8px 26px rgba(19,34,48,.06);--radius:18px;--max:760px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45} a{color:inherit}
-    .wrap{width:min(100% - 24px,var(--max));margin:0 auto} header{padding:22px 0 14px}.eyebrow{color:var(--blue-dark);font-weight:800;font-size:.86rem;margin-bottom:12px}
-    h1{margin:0;font-size:clamp(2.2rem,8vw,4rem);line-height:.98;letter-spacing:-.055em;max-width:700px}.intro{margin:16px 0 0;color:#48535f;font-size:1.08rem;max-width:650px}
-    .meta{display:flex;gap:10px 16px;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:.88rem}
-    .signup{margin:18px 0 28px;background:#142231;color:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}.signup h2{margin:0 0 5px;font-size:1.2rem}.signup p{margin:0 0 14px;color:#cdd5dc}
-    .signup-form{display:flex;gap:8px;flex-wrap:wrap}.signup input{flex:1 1 220px;min-width:0;border:0;border-radius:11px;padding:13px 14px;font:inherit}.button{border:0;border-radius:11px;background:var(--blue);color:#fff;padding:13px 16px;font-weight:800;font:inherit;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.button:hover{background:#0d50d7}.fineprint{font-size:.76rem;color:#9da8b2;margin-top:8px}#signupMessage{display:none;margin-top:10px;color:#dbe8ff;font-size:.86rem}
-    .section{margin:28px 0}.section-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}.section-head h2{margin:0;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em}.section-head:after{content:"";flex:1;height:1px;background:var(--line)}
-    .item{background:var(--paper);border:1px solid rgba(99,87,65,.12);border-radius:14px;margin-bottom:9px;box-shadow:0 2px 10px rgba(19,34,48,.025);overflow:hidden}.item a{display:block;text-decoration:none;padding:15px 16px}.item a:hover{background:#fffaf2}.topline{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.title{font-weight:850;font-size:1.08rem;line-height:1.25;letter-spacing:-.018em}.arrow{color:var(--blue);font-weight:900;flex:none;font-size:1.05rem}.summary{margin-top:5px;color:#5a6570;font-size:.92rem;line-height:1.35}.label{display:inline-block;margin-top:9px;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--blue-dark);background:var(--soft-blue);padding:5px 8px;border-radius:999px}.label.green{color:var(--green);background:var(--soft-green)}.label.orange{color:var(--orange);background:var(--soft-orange)}
-    .tipbox{background:var(--soft-green);border:1px solid #cbe6d5;border-radius:var(--radius);padding:20px;margin:34px 0 20px}.tipbox h2{margin:0 0 7px;font-size:1.35rem}.tipbox p{margin:0 0 14px;color:#3f5948}.tip-actions{display:flex;gap:8px;flex-wrap:wrap}.button.secondary{background:#fff;color:var(--green);border:1px solid #bfdcca} footer{color:var(--muted);font-size:.84rem;padding:20px 0 50px}
-    @media (max-width:640px){.wrap{width:min(100% - 32px,var(--max))}.item a{padding:14px}.signup{padding:18px}.summary{font-size:.9rem}}
-  
-    .filterbar{
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buurt deze week · Zuidoost-Enschede</title>
+  <meta name="description" content="In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman.">
+  <link rel="canonical" href="https://www.buurtdezeweek.nl/">
+  <meta property="og:title" content="Buurt deze week · Zuidoost-Enschede">
+  <meta property="og:description" content="In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman.">
+  <meta property="og:url" content="https://www.buurtdezeweek.nl/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f6f1e7">
+
+  <style>
+    :root {
+      --bg:#fbfaf6;
+      --paper:#fffdf9;
+      --ink:#121914;
+      --body:#4a544f;
+      --muted:#717973;
+      --line:#d8d4c8;
+      --blue:#155eef;
+      --blue-dark:#0c438f;
+      --green:#226649;
+      --orange:#af5d27;
+      --soft-blue:#eef3ff;
+      --soft-green:#edf6f0;
+      --soft-orange:#fff1e6;
+      --ornament:#e7d8b5;
+      --ornament-2:#c2d6c7;
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --max:980px;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      position:relative;
+    }
+    a { color:inherit; }
+    img { display:block; max-width:100%; }
+    button,input,textarea { font:inherit; }
+    .wrap { width:min(calc(100% - 32px),var(--max)); margin:0 auto; position:relative; z-index:2; }
+
+    .page-ornaments {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      z-index:0;
+    }
+    .ornament {
+      position:absolute;
+      opacity:.6;
+      filter:blur(.0px);
+    }
+    .ornament svg { display:block; }
+    .ornament.top-right { top:86px; right:22px; }
+    .ornament.mid-left { top:560px; left:16px; }
+    .ornament.bottom-right { right:28px; bottom:130px; }
+    .ornament.badge-053 {
+      top:182px;
+      right:110px;
+      padding:8px 12px;
+      border:1px solid rgba(22,94,239,.18);
+      border-radius:999px;
+      background:rgba(255,253,249,.78);
+      color:#7d866f;
+      font-size:.75rem;
+      font-weight:800;
+      letter-spacing:.16em;
+    }
+    .ornament.badge-textiel {
+      left:48px;
+      bottom:250px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,253,249,.72);
+      border:1px solid rgba(194,214,199,.45);
+      color:#7a827c;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .sitebar {
       position:sticky;
       top:0;
-      z-index:20;
-      margin:8px 0 18px;
-      padding:10px 0;
-      background:linear-gradient(var(--bg) 70%, rgba(246,242,233,0));
-      overflow-x:auto;
-      scrollbar-width:none;
+      z-index:30;
+      border-bottom:1px solid rgba(80,79,70,.10);
+      background:rgba(251,250,246,.96);
+      backdrop-filter:blur(12px);
     }
-    .filterbar::-webkit-scrollbar{display:none}
-    .filters{
+    .sitebar-inner {
+      min-height:64px;
       display:flex;
-      gap:8px;
-      min-width:max-content;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
     }
-    .filter{
-      appearance:none;
-      border:1px solid #d5d0c5;
-      background:rgba(255,253,248,.92);
-      color:#49545e;
+    .brandline {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brandlink {
+      text-decoration:none;
+      font-family:var(--serif);
+      font-size:1.55rem;
+      font-weight:700;
+      letter-spacing:-.035em;
+      white-space:nowrap;
+    }
+    .brandlink .dot { color:var(--blue); }
+    .location {
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      color:#48524c;
+      font-size:.82rem;
+      font-weight:700;
+      white-space:nowrap;
+    }
+    .location svg { width:15px; height:15px; color:var(--blue); }
+    .nav {
+      display:flex;
+      align-items:center;
+      gap:21px;
+      font-size:.82rem;
+      font-weight:760;
+    }
+    .nav a {
+      text-decoration:none;
+    }
+    .nav a:hover { color:var(--blue-dark); }
+    .nav .inbox {
+      border:1px solid #b5c5e8;
       border-radius:999px;
       padding:9px 13px;
-      font:inherit;
-      font-size:.86rem;
-      font-weight:800;
-      cursor:pointer;
-      transition:.15s ease;
-    }
-    .filter:hover{
-      border-color:#b6c6e8;
       color:var(--blue-dark);
     }
-    .filter.active{
-      background:var(--blue);
-      color:#fff;
-      border-color:var(--blue);
-      box-shadow:0 5px 16px rgba(21,94,239,.18);
-    }
-    .filter-note{
-      margin:-8px 0 18px;
-      color:var(--muted);
-      font-size:.78rem;
-    }
-    .section[hidden]{
-      display:none !important;
-    }
 
-    .tip-form-wrap{
-      display:none;
-      margin-top:16px;
-      padding-top:16px;
-      border-top:1px solid #cbe6d5;
+    .hero {
+      padding:46px 0 28px;
+      border-bottom:1px solid rgba(80,79,70,.12);
+      position:relative;
     }
-    .tip-form-wrap.open{display:block}
-    .tip-form{
+    .hero-grid {
       display:grid;
-      gap:10px;
-    }
-    .tip-form label{
-      font-size:.82rem;
-      font-weight:800;
-      color:#355344;
-    }
-    .tip-form input,
-    .tip-form textarea{
-      width:100%;
-      border:1px solid #bfdcca;
-      background:#fff;
-      border-radius:11px;
-      padding:12px 13px;
-      font:inherit;
-      color:var(--text);
-    }
-    .tip-form textarea{
-      min-height:120px;
-      resize:vertical;
-    }
-    .tip-form-actions{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
+      grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+      gap:42px;
       align-items:center;
     }
-    .tip-status{
-      display:none;
-      margin-top:10px;
-      font-size:.86rem;
-      color:#365443;
-    }
-    .tip-status.show{display:block}
-
-    #bd-email{scroll-margin-top:110px}
-    .tip-details{display:inline-block}
-    .tip-details summary{
-      list-style:none;
-      cursor:pointer;
-      user-select:none;
-    }
-    .tip-details summary::-webkit-details-marker{display:none}
-    .tip-details[open]{display:block;width:100%}
-    .tip-details[open] summary{width:max-content}
-    .tip-details .tip-form-wrap{
-      display:block;
-      margin-top:16px;
-      padding-top:16px;
-      border-top:1px solid #cbe6d5;
-    }
-
-    .info-block{
-      margin:26px 0 8px;
-      border-top:1px solid var(--line);
-      padding-top:18px;
-      color:var(--muted);
-      font-size:.88rem;
-    }
-    .info-block details{
-      border-bottom:1px solid var(--line);
-      padding:11px 0;
-    }
-    .info-block summary{
-      cursor:pointer;
-      font-weight:800;
-      color:var(--text);
-      list-style:none;
-    }
-    .info-block summary::-webkit-details-marker{display:none}
-    .info-block details p{margin:8px 0 2px;max-width:650px}
-    .info-block a{color:var(--blue-dark);font-weight:700}
-    .source-name{
-      display:inline-block;
-      margin-left:7px;
-      color:var(--muted);
-      font-size:.72rem;
-      font-weight:700;
-      text-transform:none;
-      letter-spacing:0;
-    }
-
-    .contact-line{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      align-items:center;
-      margin-top:8px;
-    }
-    .contact-email{
-      color:var(--blue-dark);
-      font-weight:800;
-      word-break:break-all;
-    }
-    .copy-email{
-      border:1px solid #d5d0c5;
-      background:var(--paper);
-      color:var(--text);
-      border-radius:9px;
-      padding:7px 10px;
-      font:inherit;
-      font-size:.8rem;
-      font-weight:800;
-      cursor:pointer;
-    }
-    .copy-status{
-      font-size:.78rem;
-      color:var(--green);
-      min-height:1em;
-    }
-
-    .meta span{
-      display:inline-flex;
-      align-items:center;
-    }
-    .meta span:not(:last-child)::after{
-      content:"·";
-      margin-left:16px;
-      color:var(--muted);
-    }
-    .meta{
-      column-gap:0;
-      row-gap:8px;
-    }
-    @media (max-width:640px){
-      .meta span:not(:last-child)::after{
-        margin-left:10px;
-      }
-    }
-
-    .edition-header{
-      padding:38px 0 24px;
-    }
-    .edition-date{
-      font-size:1rem;
-      color:#21483b;
-      margin-bottom:18px;
-    }
-    .edition-brand{
+    .edition-date {
+      color:#345247;
       font-size:.84rem;
-      font-weight:800;
+      margin-bottom:9px;
+    }
+    .edition-brand {
       color:var(--blue-dark);
-      margin-bottom:10px;
-      text-transform:none;
-      letter-spacing:.01em;
+      font-size:.8rem;
+      font-weight:850;
+      margin-bottom:7px;
     }
-    .edition-title{
+    .edition-title {
       margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.2rem,8vw,4rem);
+      max-width:650px;
+      font-family:var(--serif);
+      font-size:clamp(3rem,6vw,4.8rem);
       line-height:.92;
-      letter-spacing:-.045em;
+      letter-spacing:-.052em;
       font-weight:700;
-      max-width:900px;
-      color:#111714;
     }
-    .edition-title .dot{
-      color:var(--blue);
+    .edition-title .dot { color:var(--blue); }
+    .edition-intro {
+      margin:20px 0 0;
+      max-width:650px;
+      color:#3f4943;
+      font-size:1.08rem;
+      line-height:1.55;
     }
-    .edition-intro{
-      margin:24px 0 0;
-      max-width:840px;
-      font-size:clamp(1.15rem,2.2vw,1.55rem);
-      line-height:1.45;
-      color:#37413c;
-    }
-    .edition-rule{
-      margin:28px 0 16px;
-      border:0;
-      border-top:1px solid #bfc7c1;
-    }
-    .edition-meta{
+    .hero-meta {
       display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px 24px;
       flex-wrap:wrap;
-      color:#6b736e;
-      font-size:.95rem;
+      gap:8px 0;
+      margin-top:22px;
+      padding-top:14px;
+      border-top:1px solid #bfc5bd;
+      color:#707873;
+      font-size:.78rem;
     }
-    .edition-meta-left,
-    .edition-meta-right{
-      display:flex;
-      gap:0;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-    .edition-meta span{
+    .hero-meta span {
       display:inline-flex;
       align-items:center;
     }
-    .edition-meta span:not(:last-child)::after{
+    .hero-meta span:not(:last-child)::after {
       content:"·";
       margin:0 10px;
-      color:#8a918d;
+      color:#989e99;
     }
-    @media (max-width:640px){
-      .edition-header{padding:24px 0 16px}
-      .edition-title{font-size:clamp(2.2rem,8vw,4rem)}
-      .edition-intro{font-size:1.08rem;margin-top:18px}
-      .edition-meta{font-size:.86rem}
-      .edition-meta-right{width:100%}
+    .hero-visual {
+      position:relative;
+      min-height:285px;
+      border-radius:0 0 0 78px;
+      overflow:hidden;
+      background:#ebe7dc;
+      box-shadow:0 18px 40px rgba(50,55,48,.05);
+    }
+    .hero-visual img {
+      width:100%;
+      height:100%;
+      min-height:285px;
+      object-fit:cover;
+    }
+    .hero-visual:after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(251,250,246,.32) 0%,rgba(251,250,246,0) 38%);
+      pointer-events:none;
     }
 
-    .signup-note{
-      margin:10px 0 14px;
-      max-width:650px;
-      font-size:.93rem;
-      line-height:1.5;
-      color:var(--muted);
+    .feed-shell { padding:34px 0 10px; }
+    .feed-head {
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+      padding-bottom:10px;
+      border-bottom:1px solid #9ba69f;
     }
-    .signup-note strong{color:var(--text)}
-
-    .signup .signup-intro{
-      margin:0 0 14px;
-      color:#cdd5dc;
-    }
-    .signup .signup-confirm{
-      margin:10px 0 0;
-      max-width:none;
-      color:#aeb9c3;
+    .feed-title {
+      margin:0;
+      color:var(--green);
       font-size:.78rem;
-      line-height:1.45;
-      text-align:left;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-weight:900;
     }
-    .signup .signup-confirm strong{
-      color:#ffffff;
-      font-weight:800;
-    }
-    .signup-form{
-      align-items:stretch;
-    }
-    .signup-form .button{
+    .feed-count {
+      color:var(--muted);
+      font-size:.78rem;
       white-space:nowrap;
     }
-    @media (max-width:640px){
-      .signup-form{
-        flex-direction:column;
-      }
-      .signup-form input,
-      .signup-form .button{
-        width:100%;
-      }
+    .feed-title::after {
+      content:"";
+      display:block;
+      width:34px;
+      height:2px;
+      background:#d6a347;
+      margin-top:10px;
     }
 
-    /* Definitieve nieuwsbrief-layout */
-    .signup{
-      padding:22px 20px 18px;
+    .filters {
+      display:flex;
+      gap:6px;
+      overflow:auto;
+      padding:12px 0 2px;
+      scrollbar-width:none;
     }
-    .signup > h2{
-      margin:0 0 4px;
-    }
-    .signup > .signup-intro{
-      margin:0 0 16px !important;
-      color:#d4dbe2 !important;
-      text-align:left !important;
-    }
-    .signup > .signup-form{
-      display:grid !important;
-      grid-template-columns:minmax(0,1fr) auto !important;
-      gap:8px !important;
-      align-items:stretch !important;
-      width:100% !important;
-    }
-    .signup > .signup-form input[type="email"]{
-      width:100% !important;
-      min-width:0 !important;
-      margin:0 !important;
-    }
-    .signup > .signup-form .button{
-      width:auto !important;
-      min-width:122px;
-      margin:0 !important;
-      white-space:nowrap;
-    }
-    .signup > .signup-confirm{
-      display:flex !important;
-      align-items:baseline;
-      gap:8px;
-      margin:10px 0 0 !important;
-      padding:0 !important;
-      color:#aeb9c3 !important;
-      font-size:.78rem !important;
-      line-height:1.45 !important;
-      text-align:left !important;
-    }
-    .signup > .signup-confirm .signup-confirm-label{
-      flex:none;
-      color:#ffffff !important;
+    .filters::-webkit-scrollbar { display:none; }
+    .filter {
+      border:0;
+      background:transparent;
+      color:#6f7772;
+      padding:6px 0;
+      margin-right:16px;
+      font-size:.78rem;
       font-weight:800;
+      cursor:pointer;
+      white-space:nowrap;
+      border-bottom:2px solid transparent;
     }
-    @media (max-width:640px){
-      .signup > .signup-form{
-        grid-template-columns:1fr !important;
-      }
-      .signup > .signup-form .button{
-        width:100% !important;
-      }
-      .signup > .signup-confirm{
-        display:block !important;
-      }
-      .signup > .signup-confirm .signup-confirm-label{
-        display:block;
-        margin-bottom:2px;
-      }
+    .filter:hover { color:var(--blue-dark); }
+    .filter.active {
+      color:var(--blue-dark);
+      border-bottom-color:var(--blue);
     }
 
-    .edition-loading{
-      margin:28px 0;
+    .stories { margin-top:4px; }
+    .story {
+      border-bottom:1px solid var(--line);
+      position:relative;
+    }
+    .story-link {
+      display:grid;
+      grid-template-columns:18px minmax(0,1fr) 158px;
+      gap:16px;
+      align-items:center;
       padding:18px 0;
-      color:var(--muted);
+      text-decoration:none;
+    }
+    .story-link:hover .story-title { color:var(--blue-dark); }
+    .story-bullet {
+      width:4px;
+      height:4px;
+      border-radius:50%;
+      background:#d6b36b;
+      margin-top:10px;
+      align-self:start;
+    }
+    .story-main { min-width:0; }
+    .story-category {
+      color:var(--blue);
+      text-transform:uppercase;
+      font-size:.68rem;
+      letter-spacing:.12em;
+      font-weight:900;
+      margin-bottom:4px;
+    }
+    .story-title {
+      margin:0;
+      font-family:var(--serif);
+      font-size:1.55rem;
+      line-height:1.08;
+      letter-spacing:-.03em;
+      transition:color .15s ease;
+    }
+    .story-summary {
+      margin:7px 0 0;
+      color:#59625d;
       font-size:.9rem;
+      line-height:1.42;
+      max-width:96%;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
     }
-    .edition-error{
-      margin:28px 0;
-      padding:18px;
-      border:1px solid #e0b9b9;
-      background:#fff7f7;
-      border-radius:14px;
-      color:#7f2f2f;
-      font-size:.9rem;
+    .story-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:9px;
+      color:#6a756f;
+      font-size:.72rem;
+      font-weight:780;
+      align-items:center;
     }
-    [hidden]{display:none !important}
-
-    .tipbox form .tip-note{
-      margin:10px 0 0;
-      font-size:.82rem;
-      line-height:1.45;
+    .story-tag {
+      display:inline-flex;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--soft-blue);
+      color:#4b6899;
+      font-size:.68rem;
+      letter-spacing:.03em;
+      font-weight:900;
+    }
+    .story-tag.green {
+      background:var(--soft-green);
+      color:#397053;
+    }
+    .story-tag.orange {
+      background:var(--soft-orange);
+      color:#9c602e;
+    }
+    .story-thumb,
+    .story-thumb-placeholder {
+      width:158px;
+      aspect-ratio:16/10;
+      border-radius:12px;
+      overflow:hidden;
+      background:#ebe6db;
+      justify-self:end;
+    }
+    .story-thumb {
+      object-fit:cover;
+      box-shadow:0 8px 22px rgba(60,64,58,.05);
+    }
+    .story-thumb-placeholder {
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:14px;
+      color:#8b908b;
+      font-family:var(--serif);
+      font-size:.8rem;
+      background:linear-gradient(145deg,#e8e2d6,#f8f5ee);
+    }
+    .edition-loading,.edition-error {
+      padding:30px 0;
       color:var(--muted);
-    }
-    .tipbox form .tip-error{
-      margin:10px 0 0;
-      font-size:.82rem;
-      line-height:1.45;
-      color:#9b2c2c;
-      font-weight:700;
-    }
-    .tipbox form button[disabled]{
-      opacity:.7;
-      cursor:wait;
+      font-size:.92rem;
     }
 
-    /* Definitieve tipformulier-layout */
-    .tipbox details{
-      margin-top:14px;
+    .signup {
+      margin:42px 0 18px;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:24px 0;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(280px,.85fr);
+      gap:28px;
+      align-items:center;
     }
-
-    .tipbox details > summary{
+    .signup h2 {
+      margin:0 0 4px;
+      font-family:var(--serif);
+      font-size:1.5rem;
+      letter-spacing:-.025em;
+    }
+    .signup p {
+      margin:0;
+      color:#626a65;
+      font-size:.85rem;
+    }
+    .signup-form {
+      display:flex;
+      gap:8px;
+    }
+    .signup-form input {
+      min-width:0;
+      flex:1;
+      border:1px solid #d3d0c7;
+      background:var(--paper);
+      padding:11px 12px;
+      border-radius:10px;
+      color:var(--ink);
+    }
+    .button {
+      border:0;
+      border-radius:10px;
+      background:var(--blue);
+      color:#fff;
+      padding:11px 15px;
+      font-weight:850;
+      cursor:pointer;
+      text-decoration:none;
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      white-space:nowrap;
+    }
+    .button:hover { background:#0c50d7; }
+    .signup-confirm {
+      grid-column:2;
+      margin-top:-18px;
+      color:#8a918c;
+      font-size:.7rem;
+    }
+
+    .tipbox {
+      margin:24px 0 8px;
+      padding:21px 0;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:20px;
+      align-items:center;
+      border-bottom:1px solid var(--line);
+    }
+    .tipbox h2 {
+      margin:0 0 4px;
+      font-family:var(--serif);
+      font-size:1.34rem;
+      letter-spacing:-.02em;
+    }
+    .tipbox > div > p {
+      margin:0;
+      color:#657069;
+      font-size:.84rem;
+    }
+    .tip-details summary {
       list-style:none;
       cursor:pointer;
-      background:var(--blue);
-      color:#fff;
-      font-weight:800;
-      padding:12px 16px;
-      border-radius:12px;
-      user-select:none;
+      border:1px solid #c7c9c2;
+      border-radius:999px;
+      padding:9px 14px;
+      font-size:.8rem;
+      font-weight:850;
+      white-space:nowrap;
     }
-
-    .tipbox details > summary::-webkit-details-marker{
-      display:none;
+    .tip-details summary::-webkit-details-marker { display:none; }
+    .tip-details[open] {
+      grid-column:1/-1;
+      width:100%;
     }
-
-    .tipbox details[open] > summary{
-      margin-bottom:18px;
+    .tip-details[open] summary {
+      display:inline-block;
+      margin-bottom:16px;
     }
-
-    .tipbox #tipForm{
+    .tip-form {
       display:grid;
-      grid-template-columns:1fr;
-      gap:8px;
-      width:100%;
-      padding-top:2px;
+      gap:9px;
+      max-width:650px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
     }
-
-    .tipbox #tipForm label{
-      display:block;
-      margin-top:4px;
-      font-size:.84rem;
-      line-height:1.35;
-      font-weight:800;
-      color:#315442;
+    .tip-form label {
+      color:#405048;
+      font-size:.76rem;
+      font-weight:850;
     }
-
-    .tipbox #tipForm input[type="text"],
-    .tipbox #tipForm textarea{
-      display:block;
+    .tip-form input,.tip-form textarea {
       width:100%;
-      min-width:0;
+      border:1px solid #d1cec4;
+      background:var(--paper);
+      color:var(--ink);
+      border-radius:10px;
+      padding:11px 12px;
+    }
+    .tip-form textarea { min-height:115px; resize:vertical; }
+    .tip-note,.tip-error {
       margin:0;
-      padding:12px 14px;
-      border:1px solid #bdd8c9;
-      border-radius:12px;
-      background:#fff;
-      color:var(--text);
-      font:inherit;
-      font-size:.95rem;
-      line-height:1.45;
-      outline:none;
+      color:var(--muted);
+      font-size:.74rem;
     }
+    .tip-error { color:#9d3c31; }
 
-    .tipbox #tipForm textarea{
-      min-height:118px;
-      resize:vertical;
+    .info {
+      padding:18px 0 0;
+      color:var(--muted);
+      font-size:.79rem;
     }
-
-    .tipbox #tipForm input:focus,
-    .tipbox #tipForm textarea:focus{
-      border-color:var(--blue);
-      box-shadow:0 0 0 3px rgba(18,103,244,.10);
+    .info details {
+      border-bottom:1px solid var(--line);
+      padding:10px 0;
     }
-
-    .tipbox #tipForm .button{
-      justify-self:start;
-      width:auto;
-      margin-top:8px;
-      border:0;
+    .info summary {
       cursor:pointer;
+      list-style:none;
+      font-weight:850;
+      color:#323b36;
+    }
+    .info summary::-webkit-details-marker { display:none; }
+    .info p { max-width:690px; margin:8px 0 3px; }
+    .info a { color:var(--blue-dark); font-weight:750; }
+    .contact-line {
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:7px;
+    }
+    .copy-email {
+      border:1px solid #d1cec4;
+      border-radius:8px;
+      background:var(--paper);
+      padding:6px 9px;
+      cursor:pointer;
+      font-size:.72rem;
+      font-weight:800;
+    }
+    .copy-status { color:var(--green); font-size:.72rem; min-height:1em; }
+
+    footer {
+      padding:22px 0 50px;
+      color:#818782;
+      font-size:.76rem;
     }
 
-    .tipbox #tipForm .tip-note,
-    .tipbox #tipForm .tip-error{
-      margin:6px 0 0;
-      max-width:680px;
-    }
-
-    .tipbox .follow-link{
-      display:inline-flex;
-      margin-top:14px;
-    }
-
-    @media (max-width:640px){
-      .tipbox details > summary{
-        width:auto;
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns:1fr; gap:24px; }
+      .hero-visual {
+        min-height:220px;
+        border-radius:18px;
       }
+      .hero-visual img { min-height:220px; }
+      .ornament.top-right,
+      .ornament.badge-053 { display:none; }
+    }
 
-      .tipbox #tipForm .button{
+    @media (max-width: 800px) {
+      .sitebar-inner { min-height:58px; }
+      .location { display:none; }
+      .nav a:not(.inbox) { display:none; }
+      .hero { padding:30px 0 22px; }
+      .story-link {
+        grid-template-columns:12px minmax(0,1fr) 116px;
+        gap:12px;
+      }
+      .story-thumb,
+      .story-thumb-placeholder { width:116px; }
+      .story-title { font-size:1.22rem; }
+      .signup { grid-template-columns:1fr; gap:15px; }
+      .signup-confirm { grid-column:1; margin-top:-7px; }
+      .tipbox { grid-template-columns:1fr; gap:12px; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width:min(calc(100% - 24px),var(--max)); }
+      .brandlink { font-size:1.32rem; }
+      .nav .inbox { padding:8px 11px; }
+      .edition-title { font-size:clamp(2.6rem,13vw,4rem); }
+      .edition-intro { font-size:1rem; }
+      .hero-meta { font-size:.72rem; }
+      .feed-head { align-items:flex-start; flex-direction:column; gap:8px; }
+      .story-link {
+        grid-template-columns:minmax(0,1fr);
+        gap:10px;
+        padding:16px 0;
+      }
+      .story-bullet { display:none; }
+      .story-thumb,
+      .story-thumb-placeholder {
         width:100%;
-        justify-self:stretch;
+        max-width:220px;
+        justify-self:start;
+        order:3;
       }
+      .story-summary {
+        max-width:100%;
+        -webkit-line-clamp:2;
+      }
+      .signup-form { flex-direction:column; }
+      .signup-form .button { width:100%; }
+      .ornament.mid-left,
+      .ornament.bottom-right,
+      .ornament.badge-textiel { display:none; }
     }
-</style>
-<script>
-window.sa_event = window.sa_event || function () {
-  var a = [].slice.call(arguments);
-  window.sa_event.q ? window.sa_event.q.push(a) : window.sa_event.q = [a];
-};
-</script>
-<link href="https://www.buurtdezeweek.nl/" rel="canonical"/><meta content="Zuidoost deze week" property="og:title"/><meta content="In één oogopslag wat er deze week speelt in Wooldrik, Hogeland-Zuid en Varvik-Diekman." property="og:description"/><meta content="https://www.buurtdezeweek.nl/" property="og:url"/><meta content="website" property="og:type"/><meta content="#f6f2e9" name="theme-color"/></head>
+  </style>
+
+  <script>
+    window.sa_event = window.sa_event || function () {
+      var a = [].slice.call(arguments);
+      window.sa_event.q ? window.sa_event.q.push(a) : window.sa_event.q = [a];
+    };
+  </script>
+</head>
 <body>
-<header class="wrap edition-header">
-<div class="edition-date" id="editionDate">Zondag 6 september 2026</div>
-<div class="edition-brand" id="editionBrand">Buurt deze week · Zuidoost-Enschede</div>
-<h1 class="edition-title"><span id="editionTitle">Dit speelt er deze week in jouw buurt</span><span class="dot">.</span></h1>
-<p class="edition-intro" id="editionIntro">In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.</p>
-<hr class="edition-rule"/>
-<div class="edition-meta">
-<div class="edition-meta-left">
-<span id="freeLabel">Gratis</span>
-</div>
-<div class="edition-meta-right">
-<span id="sourceCount">11 lokale bronnen</span>
-<span id="storyCount">11 berichten</span>
-</div>
-</div>
-</header>
-<main class="wrap">
-<div aria-label="Filter onderwerpen" class="filterbar" hidden="hidden" id="filterbar">
-<div class="filters" id="filters"></div>
-</div><div id="editionContent"><div class="edition-loading">Editie laden…</div></div><section class="signup" id="inschrijven">
-<h2>Iedere donderdag in je inbox</h2>
-<p class="signup-intro">Gratis en zonder ruis. Alleen wat relevant is voor jouw buurt.</p>
-<form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post">
-<input autocomplete="email" id="bd-email" name="email" placeholder="jij@voorbeeld.nl" required="" type="email"/>
-<input name="embed" type="hidden" value="1"/>
-<button class="button" type="submit">Schrijf me in</button>
-</form>
-<div class="signup-confirm">
-<span class="signup-confirm-label">Bevestigen via e-mail</span>
-<span>Na inschrijven ontvang je een bevestigingsmail. Klik daarin op de link om je inschrijving af te ronden.</span>
-</div>
-</section>
-<section class="tipbox"><h2>Hebben we iets gemist?</h2><p>Organiseer je iets, verandert er iets in je straat of speelt er iets dat buurtgenoten moeten weten?</p><div class="tip-actions"><details class="tip-details" id="tipDetails">
-<summary id="tipSummary">Stuur een tip</summary>
-<form action="https://formspree.io/f/mljeazya" id="tipForm" method="POST">
-<input name="_subject" type="hidden" value="Nieuwe tip via Buurt deze week"/>
-<input name="_next" type="hidden" value="https://www.buurtdezeweek.nl/tip-ontvangen/"/>
-<label for="tipSubject">Waar gaat je tip over?</label>
-<input id="tipSubject" name="onderwerp" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" required="" type="text"/>
-<label for="tipLocation">Waar?</label>
-<input id="tipLocation" name="locatie" placeholder="Straat, locatie of buurt" required="" type="text"/>
-<label for="tipDate">Wanneer?</label>
-<input id="tipDate" name="wanneer" placeholder="Datum of periode" type="text"/>
-<label for="tipDetails">Meer informatie</label>
-<textarea id="tipDetails" name="informatie" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe." required="" rows="5"></textarea>
-<button class="button" type="submit">Verstuur tip</button>
-<p class="tip-note">Je tip wordt rechtstreeks verstuurd. Er opent geen mailprogramma.</p>
-<p class="tip-error" hidden="" id="tipError">Versturen lukt nu niet. Probeer het later nog eens.</p>
-</form>
-</details><a class="follow-link button secondary" href="#bd-email">Volg de pilot</a></div>
-</section>
-<section aria-label="Over en contact" class="info-block">
-<details>
-<summary>Over deze pilot</summary>
-<p><strong>Buurt deze week</strong> is een onafhankelijke pilot van Tom de Haas. Ik woon aan de Padangstraat en inmiddels zo’n 15 jaar op het Hogeland.</p>
-<p>De aanleiding is simpel: veel nieuws, activiteiten en praktische informatie over de buurt bestaan al, maar staan verspreid over allerlei websites, agenda’s, organisaties en kanalen. Daardoor moet je zelf behoorlijk zoeken om te weten wat er speelt.</p>
-<p>Met Buurt deze week wil ik onderzoeken of dat slimmer en overzichtelijker kan: één kort overzicht met alleen relevante informatie voor Wooldrik, Hogeland-Zuid en Varvik-Diekman. De pilot is onafhankelijk en is niet verbonden aan de gemeente Enschede.</p>
-</details>
-<details>
-<summary>Privacy</summary>
-<p>Voor de nieuwsbrief wordt je e-mailadres verwerkt via Buttondown. We gebruiken Simple Analytics om privacyvriendelijk te meten hoe de site wordt gebruikt. We plaatsen zelf geen advertentiecookies. Een tip wordt alleen verstuurd als je die zelf via e-mail verzendt.</p>
-</details>
-<details>
-<summary>Contact</summary>
-<p>Vraag, suggestie, tip of interesse in de pilot? Neem contact op via:</p>
-<div class="contact-line">
-<a class="contact-email" href="mailto:buurtdezeweek@buttondown.email?subject=Buurt%20deze%20week">
-          buurtdezeweek@buttondown.email
-        </a>
-<button class="copy-email" id="copyEmail" type="button">Kopieer e-mailadres</button>
-</div>
-<div aria-live="polite" class="copy-status" id="copyEmailStatus"></div>
-</details>
-</section><footer>Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a></footer>
-</main>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var tipSummary = document.getElementById('tipSummary');
-  if (tipSummary) {
-    tipSummary.addEventListener('click', function () {
-      sa_event('tip_clicked');
-    });
-  }
+  <div class="page-ornaments" aria-hidden="true">
+    <div class="ornament top-right">
+      <svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="86" r="56" fill="#EFE3C8"/>
+        <path d="M34 86c15-16 35-22 56-22 16 0 31-3 44-9" stroke="#D5B06B" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M47 110c18-8 39-12 64-12" stroke="#DAB97B" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M59 42c8 12 21 19 36 19" stroke="#C8D8CC" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
 
-  var followLink = document.querySelector('.tipbox a[href="#bd-email"]');
-  if (followLink) {
-    followLink.addEventListener('click', function () {
-      sa_event('follow_pilot_clicked');
-    });
-  }
+    <div class="ornament mid-left">
+      <svg width="120" height="180" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M77 15c0 13-10 23-23 23S31 28 31 15 41 0 54 0s23 2 23 15Z" fill="#E9DFC8"/>
+        <path d="M41 56c13 9 30 9 43 0" stroke="#D5B06B" stroke-width="2.3" stroke-linecap="round"/>
+        <path d="M39 87c18-8 29-8 46 0" stroke="#D5B06B" stroke-width="2.3" stroke-linecap="round"/>
+        <path d="M34 117c22 13 35 13 56 0" stroke="#C3D8C8" stroke-width="2.3" stroke-linecap="round"/>
+        <circle cx="60" cy="153" r="18" fill="#F1E8D5"/>
+      </svg>
+    </div>
 
-  var signupForm = document.querySelector(
-    'form[action*="buttondown.com/api/emails/embed-subscribe"]'
-  );
-  if (signupForm) {
-    signupForm.addEventListener('submit', function () {
-      sa_event('newsletter_signup_started');
-    });
-  }
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var copyButton = document.getElementById('copyEmail');
-  var status = document.getElementById('copyEmailStatus');
-  if (!copyButton) return;
+    <div class="ornament bottom-right">
+      <svg width="165" height="145" viewBox="0 0 165 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="22" y="24" width="98" height="80" rx="18" fill="#F1E8D5"/>
+        <path d="M39 78c11-11 22-16 39-16 16 0 32-4 45-13" stroke="#D4AE67" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M56 45v38" stroke="#C1D4C6" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M74 45v48" stroke="#C1D4C6" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M92 45v32" stroke="#C1D4C6" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </div>
 
-  copyButton.addEventListener('click', async function () {
-    try {
-      await navigator.clipboard.writeText('buurtdezeweek@buttondown.email');
-      if (status) status.textContent = 'Gekopieerd.';
-      if (typeof sa_event === 'function') sa_event('contact_email_copied');
-    } catch (err) {
-      if (status) status.textContent = 'Kopiëren lukte niet. Selecteer: buurtdezeweek@buttondown.email';
-    }
-  });
-});
-</script><script>
-(function () {
-  const MONTHS = [
-    'januari','februari','maart','april','mei','juni',
-    'juli','augustus','september','oktober','november','december'
-  ];
-  const DAYS = [
-    'zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'
-  ];
+    <div class="ornament badge-053">053</div>
+    <div class="ornament badge-textiel">textielstad</div>
+  </div>
 
-  function formatDutchDate(isoDate) {
-    const parts = isoDate.split('-').map(Number);
-    const d = new Date(parts[0], parts[1] - 1, parts[2]);
-    return DAYS[d.getDay()].charAt(0).toUpperCase() + DAYS[d.getDay()].slice(1)
-      + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
-  }
+  <div class="sitebar">
+    <div class="wrap sitebar-inner">
+      <div class="brandline">
+        <a class="brandlink" href="/">Buurt deze week<span class="dot">.</span></a>
+        <span class="location">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" fill="currentColor"/>
+            <circle cx="12" cy="9" r="2.4" fill="#fbfaf6"/>
+          </svg>
+          Zuidoost-Enschede
+        </span>
+      </div>
 
-  function escapeHtml(value) {
-    return String(value ?? '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
+      <nav class="nav" aria-label="Hoofdnavigatie">
+        <a href="/">Vandaag</a>
+        <a href="/berichten/">Berichten</a>
+        <a href="#over">Over</a>
+        <a class="inbox" href="#inschrijven">In je inbox</a>
+      </nav>
+    </div>
+  </div>
 
-  function sectionHtml(section) {
-    const items = section.items.map(function (item) {
-      const labelClass =
-        item.label_style === 'green' ? ' green'
-        : item.label_style === 'orange' ? ' orange'
-        : '';
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="edition-date" id="editionDate">Editie laden…</div>
+        <div class="edition-brand" id="editionBrand">Buurt deze week · Zuidoost-Enschede</div>
+        <h1 class="edition-title"><span id="editionTitle">Dit speelt er deze week in jouw buurt</span><span class="dot">.</span></h1>
+        <p class="edition-intro" id="editionIntro">In een paar minuten zie je wat er speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Zonder eindeloos zoeken.</p>
 
-      const href = item.page_url || item.url;
-      const externalAttrs = item.page_url ? '' : ' rel="noopener" target="_blank"';
+        <div class="hero-meta">
+          <span id="editionDay">donderdag-editie</span>
+          <span id="sourceCount">lokale bronnen</span>
+          <span id="storyCount">berichten</span>
+          <span id="readTime">ongeveer 4 minuten</span>
+          <span id="freeLabel">gratis</span>
+        </div>
+      </div>
 
-      return `
-        <article class="item">
-          <a href="${escapeHtml(href)}"${externalAttrs}>
-            <div class="topline">
-              <div class="title">${escapeHtml(item.title)}</div>
-              <div class="arrow">›</div>
-            </div>
-            <div class="summary">${escapeHtml(item.summary)}</div>
-            ${item.label ? `<span class="label${labelClass}">${escapeHtml(item.label)}</span>` : ''}
-            ${item.source ? `<span class="source-name">· ${escapeHtml(item.source)}</span>` : ''}
-          </a>
-        </article>
-      `;
-    }).join('');
+      <div class="hero-visual" aria-label="Illustratie van Enschede">
+        <img src="/assets/enschede-hero.png" alt="Illustratie van Enschede en Zuidoost-Enschede">
+      </div>
+    </div>
+  </header>
 
-    return `
-      <section class="section" data-category="${escapeHtml(section.id)}">
-        <div class="section-head"><h2>${escapeHtml(section.title)}</h2></div>
-        ${items}
-      </section>
-    `;
-  }
+  <main class="wrap">
+    <section class="feed-shell" aria-labelledby="feedHeading">
+      <div class="feed-head">
+        <h2 class="feed-title" id="feedHeading">Nieuws uit jouw buurt</h2>
+        <div class="feed-count" id="feedCount">8 verhalen</div>
+      </div>
 
-  function setCounts(data) {
-    const items = data.sections.flatMap(s => s.items || []);
-    const sources = new Set(items.map(i => (i.source || '').trim()).filter(Boolean));
+      <div class="filters" id="filters" aria-label="Filter berichten"></div>
 
-    document.getElementById('sourceCount').textContent =
-      sources.size === 1 ? '1 lokale bron' : sources.size + ' lokale bronnen';
+      <div class="stories" id="editionContent">
+        <div class="edition-loading">Editie laden…</div>
+      </div>
+    </section>
 
-    document.getElementById('storyCount').textContent =
-      items.length === 1 ? '1 bericht' : items.length + ' berichten';
-  }
+    <section class="signup" id="inschrijven">
+      <div>
+        <h2>Elke donderdag het belangrijkste buurtnieuws in je mailbox</h2>
+        <p>Ontvang alleen wat relevant is voor Wooldrik, Hogeland-Zuid en Varvik-Diekman.</p>
+      </div>
 
-  function renderFilters(data) {
-    const filterbar = document.getElementById('filterbar');
-    const filters = document.getElementById('filters');
-    const filterable = data.sections.filter(s => (s.items || []).length >= 2);
+      <form action="https://buttondown.com/api/emails/embed-subscribe/buurtdezeweek" class="signup-form" method="post">
+        <input autocomplete="email" id="bd-email" name="email" placeholder="Je e-mailadres" required type="email">
+        <input name="embed" type="hidden" value="1">
+        <button class="button" type="submit">Ja, graag →</button>
+      </form>
 
-    filters.innerHTML = '';
-    if (!filterable.length) {
-      filterbar.hidden = true;
-      return;
-    }
+      <div class="signup-confirm">Na inschrijven ontvang je een bevestigingsmail. Klik daarin nog één keer om je inschrijving af te ronden.</div>
+    </section>
 
-    const all = document.createElement('button');
-    all.type = 'button';
-    all.className = 'filter active';
-    all.dataset.filter = 'all';
-    all.setAttribute('aria-pressed', 'true');
-    all.textContent = 'Alles';
-    filters.appendChild(all);
+    <section class="tipbox">
+      <div>
+        <h2>Zelf een tip voor de buurt?</h2>
+        <p>Zie je iets nieuws, leuks of belangrijks? Laat het weten.</p>
+      </div>
 
-    filterable.forEach(function (section) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'filter';
-      button.dataset.filter = section.id;
-      button.setAttribute('aria-pressed', 'false');
-      button.textContent = section.title;
-      filters.appendChild(button);
-    });
+      <details class="tip-details" id="tipDetails">
+        <summary id="tipSummary">Tip de redactie →</summary>
 
-    filterbar.hidden = false;
-  }
+        <form action="https://formspree.io/f/mljeazya" class="tip-form" id="tipForm" method="POST">
+          <input name="_subject" type="hidden" value="Nieuwe tip via Buurt deze week">
+          <input name="_next" type="hidden" value="https://www.buurtdezeweek.nl/tip-ontvangen/">
 
-  function positionSignup(selected) {
-    const signup = document.querySelector('.signup');
-    if (!signup) return;
+          <label for="tipSubject">Waar gaat je tip over?</label>
+          <input id="tipSubject" name="onderwerp" placeholder="Bijv. buurtfeest, wegafsluiting of activiteit" required type="text">
 
-    if (selected === 'all') {
-      const doen = document.querySelector('.section[data-category="doen"]');
-      if (doen) {
-        doen.insertAdjacentElement('afterend', signup);
-      } else {
-        document.getElementById('editionContent').appendChild(signup);
+          <label for="tipLocation">Waar?</label>
+          <input id="tipLocation" name="locatie" placeholder="Straat, locatie of buurt" required type="text">
+
+          <label for="tipDate">Wanneer?</label>
+          <input id="tipDate" name="wanneer" placeholder="Datum of periode" type="text">
+
+          <label for="tipInfo">Meer informatie</label>
+          <textarea id="tipInfo" name="informatie" placeholder="Vertel kort wat er speelt. Voeg eventueel een link toe." required></textarea>
+
+          <button class="button" type="submit">Verstuur tip</button>
+          <p class="tip-note">Je tip wordt rechtstreeks verstuurd.</p>
+          <p class="tip-error" hidden id="tipError">Versturen lukt nu niet. Probeer het later nog eens.</p>
+        </form>
+      </details>
+    </section>
+
+    <section class="info" id="over" aria-label="Over en contact">
+      <details>
+        <summary>Over Buurt deze week</summary>
+        <p><strong>Buurt deze week</strong> is een onafhankelijke pilot van Tom de Haas. Veel nieuws, activiteiten en praktische informatie over de buurt bestaan al, maar staan verspreid over websites, agenda’s, organisaties en andere kanalen.</p>
+        <p>Buurt deze week brengt de belangrijkste informatie voor Wooldrik, Hogeland-Zuid en Varvik-Diekman bij elkaar. De pilot is onafhankelijk en is niet verbonden aan de gemeente Enschede.</p>
+      </details>
+
+      <details>
+        <summary>Privacy</summary>
+        <p>Voor de nieuwsbrief wordt je e-mailadres verwerkt via Buttondown. We gebruiken Simple Analytics om privacyvriendelijk te meten hoe de site wordt gebruikt. We plaatsen zelf geen advertentiecookies.</p>
+      </details>
+
+      <details>
+        <summary>Contact</summary>
+        <p>Vraag, suggestie, tip of interesse in de pilot?</p>
+        <div class="contact-line">
+          <a href="mailto:buurtdezeweek@buttondown.email?subject=Buurt%20deze%20week">buurtdezeweek@buttondown.email</a>
+          <button class="copy-email" id="copyEmail" type="button">Kopieer e-mailadres</button>
+          <span class="copy-status" id="copyEmailStatus" aria-live="polite"></span>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      Buurt deze week · pilot Zuidoost-Enschede · <a href="https://www.buurtdezeweek.nl/">www.buurtdezeweek.nl</a>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const signupForm = document.querySelector('form[action*="buttondown.com/api/emails/embed-subscribe"]');
+      if (signupForm) {
+        signupForm.addEventListener('submit', function () {
+          if (typeof sa_event === 'function') sa_event('newsletter_signup_started');
+        });
       }
-      return;
-    }
 
-    const active = document.querySelector(
-      '.section[data-category="' + CSS.escape(selected) + '"]'
-    );
-    if (active) active.insertAdjacentElement('afterend', signup);
-  }
-
-  function bindFilters() {
-    const buttons = document.querySelectorAll('.filter[data-filter]');
-
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const selected = button.dataset.filter;
-
-        buttons.forEach(function (btn) {
-          const active = btn === button;
-          btn.classList.toggle('active', active);
-          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      const tipSummary = document.getElementById('tipSummary');
+      if (tipSummary) {
+        tipSummary.addEventListener('click', function () {
+          if (typeof sa_event === 'function') sa_event('tip_clicked');
         });
+      }
 
-        document.querySelectorAll('.section[data-category]').forEach(function (section) {
-          section.hidden = selected !== 'all' && section.dataset.category !== selected;
+      const copyButton = document.getElementById('copyEmail');
+      const copyStatus = document.getElementById('copyEmailStatus');
+      if (copyButton) {
+        copyButton.addEventListener('click', async function () {
+          try {
+            await navigator.clipboard.writeText('buurtdezeweek@buttondown.email');
+            if (copyStatus) copyStatus.textContent = 'Gekopieerd.';
+            if (typeof sa_event === 'function') sa_event('contact_email_copied');
+          } catch (error) {
+            if (copyStatus) copyStatus.textContent = 'Selecteer: buurtdezeweek@buttondown.email';
+          }
         });
+      }
+    });
+  </script>
 
-        positionSignup(selected);
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('tipForm');
+      if (!form) return;
 
-        if (typeof sa_event === 'function') {
-          sa_event('filter_used', { filter: selected || 'unknown' });
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const button = form.querySelector('button[type="submit"]');
+        const error = document.getElementById('tipError');
+        const originalText = button.textContent;
+
+        button.disabled = true;
+        button.textContent = 'Versturen…';
+        if (error) error.hidden = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method:'POST',
+            body:new FormData(form),
+            headers:{'Accept':'application/json'}
+          });
+
+          if (!response.ok) throw new Error('Formspree response ' + response.status);
+          if (typeof sa_event === 'function') sa_event('tip_submitted');
+          window.location.href = '/tip-ontvangen/';
+        } catch (error) {
+          console.error(error);
+          const errorEl = document.getElementById('tipError');
+          if (errorEl) errorEl.hidden = false;
+          button.disabled = false;
+          button.textContent = originalText;
         }
       });
     });
-  }
+  </script>
 
-  function bindArticleTracking() {
-    document.getElementById('editionContent').addEventListener('click', function (event) {
-      const link = event.target.closest('.section[data-category] .item a');
-      if (!link) return;
 
-      const section = link.closest('.section[data-category]');
-      const titleEl = link.querySelector('.title');
+  <script>
+    (function () {
+      const MONTHS = [
+        'januari','februari','maart','april','mei','juni',
+        'juli','augustus','september','oktober','november','december'
+      ];
+      const DAYS = [
+        'zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'
+      ];
 
-      if (typeof sa_event === 'function') {
-        sa_event('article_clicked', {
-          category: section ? section.dataset.category : 'unknown',
-          title: titleEl ? titleEl.textContent.trim() : 'unknown'
+      let editionData = null;
+      let activeFilter = 'all';
+
+      function formatDutchDate(isoDate) {
+        const parts = isoDate.split('-').map(Number);
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        return DAYS[d.getDay()].charAt(0).toUpperCase() +
+          DAYS[d.getDay()].slice(1) + ' ' + d.getDate() + ' ' +
+          MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+      }
+
+      function dayLabel(isoDate) {
+        const parts = isoDate.split('-').map(Number);
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        return DAYS[d.getDay()] + '-editie';
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function allStories(data) {
+        return (data.sections || []).flatMap(function (section) {
+          return (section.items || []).map(function (item) {
+            return Object.assign({}, item, {
+              categoryId: section.id,
+              categoryTitle: section.title
+            });
+          });
         });
       }
-    });
-  }
 
-  async function loadEdition() {
-    const content = document.getElementById('editionContent');
-
-    try {
-      const response = await fetch('./editie-site.json?v=' + Date.now(), { cache: 'no-store' });
-      if (!response.ok) throw new Error('HTTP ' + response.status);
-
-      const data = await response.json();
-      if (!data.edition || !data.edition.date || !Array.isArray(data.sections)) {
-        throw new Error('editie-site.json heeft niet de verwachte structuur');
+      function internalHref(item) {
+        const href = item.page_url || item.url || '#';
+        if (item.page_url && !href.startsWith('/')) return '/' + href;
+        return href;
       }
 
-      document.getElementById('editionDate').textContent = formatDutchDate(data.edition.date);
-      document.getElementById('editionBrand').textContent =
-        data.edition.brand || 'Buurt deze week · Zuidoost-Enschede';
-      document.getElementById('editionTitle').textContent =
-        data.edition.title || 'Dit speelt er deze week in jouw buurt';
-      document.getElementById('editionIntro').textContent = data.edition.intro || '';
-      document.getElementById('freeLabel').textContent =
-        data.edition.free === false ? '' : 'Gratis';
+      function storyHtml(item) {
+        const href = internalHref(item);
+        const externalAttrs = item.page_url ? '' : ' target="_blank" rel="noopener"';
+        const tagClass = item.label_style === 'green'
+          ? 'green'
+          : item.label_style === 'orange'
+            ? 'orange'
+            : '';
 
-      content.innerHTML = data.sections.map(sectionHtml).join('');
-      setCounts(data);
-      renderFilters(data);
-      bindFilters();
-      bindArticleTracking();
-      positionSignup('all');
+        const image = item.image_url
+          ? `<img class="story-thumb" src="${escapeHtml(item.image_url)}" alt="" loading="lazy">`
+          : `<div class="story-thumb-placeholder">Buurt deze week</div>`;
 
-      document.title = 'Buurt deze week · ' + formatDutchDate(data.edition.date);
-
-      const description = document.querySelector('meta[name="description"]');
-      if (description && data.edition.intro) description.setAttribute('content', data.edition.intro);
-
-      if (typeof sa_event === 'function') {
-        sa_event('edition_viewed', { edition: data.edition.date });
-      }
-    } catch (error) {
-      console.error(error);
-      content.innerHTML = `
-        <div class="edition-error">
-          De editie kon niet worden geladen. Probeer de pagina over een paar minuten opnieuw.
-        </div>
-      `;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', loadEdition);
-})();
-</script><script>
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('tipForm');
-  if (!form) return;
-
-  form.addEventListener('submit', async function (event) {
-    event.preventDefault();
-
-    var button = form.querySelector('button[type="submit"]');
-    var error = document.getElementById('tipError');
-    var originalText = button.textContent;
-
-    button.disabled = true;
-    button.textContent = 'Versturen…';
-    if (error) error.hidden = true;
-
-    try {
-      var response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (!response.ok) throw new Error('Formspree response ' + response.status);
-
-      if (typeof sa_event === 'function') {
-        sa_event('tip_submitted');
+        return `
+          <article class="story" data-category="${escapeHtml(item.categoryId)}">
+            <a class="story-link" href="${escapeHtml(href)}"${externalAttrs}>
+              <span class="story-bullet" aria-hidden="true"></span>
+              <div class="story-main">
+                <div class="story-category">${escapeHtml(item.categoryTitle || '')}</div>
+                <h3 class="story-title">${escapeHtml(item.title || '')}</h3>
+                ${item.summary ? `<p class="story-summary">${escapeHtml(item.summary)}</p>` : ''}
+                <div class="story-meta">
+                  ${item.label ? `<span class="story-tag ${tagClass}">${escapeHtml(item.label)}</span>` : ''}
+                  ${item.source ? `<span>${escapeHtml(item.source)}</span>` : ''}
+                </div>
+              </div>
+              ${image}
+            </a>
+          </article>
+        `;
       }
 
-      window.location.href = '/tip-ontvangen/';
-    } catch (err) {
-      console.error(err);
-      if (error) error.hidden = false;
-      button.disabled = false;
-      button.textContent = originalText;
-    }
-  });
-});
-</script><script async="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+      function renderStories() {
+        if (!editionData) return;
+
+        const stories = allStories(editionData);
+        const visible = activeFilter === 'all'
+          ? stories
+          : stories.filter(function (story) {
+              return story.categoryId === activeFilter;
+            });
+
+        const content = document.getElementById('editionContent');
+        content.innerHTML = visible.map(storyHtml).join('');
+
+        const count = document.getElementById('feedCount');
+        if (count) count.textContent = visible.length === 1 ? '1 verhaal' : visible.length + ' verhalen';
+
+        bindStoryTracking();
+      }
+
+      function renderFilters(data) {
+        const holder = document.getElementById('filters');
+        const available = (data.sections || []).filter(function (section) {
+          return (section.items || []).length > 0;
+        });
+
+        const buttons = [
+          '<button class="filter active" type="button" data-filter="all">Alles</button>'
+        ];
+
+        available.forEach(function (section) {
+          buttons.push(
+            `<button class="filter" type="button" data-filter="${escapeHtml(section.id)}">${escapeHtml(section.title)}</button>`
+          );
+        });
+
+        holder.innerHTML = buttons.join('');
+
+        holder.querySelectorAll('.filter').forEach(function (button) {
+          button.addEventListener('click', function () {
+            activeFilter = button.dataset.filter;
+            holder.querySelectorAll('.filter').forEach(function (btn) {
+              btn.classList.toggle('active', btn === button);
+            });
+            renderStories();
+            if (typeof sa_event === 'function') {
+              sa_event('filter_used', { filter: activeFilter });
+            }
+          });
+        });
+      }
+
+      function setCounts(data) {
+        const stories = allStories(data);
+        const sources = new Set(
+          stories.map(function (item) {
+            return (item.source || '').trim();
+          }).filter(Boolean)
+        );
+
+        document.getElementById('sourceCount').textContent =
+          sources.size === 1 ? '1 lokale bron' : sources.size + ' lokale bronnen';
+        document.getElementById('storyCount').textContent =
+          stories.length === 1 ? '1 bericht' : stories.length + ' berichten';
+        document.getElementById('feedCount').textContent =
+          stories.length === 1 ? '1 verhaal' : stories.length + ' verhalen';
+
+        const minutes = Math.max(2, Math.ceil(stories.length * 0.48));
+        document.getElementById('readTime').textContent = 'ongeveer ' + minutes + ' minuten';
+      }
+
+      function bindStoryTracking() {
+        document.querySelectorAll('.story-link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            const story = link.closest('.story');
+            const title = link.querySelector('.story-title');
+            if (typeof sa_event === 'function') {
+              sa_event('article_clicked', {
+                category: story ? story.dataset.category : 'unknown',
+                title: title ? title.textContent.trim() : 'unknown'
+              });
+            }
+          });
+        });
+      }
+
+      async function loadEdition() {
+        const content = document.getElementById('editionContent');
+
+        try {
+          const response = await fetch('./editie-site.json?v=' + Date.now(), { cache:'no-store' });
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+
+          const data = await response.json();
+          if (!data.edition || !data.edition.date || !Array.isArray(data.sections)) {
+            throw new Error('editie-site.json heeft niet de verwachte structuur');
+          }
+
+          editionData = data;
+
+          document.getElementById('editionDate').textContent = formatDutchDate(data.edition.date);
+          document.getElementById('editionDay').textContent = dayLabel(data.edition.date);
+          document.getElementById('editionBrand').textContent = data.edition.brand || 'Buurt deze week · Zuidoost-Enschede';
+          document.getElementById('editionTitle').textContent = data.edition.title || 'Dit speelt er deze week in jouw buurt';
+          document.getElementById('editionIntro').textContent = data.edition.intro || '';
+          document.getElementById('freeLabel').textContent = data.edition.free === false ? '' : 'gratis';
+
+          setCounts(data);
+          renderFilters(data);
+          renderStories();
+
+          document.title = 'Buurt deze week · ' + formatDutchDate(data.edition.date);
+          const description = document.querySelector('meta[name="description"]');
+          if (description && data.edition.intro) description.setAttribute('content', data.edition.intro);
+
+          if (typeof sa_event === 'function') {
+            sa_event('edition_viewed', { edition: data.edition.date });
+          }
+        } catch (error) {
+          console.error(error);
+          content.innerHTML = '<div class="edition-error">De editie kon niet worden geladen. Probeer de pagina over een paar minuten opnieuw.</div>';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadEdition);
+    })();
+  </script>
+
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
