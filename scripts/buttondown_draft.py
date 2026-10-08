@@ -7,7 +7,7 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
-from urllib.parse import urlencode, urlsplit, urlunsplit, parse_qsl
+from urllib.parse import urlencode, urlsplit, urlunsplit, parse_qsl, urljoin
 
 import requests
 
@@ -72,12 +72,23 @@ def slugify(text):
     return re.sub(r"-+", "-", text).strip("-")
 
 
+def absolute_url(value):
+    value = str(value or "").strip()
+    if not value:
+        return ""
+    resolved = urljoin(SITE_URL, value)
+    if urlsplit(resolved).scheme not in {"https", "http"}:
+        raise ValueError("Alle nieuwsbriefafbeeldingen en links moeten HTTP(S)-URLs zijn")
+    return resolved
+
+
 def article_url(item, edition_date):
-    page_url = (item.get("page_url") or "").lstrip("/")
+    page_url = (item.get("page_url") or "").strip()
     if not page_url:
         slug = (item.get("slug") or slugify(item.get("title"))).strip()
-        page_url = f"berichten/{edition_date.isoformat()}-{slug}.html"
-    return SITE_URL.rstrip("/") + "/" + page_url
+        slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", slug)
+        page_url = f"berichten/{edition_date.isoformat()}-{slug}/index.html"
+    return absolute_url(page_url)
 
 
 def add_utm(url, campaign):
@@ -96,54 +107,30 @@ def esc(value):
 
 
 def email_item(item, parsed_date):
-    style = item.get("label_style", "blue")
-    palette = {
-        "blue": ("#0d3f9b", "#eaf1ff"),
-        "green": ("#2f7d59", "#edf7f1"),
-        "orange": ("#b65f20", "#fff1e7"),
-    }
-    fg, bg = palette.get(style, palette["blue"])
-
-    label = ""
-    if item.get("label"):
-        label = (
-            f'<span style="display:inline-block;margin-top:9px;'
-            f'font-size:11px;font-weight:900;text-transform:uppercase;'
-            f'letter-spacing:.05em;color:{fg};background:{bg};'
-            f'padding:5px 8px;border-radius:999px;">'
-            f'{esc(item["label"])}</span>'
+    url = esc(article_url(item, parsed_date))
+    image_url = absolute_url(item.get("image_url"))
+    image_html = ""
+    if image_url:
+        image_html = (
+            '<td class="email-thumb" width="150" valign="top" style="width:150px;padding-left:18px;">'
+            '<a href="' + url + '" style="text-decoration:none;">'
+            '<img src="' + esc(image_url) + '" alt="' + esc(item.get("image_alt") or "Illustratief beeld bij: " + item["title"]) +
+            '" width="150" border="0" style="display:block;width:150px;max-width:150px;height:auto;border-radius:10px;">'
+            '</a></td>'
         )
-
-    source = (
-        f'<span style="font-size:12px;color:#6b7280;">'
-        f'&nbsp;·&nbsp; {esc(item["source"])}</span>'
+    label = esc(item.get("display_date") or item.get("label"))
+    return (
+        '<tr><td style="padding:17px 0;border-bottom:1px solid #ddd9cd;">'
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">'
+        '<tr><td class="email-copy" valign="top" style="font-family:Arial,Helvetica,sans-serif;">'
+        '<div style="font-size:11px;line-height:1.4;font-weight:700;color:#155eef;margin-bottom:6px;">' + label + '</div>'
+        '<a href="' + url + '" style="text-decoration:none;color:#132230;">'
+        '<div style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:1.2;font-weight:700;color:#132230;margin-bottom:8px;">' + esc(item["title"]) + '</div></a>'
+        '<div style="font-size:14px;line-height:1.5;color:#5a6570;margin-bottom:8px;">' + esc(item["summary"]) + '</div>'
+        '<a href="' + url + '" style="font-size:13px;font-weight:700;color:#155eef;text-decoration:none;">Lees meer →</a>'
+        '<div style="font-size:11px;line-height:1.4;color:#6b736e;margin-top:8px;">Bron: ' + esc(item["source"]) + '</div>'
+        '</td>' + image_html + '</tr></table></td></tr>'
     )
-
-    return f"""
-      <tr>
-        <td style="padding:0 0 20px 0;">
-          <a href="{esc(article_url(item, parsed_date))}"
-             style="display:block;text-decoration:none;color:#132230 !important;-webkit-text-fill-color:#132230;">
-            <div style="font-family:Arial,Helvetica,sans-serif;
-                        font-size:17px;line-height:1.28;font-weight:800;
-                        letter-spacing:-.2px;margin:0 0 6px 0;
-                        color:#132230 !important;-webkit-text-fill-color:#132230;">
-              <span style="color:#132230 !important;-webkit-text-fill-color:#132230;">
-                {esc(item["title"])}
-              </span>
-              <span style="color:#155eef !important;-webkit-text-fill-color:#155eef;">›</span>
-            </div>
-            <div style="font-family:Arial,Helvetica,sans-serif;
-                        font-size:14px;line-height:1.5;
-                        color:#5a6570 !important;-webkit-text-fill-color:#5a6570;
-                        margin:0 0 2px 0;">
-              {esc(item["summary"])}
-            </div>
-          </a>
-          <div>{label}{source}</div>
-        </td>
-      </tr>
-    """
 
 
 def build_body(data, parsed_date):
@@ -177,19 +164,28 @@ def build_body(data, parsed_date):
     campaign = f"editie_{parsed_date:%Y_%m_%d}"
     online_url = add_utm(SITE_URL, campaign)
 
+    header_url = absolute_url(edition.get("header_image_url") or "assets/enschede-hero-staand.png")
+    header_html = (
+        '<tr><td align="center" style="padding:0 0 24px 0;">'
+        '<img src="' + esc(header_url) + '" alt="Illustratie van Enschede en Zuidoost-Enschede" width="280" border="0" '
+        'style="display:block;width:280px;max-width:100%;height:auto;border-radius:0 0 0 32px;">'
+        '</td></tr>'
+    )
+
     count_line = (
         f'Gratis &nbsp;·&nbsp; {len(sources)} lokale bronnen '
         f'&nbsp;·&nbsp; {len(items)} berichten'
     )
 
     return f"""<!-- buttondown-editor-mode: fancy -->
+<style>@media only screen and (max-width:520px){{.email-copy,.email-thumb{{display:block!important;width:100%!important}}.email-thumb{{padding:12px 0 0!important}}.email-thumb img{{width:100%!important;max-width:320px!important}}}}</style>
 <div style="margin:0;padding:0;background:#f6f2e9;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
        style="width:100%;background:#f6f2e9;border-collapse:collapse;">
 <tr>
 <td align="center" style="padding:30px 16px 44px 16px;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
-       style="width:100%;max-width:860px;border-collapse:collapse;">
+       style="width:100%;max-width:680px;border-collapse:collapse;">
 
 <tr>
 <td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:26px;">
@@ -213,6 +209,8 @@ def build_body(data, parsed_date):
   </div>
 </td>
 </tr>
+
+{header_html}
 
 <tr>
 <td style="background:#fffdf8;border-radius:14px;padding:10px 22px 4px 22px;">
@@ -359,11 +357,18 @@ def create_or_update(api_key, payload):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--edition", default="editie.json")
+    parser.add_argument("--edition", default="editie-site.json")
+    parser.add_argument("--source-edition")
     parser.add_argument("--preview")
     args = parser.parse_args()
 
     data, parsed_date = load_edition(args.edition)
+    if args.source_edition:
+        source, source_date = load_edition(args.source_edition)
+        generated_items = [(s["id"], i["title"], i["summary"], i["url"]) for s in data["sections"] for i in s["items"]]
+        source_items = [(s["id"], i["title"], i["summary"], i["url"]) for s in source["sections"] for i in s["items"]]
+        if source_date != parsed_date or generated_items != source_items:
+            raise ValueError("editie-site.json hoort niet bij de huidige editie.json. Bouw eerst de site.")
     payload = make_payload(data, parsed_date)
 
     if args.preview:
