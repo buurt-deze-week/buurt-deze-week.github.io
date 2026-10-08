@@ -1,11 +1,6 @@
 name: Editie archiveren
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "editie.json"
   workflow_dispatch:
 
 permissions:
