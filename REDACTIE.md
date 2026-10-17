@@ -2,13 +2,13 @@
 
 Vastgelegd op verzoek van de eigenaar op 17 oktober 2026, na de procesaudit.
 
-Kernbelofte: in één oogopslag wat er de komende dagen speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Iedere donderdag een compacte editie; relevantie boven volume. Een tussentijdse editie krijgt de werkelijke datum.
+Kernbelofte: in één oogopslag wat er de komende dagen speelt, verandert en te doen is in Wooldrik, Hogeland-Zuid en Varvik-Diekman. Wekelijks een compacte editie, zonder vaste publicatiedag; relevantie boven volume. Iedere editie krijgt de werkelijke publicatiedatum.
 
 Rubrieken: Doen, Weten, Regelen en Meedoen. De eigenaar wil grondige broncontrole en een interne verbeterronde voordat hij een eerste concept krijgt.
 
 ## Voortaan vóór het eerste concept
 
-1. Werkgebied, editiedatum en eerstvolgende donderdag vaststellen; tussentijdse editie expliciet als zodanig dateren.
+1. Werkgebied, werkelijke publicatiedatum en komende relevante dagen vaststellen. Er is geen vaste publicatiedag; de editie kan bijvoorbeeld op zaterdag verschijnen.
 2. Vast bronregister aflopen: gemeente/vergunningen/wegwerk, wijkraad en wijkkrant, corporaties, welzijn, scholen, park, verenigingen, kerk/moskee, zorg en lokale media. Nieuwe bronverwijzingen uit die bronnen toevoegen.
 3. Per ingang datum, URL, gelezen onderdeel, uitkomst en open controles vastleggen. HTTP 200 met lege inhoud telt niet als gelezen bron. Zoekresultaten dienen voor ontdekking; belangrijke feiten naar oorspronkelijke publicatie herleiden.
 4. Alle kanshebbers vergelijken op exacte buurt, komende datum/deadline, concrete bewonersactie, bewijs en herhaling. Tijdige agenda gaat vóór een inwisselbare algemene oproep.

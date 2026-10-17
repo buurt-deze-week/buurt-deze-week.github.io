@@ -1,6 +1,7 @@
 # Buurt deze week — verplicht vóór iedere editie
 Lees eerst REDACTIE.md en bronnenregister.json. De actuele opdracht van de eigenaar gaat voor.
 
+- Publicatiefrequentie: wekelijks, zonder vaste weekdag. Gebruik de werkelijke publicatiedatum en vermijd beloften als “iedere donderdag”.
 - Werkgebied: Wooldrik, Hogeland-Zuid en Varvik-Diekman in Enschede. Controleer exacte adressen; verwar Wooldrik niet met Borne of Hogeland met Groningen.
 - Doorloop alle bronfamilies in bronnenregister.json vóór een eerste concept. Het register is een beginpunt: voeg relevante ontdekte bronnen toe.
 - Lees oorspronkelijke berichten en actuele agenda's; neem ook relevante pagina's van de nieuwste wijkkrant en het actuele kerkblad door.
