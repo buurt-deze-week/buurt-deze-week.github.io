@@ -1,0 +1,283 @@
+{
+  "updated_on": "2026-10-17",
+  "purpose": "Vaste controle-ingangen; controleer opnieuw bij iedere editie. Oude uitkomsten zijn geen nieuw bewijs.",
+  "entries": [
+    {
+      "source": "Project en eerdere edities",
+      "url": "https://github.com/buurt-deze-week/buurt-deze-week.github.io",
+      "status": "Gelezen",
+      "finding": "Rubrieken, werkgebied en bronlinks uit alle zes opgeslagen edities geïnventariseerd; vergelijking op herhaling. Lokale briefing van 1 oktober aanvullend gelezen."
+    },
+    {
+      "source": "Gemeente: nieuwsoverzicht",
+      "url": "https://www.enschede.nl/nieuws?page=9",
+      "status": "Gedeeltelijk",
+      "finding": "Recent overzicht via webzoekresultaat gelezen; vaccinatiebericht gevonden. Geen volledige paginering of archiefdekking bewezen."
+    },
+    {
+      "source": "Gemeente: officiële mededelingen",
+      "url": "https://www.enschede.nl/officiele-mededelingen-van-14-oktober-2026",
+      "status": "Open",
+      "finding": "HTTP 403, ook bij directe aanvraag en alternatieve URL. Volledig weekoverzicht niet gelezen."
+    },
+    {
+      "source": "Gemeente: wegwerk",
+      "url": "https://www.enschede.nl/wegwerkzaamheden-16-oktober-2026-week-43",
+      "status": "Gelezen via zoekindex",
+      "finding": "Actuele opsomming met Wethouder Elhorststraat tot 23 oktober gelezen. Oudere werkzaamheden niet automatisch verlengd."
+    },
+    {
+      "source": "Gemeente: stadsdeel Oost",
+      "url": "https://www.enschede.nl/stadsdeel-oost",
+      "status": "Gelezen via zoekindex",
+      "finding": "Werkgebied en wijkregisseur gecontroleerd. Geen nieuw specifiek evenement in de drie buurten hier geselecteerd."
+    },
+    {
+      "source": "Bekendmakingen: ontdekking",
+      "url": "https://allesover053.nl/vergunningen/?lang=de",
+      "status": "Gedeeltelijk",
+      "finding": "Recente vermeldingen doorzocht. Indexdatum bleek bij gecontroleerde publicaties een dag af te wijken; niet als bewijsdatum gebruikt. Geen volledige officiële export."
+    },
+    {
+      "source": "Bekendmaking: moskeerectificatie",
+      "url": "https://zoek.officielebekendmakingen.nl/gmb-2026-472002.html",
+      "status": "Oorspronkelijke bron gelezen",
+      "finding": "14 oktober: correctie stadsdeel naar Oost. Geen nieuwe bouwstart of nieuwe vergunning. Afgewezen als zelfstandig nieuws."
+    },
+    {
+      "source": "Bekendmaking: Pieter Bothstraat",
+      "url": "https://zoek.officielebekendmakingen.nl/gmb-2026-466514.html",
+      "status": "Oorspronkelijke bron gelezen",
+      "finding": "14 oktober gepubliceerd; besluit 2 oktober; legalisatie nokverhoging. Nieuw kort buurtbericht geselecteerd. Buurt afzonderlijk gecontroleerd via meerdere adresbronnen."
+    },
+    {
+      "source": "Bekendmaking: Varviksingel 45",
+      "url": "https://zoek.officielebekendmakingen.nl/gmb-2026-465310.html",
+      "status": "Oorspronkelijke bron gelezen",
+      "finding": "Aanvraag uitweg; geen verleende vergunning. Randgeografie en geringe bredere relevantie: niet geselecteerd."
+    },
+    {
+      "source": "OverUwBuurt: Hogeland-Zuid",
+      "url": "https://www.overuwbuurt.nl/enschede/wijk-01-hogeland---velve/hogeland-zuid",
+      "status": "Gedeeltelijk",
+      "finding": "Zichtbare lijst bleef bij september. Geen bewijs dat er sinds september niets is gebeurd."
+    },
+    {
+      "source": "Wijkraad: nieuws en agenda",
+      "url": "https://www.wijkraadzuidoostenschede.nl/",
+      "status": "Rechtstreeks gelezen",
+      "finding": "Bestuursvergaderingen 2026; 15 oktober voorbij, volgende 19 november. Geen actuele vergadering verzonnen."
+    },
+    {
+      "source": "Wijkraad: nieuwste wijkkrant",
+      "url": "https://www.wijkraadzuidoostenschede.nl/wijkkrant/",
+      "status": "Relevante pagina’s gelezen",
+      "finding": "September 2026-PDF opgehaald; onderwerpen, projectplanningen en activiteiten nagegaan. Nieuwe bronnen: Kwiekman, Brinkstraat en actuele Power-roosterinformatie. Geen bewijs dat iedere vermelding nog actueel is."
+    },
+    {
+      "source": "Wijkbudget",
+      "url": "https://www.wijkraadzuidoostenschede.nl/wijkbudgetten/",
+      "status": "Gedeeltelijk",
+      "finding": "Regels gelezen. Jij Maakt Enschede leverde alleen een lege applicatieschil. Geen actueel budgetbedrag herhaald."
+    },
+    {
+      "source": "Brinkstraatproject",
+      "url": "https://jijmaaktenschede.nl/brinkstraat",
+      "status": "Open",
+      "finding": "Appschil zonder inhoud; wijkkrant noemt vervolg in oktober, maar geen bevestigde datum gevonden. Niet als nieuwe bijeenkomst opgenomen."
+    },
+    {
+      "source": "De Woonplaats: Hogeland",
+      "url": "https://www.dewoonplaats.nl/projecten/hogeland/",
+      "status": "Gelezen",
+      "finding": "Bewonersavond 17 juni, gesprekken en vervolg zonder nieuwe concrete datum. Geen oude bewonersavond als nieuws hergebruikt."
+    },
+    {
+      "source": "Domijn: project Varvik-Diekman",
+      "url": "https://www.domijn.nl/over-ons/wat-we-doen/sloop-verduurzaming-en-nieuwbouw-varvik-diekman/",
+      "status": "Gelezen",
+      "finding": "Oplevering en verhuur al in septemberedities; sloop eind 2026 is planning zonder nieuw exact moment. Reserve voor dossier, geen herhaling."
+    },
+    {
+      "source": "Domijn: nieuws",
+      "url": "https://www.domijn.nl/over-ons/actueel/nieuws/",
+      "status": "Gelezen",
+      "finding": "Zichtbaar overzicht zonder nieuwe relevante oktoberontwikkeling. Een index is geen bewijs van afwezigheid elders."
+    },
+    {
+      "source": "Ons Huis: nieuws",
+      "url": "https://www.onshuis.com/over-ons-huis/nieuws/",
+      "status": "Zichtbaar overzicht gelezen",
+      "finding": "Via correcte nieuwsroute rechtstreeks gelezen. Geen nieuw specifiek Varvik-verhaal bevestigd; projectbrieven en bewonersportaal niet toegankelijk onderzocht."
+    },
+    {
+      "source": "Alifa: activiteitenagenda",
+      "url": "https://www.alifa.nl/activiteiten",
+      "status": "Gelezen",
+      "finding": "Agenda met komende week bekeken; schoolhuiskamer Diekman gevonden. Herhaald aanbod en al eerder opgenomen; niet geselecteerd boven tijdige maaltijd."
+    },
+    {
+      "source": "Alifa: huiskamer Diekman",
+      "url": "https://www.alifa.nl/activiteit/294/huiskamer-stedelijk-diekman",
+      "status": "Gelezen",
+      "finding": "Maandag en donderdag 14.30–16.30, voor eigen leerlingen; geen algemene open buurtactiviteit."
+    },
+    {
+      "source": "Alifa: ouders en kinderen",
+      "url": "https://www.alifa.nl/dienst/40/ontmoetingsgroepen",
+      "status": "Gelezen",
+      "finding": "Varvik donderdag 09.30–11.30 met kinderopvang; bestaand aanbod al eerder opgenomen. Reserve."
+    },
+    {
+      "source": "Power Centrum-Oost",
+      "url": "https://oost.centrumpower.nl/onze-activiteiten/",
+      "status": "Rechtstreeks gelezen",
+      "finding": "Activiteitenlijst vergeleken met septemberkrant. Interne dubbele/verouderde roostervermeldingen en verschillende telefoonnummers; geen nieuwe exacte sessie beloofd."
+    },
+    {
+      "source": "Incluzio",
+      "url": "https://www.incluzioenschede.nl/",
+      "status": "Gedeeltelijk",
+      "finding": "Homepage bekeken, buurtwerk Hogeland via wijkkrant. Geen nieuwe concrete datum bevestigd; niet alle onderliggende nieuwsitems onderzocht."
+    },
+    {
+      "source": "Wijkwijzer: nieuws en geld",
+      "url": "https://wijkwijzerenschede.nl/besparen",
+      "status": "Rechtstreeks gelezen",
+      "finding": "Nieuwe publicatie van 14 oktober gelezen; algemene hulpvermelding vervangen door praktisch geldzakenbericht."
+    },
+    {
+      "source": "Wijkteams: lokale spreekuren",
+      "url": "https://www.wijkteamsenschede.nl/contact/wijkteam-oost/",
+      "status": "Gelezen",
+      "finding": "Maandag Olympialaan 20 en woensdag Ontmoetingskerk; actueel bronpaar bij geldzakenbericht."
+    },
+    {
+      "source": "Ontmoetingskerk: site en oktoberblad",
+      "url": "https://www.pgenschede.nl/",
+      "status": "Relevante PDF-pagina’s gelezen en visueel gecontroleerd",
+      "finding": "Oktoberblad via actuele homepage gedownload. Pagina 14 visueel gelezen: Noabermaaltijd 21 oktober en Draadkracht 21 oktober geselecteerd; data, aanmelddeadline en locatie gecontroleerd. Andere vooruitblikken als reserve."
+    },
+    {
+      "source": "Speeltuin Varvik",
+      "url": "https://www.speeltuin-varvik.nl/",
+      "status": "Open",
+      "finding": "Eerder gebruikte URL kon rechtstreeks niet worden opgelost. Andere domeinvariant gaf certificaatfout. Eerste editie leunde op zoekcache. Vage activiteit uit selectie gehaald; Alifa bevestigt alleen haar eigen ontmoetingsgroep."
+    },
+    {
+      "source": "Wooldrikpark en kinderboerderij",
+      "url": "https://www.wooldrikpark.nl/",
+      "status": "Gelezen",
+      "finding": "Homepage en voorzieningen bekeken; geen nieuwe gedateerde komende-weekactiviteit gevonden. Dierendag voorbij, kunstwandeling stond al in vorige editie."
+    },
+    {
+      "source": "Sportaal en vakantiezwemmen",
+      "url": "https://www.sportaal.nl/nieuws-en-activiteiten/sportief-de-herfstvakantie-in-met-zwembad-het-diekman/",
+      "status": "Gelezen",
+      "finding": "17/18 oktober-programma bevestigd. Laatste vakantieweekend behouden; verwijzing naar vorige editie maakt herhaling expliciet."
+    },
+    {
+      "source": "KNZB: Het Diekman",
+      "url": "https://waterpolo.knzb.nl/waterpolo/locaties/locatie/DQJ820U",
+      "status": "Gelezen",
+      "finding": "Komend programma bekeken. 24 oktober 18.45 en 19.30 geselecteerd als vooruitblik; geen gratis toegang of bezoekersrecht verondersteld."
+    },
+    {
+      "source": "T.V. Het Wooldrik",
+      "url": "https://www.tvhetwooldrik.nl/",
+      "status": "Gelezen",
+      "finding": "Homepage, agenda, contractbericht en commissies bekeken. Contractbericht behouden; algemene hulpvraag commissie verwijderd ten gunste van concrete activiteit."
+    },
+    {
+      "source": "VOGIDO",
+      "url": "https://www.vogido.nl/",
+      "status": "Gelezen",
+      "finding": "Nieuws, programma en uitslagen zichtbaar. Oudere nieuwsberichten en reguliere wedstrijden niet als sterker verhaal geselecteerd."
+    },
+    {
+      "source": "Tubanters",
+      "url": "https://tubanters.nl/nieuwsoverzicht/",
+      "status": "Rechtstreeks gelezen",
+      "finding": "Agenda en nieuwsoverzicht vergeleken. Oktober/november-tegenstrijdigheid bij ledenvergadering blijft; niet opgenomen. Bokbiertoernooi 16 oktober al voorbij."
+    },
+    {
+      "source": "EFC PW / Kwiekman",
+      "url": "https://www.efcpw.nl/kwiekman-ouderensport",
+      "status": "Gedeeltelijk",
+      "finding": "Website toont alleen afbeelding/schil. Septemberkrant kondigt open middagen 3 en 5 november aan; reserve, nog niet opnieuw bij organisatie bevestigd."
+    },
+    {
+      "source": "FC Fietsplezier",
+      "url": "https://fcfietsplezier.nl/",
+      "status": "Gelezen",
+      "finding": "Homepage noemt nog 11 oktober als eerstvolgende tocht: inmiddels voorbij. Niet opnieuw geplaatst."
+    },
+    {
+      "source": "IVN Enschede",
+      "url": "https://www.ivn.nl/afdeling/enschede/natuuractiviteiten/",
+      "status": "Gelezen",
+      "finding": "Agenda plus cursus 22 oktober gelezen. Theorie in NIVON Dotterbloemstraat buiten de drie buurten; excursielocatie onbekend. Niet toegevoegd om volume te vullen."
+    },
+    {
+      "source": "GGD Twente",
+      "url": "https://www.ggdtwente.nl/onderwerpen/kinderen/vaccinaties/vaccinatiedagen",
+      "status": "Gelezen",
+      "finding": "Nieuwe relevante servicevooruitblik: sporthal Diekman 5/10 november, met verschillende vaccins en openingstijden per dag. Met gemeentebericht vergeleken."
+    },
+    {
+      "source": "Het Stedelijk Diekman",
+      "url": "https://www.hetstedelijk.nl/locaties/diekman",
+      "status": "Gelezen",
+      "finding": "Nieuwsindex en bovenste relevante nieuwsitem geopend: 25 juni, geen oktober-nieuws. Niet iedere oude artikelpagina gelezen."
+    },
+    {
+      "source": "OBS Het Wooldrik",
+      "url": "https://www.obshetwooldrik.nl/",
+      "status": "Homepage en vacature bekeken",
+      "finding": "Geen nieuwe openbare nieuwsfeed bevestigd. Praktische vrijwilligersvacature blijft reserve; oudersysteem niet bekeken."
+    },
+    {
+      "source": "M-Pact",
+      "url": "https://www.m-pact.nl/",
+      "status": "Gedeeltelijk",
+      "finding": "Gerichte vacatures voor Wooldrik/Diekman gezocht; oude schoolvacature en verlopen kinderboerderijvacature gecontroleerd. Geen volledige geografische platformexport."
+    },
+    {
+      "source": "Huis voor Taal en Meedoen",
+      "url": "https://www.huisvoortaalenmeedoen.nl/",
+      "status": "Gelezen",
+      "finding": "Homepage en spreekuur; laatste zichtbare nieuws 30 september, geen nieuwe buurtactiviteit met deadline gevonden."
+    },
+    {
+      "source": "1Twente",
+      "url": "https://www.1twente.nl/enschede",
+      "status": "Gedeeltelijk",
+      "finding": "Recent overzicht en gerichte buurtzoekopdrachten bekeken; geen volledige archiefdoorzoeking. Oud zwemwaterdossier niet opnieuw als nieuw gebruikt."
+    },
+    {
+      "source": "Huis aan Huis Enschede",
+      "url": "https://www.huisaanhuisenschede.nl/",
+      "status": "Gedeeltelijk",
+      "finding": "Homepage en zoekopdrachten bekeken; isolatiebon-kandidaat niet volledig bij oorspronkelijke actuele regeling doorgelicht, daarom niet geselecteerd."
+    },
+    {
+      "source": "Twente Milieu",
+      "url": "https://www.twentemilieu.nl/enschede",
+      "status": "Gelezen",
+      "finding": "Gemeentepagina bekeken; algemeen aanbod, geen nieuwe buurtwijziging. Geen adresgebonden afvalkalender uitgelezen."
+    },
+    {
+      "source": "Politie",
+      "url": "https://www.politie.nl/mijn-buurt/wijkagenten/lijst?query=Enschede",
+      "status": "Open",
+      "finding": "Pagina niet toegankelijk via webtool. Geen volledige lokale veiligheidsnieuwscontrole; geen incidenten uit onbevestigde meldingen opgenomen."
+    },
+    {
+      "source": "Sociale kanalen en bewonersinput",
+      "url": "https://www.wijkraadzuidoostenschede.nl/sociale-partners/",
+      "status": "Open",
+      "finding": "Openbare partnerverwijzingen geïnventariseerd, maar geen volledige controle van Facebook/Instagram, WhatsApp, Formspree-inzendingen, e-mail, bewonersbrieven of besloten schoolkanalen. Geen nieuwe verbinding of privétoegang gebruikt."
+    }
+  ]
+}
+
