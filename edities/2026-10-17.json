@@ -1,0 +1,199 @@
+{
+  "edition": {
+    "date": "2026-10-17",
+    "brand": "Buurt deze week · Zuidoost-Enschede",
+    "title": "Samen aan tafel, het water in en iets voor een ander doen",
+    "intro": "Woensdag kun je voor €3 aanschuiven in de Ontmoetingskerk — meld je uiterlijk maandagochtend aan. Verder: het laatste weekend vakantiezwemmen, handwerken voor een goed doel en een nieuwe vergunning in Hogeland-Zuid. Ook nieuws over wegwerk en tennislessen, hulp bij geldzaken en twee vooruitblikken.",
+    "free": true,
+    "email_subject": "Buurt deze week: samen eten voor €3, aanmelden vóór maandagmiddag",
+    "email_preheader": "Noabermaaltijd, handwerken, wegwerk, buurtvergunning en meer voor Wooldrik, Hogeland-Zuid en Varvik-Diekman."
+  },
+  "sections": [
+    {
+      "id": "doen",
+      "title": "Doen",
+      "items": [
+        {
+          "title": "Woensdag samen eten voor €3: meld je vóór maandagmiddag aan",
+          "summary": "Op woensdag 21 oktober is er een Noabermaaltijd in de Ontmoetingskerk. Aanmelden kan tot en met maandagochtend 19 oktober.",
+          "page_summary": "Schuif aan voor een maaltijd met anderen uit de buurt. De inloop begint om 17.30 uur; om 17.45 uur wordt gegeten. De maaltijd kost €3 en de bijeenkomst duurt tot 19.00 uur. Aanmelden kan alleen telefonisch via 053 431 15 68, tussen 10.00 en 12.00 uur, voor maximaal twee personen. Voor deze maaltijd is maandag 19 oktober de laatste aanmeldochtend. De data, tijden en voorwaarden staan in het actuele oktoberblad van de Ontmoetingskerk. Beschikbaarheid van plaatsen moet je bij het aanmelden navragen.",
+          "label": "Varvik-Diekman · Ontmoetingskerk, dr. Joh. Wagenaarstraat 6",
+          "location": "Varvik-Diekman · Ontmoetingskerk, dr. Joh. Wagenaarstraat 6",
+          "display_date": "Woensdag 21 oktober · aanmelden uiterlijk maandag 19 oktober 12.00 uur",
+          "source": "Ontmoetingskerk · Kerk & Stad oktober 2026, p. 14",
+          "url": "https://www.pgenschede.nl/wp-content/uploads/2026/09/PGE-Magazine-OKT2026-website.pdf#page=14",
+          "label_style": "green",
+          "slug": "2026-10-17-woensdag-samen-eten-voor-3-meld-je-voor-maandagmiddag-aan",
+          "page_url": "berichten/2026-10-17-woensdag-samen-eten-voor-3-meld-je-voor-maandagmiddag-aan/index.html",
+          "image_url": "/assets/berichten/2026-10-17-woensdag-samen-eten-voor-3-meld-je-voor-maandagmiddag-aan.jpg",
+          "image_path": "assets/berichten/2026-10-17-woensdag-samen-eten-voor-3-meld-je-voor-maandagmiddag-aan.jpg",
+          "image_credit": "Pexels",
+          "image_page_url": "https://pixabay.com/photos/chair-couch-furniture-road-1840011/",
+          "pixabay_query": "road construction neighborhood"
+        },
+        {
+          "title": "Nog dit weekend: de stormbaan in Het Diekman",
+          "summary": "Nog een keer het water in tijdens de herfstvakantie? Zaterdag 17 en zondag 18 oktober kun je van 10.00 tot 16.00 uur recreatief zwemmen in Het Diekman.",
+          "page_summary": "De stormbaan ligt tijdens de herfstvakantie weer in het water. Zaterdag zijn beide baden van 10.00 tot 16.00 uur beschikbaar. Zondag is van 10.00 tot 11.00 uur alleen bad 2 open; daarna zijn beide baden tot 16.00 uur beschikbaar. Tickets bestel je via de zwembadwebsite. Dit is de laatste weekendtip uit het vakantieprogramma dat we in de vorige editie aankondigden.",
+          "label": "Varvik-Diekman · J.J. van Deinselaan 2",
+          "location": "Varvik-Diekman · J.J. van Deinselaan 2",
+          "display_date": "Zaterdag 17 en zondag 18 oktober · 10.00–16.00 uur",
+          "source": "Sportaal",
+          "url": "https://www.sportaal.nl/nieuws-en-activiteiten/sportief-de-herfstvakantie-in-met-zwembad-het-diekman/",
+          "label_style": "green",
+          "slug": "2026-10-17-nog-dit-weekend-de-stormbaan-in-het-diekman",
+          "page_url": "berichten/2026-10-17-nog-dit-weekend-de-stormbaan-in-het-diekman/index.html",
+          "image_url": "/assets/berichten/2026-10-08-de-stormbaan-ligt-weer-in-het-diekman.jpg",
+          "image_path": "assets/berichten/2026-10-08-de-stormbaan-ligt-weer-in-het-diekman.jpg",
+          "image_credit": "Pixabay",
+          "image_page_url": "https://pixabay.com/photos/indoor-swimming-pool-swimming-pool-735309/",
+          "pixabay_query": "indoor swimming pool"
+        },
+        {
+          "title": "Volgende zaterdag waterpolo in Het Diekman",
+          "summary": "Op zaterdag 24 oktober staan twee waterpolowedstrijden in Het Diekman op het KNZB-programma: om 18.45 en 19.30 uur.",
+          "page_summary": "Om 18.45 uur speelt EZC GO12-1 tegen VZ&PC GO12-1. Om 19.30 uur volgt Piranha H1 tegen ZPC De Hof H1. Het programma noemt zwembad Het Diekman aan de J.J. van Deinselaan 2 als locatie. Wil je komen kijken? Vraag de vereniging naar bezoekersmogelijkheden en eventuele kosten. Het wedstrijdprogramma alleen bevestigt geen vrije toegang. Controleer kort voor vertrek of de tijden nog kloppen.",
+          "label": "Varvik-Diekman · J.J. van Deinselaan 2",
+          "location": "Varvik-Diekman · J.J. van Deinselaan 2",
+          "display_date": "Vooruitblik · zaterdag 24 oktober, 18.45 en 19.30 uur",
+          "source": "KNZB",
+          "url": "https://waterpolo.knzb.nl/waterpolo/locaties/locatie/DQJ820U",
+          "label_style": "green",
+          "slug": "2026-10-17-volgende-zaterdag-waterpolo-in-het-diekman",
+          "page_url": "berichten/2026-10-17-volgende-zaterdag-waterpolo-in-het-diekman/index.html",
+          "image_url": "/assets/berichten/2026-10-08-waterpolo-in-de-buurt-dit-weekend.jpg",
+          "image_path": "assets/berichten/2026-10-08-waterpolo-in-de-buurt-dit-weekend.jpg",
+          "image_credit": "Pixabay",
+          "image_page_url": "https://pixabay.com/photos/search/water%20polo/",
+          "pixabay_query": "water polo"
+        }
+      ]
+    },
+    {
+      "id": "weten",
+      "title": "Weten",
+      "items": [
+        {
+          "title": "Nog wegwerk aan de Wethouder Elhorststraat",
+          "summary": "De gemeente noemt vrijdag 23 oktober nog steeds als geplande einddatum voor het vervangen van de drempels aan de Wethouder Elhorststraat.",
+          "page_summary": "Het overzicht van 16 oktober vermeldt werkzaamheden vanaf de kruising met de Wethouder Beversstraat tot en met de kruising met de Mariastraat. De planning loopt van 5 tot en met 23 oktober. Dit is een vervolg op onze eerdere aankondiging. Houd rekening met hinder als je hier langs moet en volg de aanwijzingen ter plaatse. Een geplande einddatum is geen bevestiging dat het werk al klaar is.",
+          "label": "Varvik-Diekman · Wethouder Elhorststraat",
+          "location": "Varvik-Diekman · Wethouder Elhorststraat",
+          "display_date": "Actuele planning · tot en met vrijdag 23 oktober",
+          "source": "Gemeente Enschede",
+          "url": "https://www.enschede.nl/wegwerkzaamheden-16-oktober-2026-week-43",
+          "label_style": "green",
+          "slug": "2026-10-17-nog-wegwerk-aan-de-wethouder-elhorststraat",
+          "page_url": "berichten/2026-10-17-nog-wegwerk-aan-de-wethouder-elhorststraat/index.html",
+          "image_url": "/assets/berichten/2026-10-17-nog-wegwerk-aan-de-wethouder-elhorststraat.jpg",
+          "image_path": "assets/berichten/2026-10-17-nog-wegwerk-aan-de-wethouder-elhorststraat.jpg",
+          "image_credit": "652234",
+          "image_page_url": "https://pixabay.com/photos/excavator-construction-site-build-1174428/",
+          "pixabay_query": "road construction neighborhood"
+        },
+        {
+          "title": "Tennislessen op Het Wooldrik: vertrouwde scholen blijven",
+          "summary": "T.V. Het Wooldrik heeft nieuwe contracten gesloten met de drie bestaande tennisscholen. Jeroen Bakker gaat er daarnaast zelfstandig verder als JBTennis.",
+          "page_summary": "Gustavo van Enck, Coen Beltman en Vincent Eleveld blijven lessen verzorgen op het park. De nieuwe afspraken gaan onder meer over de verdeling van lesbanen en eisen aan de tennisleraren. Jeroen Bakker, die eerder onder VTennis werkte, zet zijn bestaande lessen voort onder de naam JBTennis. Voor zijn huidige leerlingen verandert inhoudelijk weinig; hij blijft in eerste instantie actief op maandag, woensdag en donderdag. Lesaanbod en tarieven vind je via het bericht van de vereniging.",
+          "label": "Wooldrik · Tegelerweg 72",
+          "location": "Wooldrik · Tegelerweg 72",
+          "display_date": "Clubnieuws · bericht van 8 oktober",
+          "source": "T.V. Het Wooldrik",
+          "url": "https://www.tvhetwooldrik.nl/nieuws/nieuws_vanuit_het_bestuur_nieuwe_contracten_voor_de_tennisscholen/f2cfbd56-5923-4b09-a928-0300ce7ea308",
+          "label_style": "green",
+          "slug": "2026-10-17-tennislessen-op-het-wooldrik-vertrouwde-scholen-blijven",
+          "page_url": "berichten/2026-10-17-tennislessen-op-het-wooldrik-vertrouwde-scholen-blijven/index.html",
+          "image_url": "/assets/berichten/2026-10-17-tennislessen-op-het-wooldrik-vertrouwde-scholen-blijven.jpg",
+          "image_path": "assets/berichten/2026-10-17-tennislessen-op-het-wooldrik-vertrouwde-scholen-blijven.jpg",
+          "image_credit": "Arcaion",
+          "image_page_url": "https://pixabay.com/photos/street-parking-cars-city-night-2701004/",
+          "pixabay_query": "city park trees neighborhood"
+        },
+        {
+          "title": "Nokverhoging Pieter Bothstraat 39 krijgt vergunning",
+          "summary": "De gemeente heeft een vergunning verleend voor het legaliseren van een nokverhoging aan Pieter Bothstraat 39. Het besluit is op 14 oktober gepubliceerd.",
+          "page_summary": "Het besluit is genomen op 2 oktober en gaat over het legaliseren van een nokverhoging. Dat is een andere situatie dan de aankondiging van een nieuwe verbouwing. De bekendmaking noemt geen toekomstige startdatum van werkzaamheden. Voor meer informatie over het besluit en de procedure kun je bij de gemeente het zaaknummer 0153Z2606-0817 noemen. Het adres ligt in Hogeland-Zuid.",
+          "label": "Hogeland-Zuid · Pieter Bothstraat 39",
+          "location": "Hogeland-Zuid · Pieter Bothstraat 39",
+          "display_date": "Kort buurtbericht · gepubliceerd 14 oktober",
+          "source": "Gemeente Enschede",
+          "url": "https://zoek.officielebekendmakingen.nl/gmb-2026-466514.html",
+          "label_style": "green",
+          "slug": "2026-10-17-nokverhoging-pieter-bothstraat-39-krijgt-vergunning",
+          "page_url": "berichten/2026-10-17-nokverhoging-pieter-bothstraat-39-krijgt-vergunning/index.html",
+          "image_url": "/assets/berichten/2026-10-17-nokverhoging-pieter-bothstraat-39-krijgt-vergunning.jpg",
+          "image_path": "assets/berichten/2026-10-17-nokverhoging-pieter-bothstraat-39-krijgt-vergunning.jpg",
+          "image_credit": "tianya1223",
+          "image_page_url": "https://pixabay.com/photos/sunset-street-town-people-walk-6878021/",
+          "pixabay_query": "road construction neighborhood"
+        }
+      ]
+    },
+    {
+      "id": "regelen",
+      "title": "Regelen",
+      "items": [
+        {
+          "title": "Geldzaken nalopen? Nieuwe tips, hulp dichtbij",
+          "summary": "De Wijkwijzer publiceerde op 14 oktober tips om vaste lasten na te lopen. Wil je hulp bij je geldzaken? In de buurt zijn twee vaste spreekuren.",
+          "page_summary": "Bekijk bijvoorbeeld welke abonnementen je nog gebruikt en of verzekeringen elkaar overlappen. De Wijkwijzer kan je verwijzen naar hulp bij budgetvragen, administratie of schulden. In De Vrije Ruimte, Olympialaan 20, is het vaste spreekuur maandag van 09.00 tot 12.00 uur. In de Ontmoetingskerk, Doctor Wagenaarstraat 6, kun je woensdag van 14.00 tot 17.00 uur terecht. De locaties en tijden zijn gecontroleerd bij Wijkteams Enschede. Bellen kan via 053 481 79 00. De nieuwe tips zijn gemeentebreed; de genoemde hulp zit in de buurt.",
+          "label": "Voor alle drie buurten · hulp aan Olympialaan 20 en Doctor Wagenaarstraat 6",
+          "location": "Voor alle drie buurten · hulp aan Olympialaan 20 en Doctor Wagenaarstraat 6",
+          "display_date": "Nieuwe publicatie · 14 oktober; vaste spreekuren maandag en woensdag",
+          "source": "Wijkwijzer / Wijkteams Enschede",
+          "url": "https://wijkwijzerenschede.nl/besparen",
+          "label_style": "green",
+          "slug": "2026-10-17-geldzaken-nalopen-nieuwe-tips-hulp-dichtbij",
+          "page_url": "berichten/2026-10-17-geldzaken-nalopen-nieuwe-tips-hulp-dichtbij/index.html",
+          "image_url": "/assets/berichten/2026-10-17-geldzaken-nalopen-nieuwe-tips-hulp-dichtbij.jpg",
+          "image_path": "assets/berichten/2026-10-17-geldzaken-nalopen-nieuwe-tips-hulp-dichtbij.jpg",
+          "image_credit": "noelsch",
+          "image_page_url": "https://pixabay.com/photos/chinatown-streets-new-york-4582511/",
+          "pixabay_query": "road construction neighborhood"
+        },
+        {
+          "title": "Alvast in de agenda: vaccinatiedagen in de Diekmanhal",
+          "summary": "GGD Twente vaccineert op donderdag 5 en dinsdag 10 november in sporthal Het Diekman. Welke prik je op welke dag kunt halen, verschilt.",
+          "page_summary": "Op 5 november is de locatie open van 13.45 tot 19.00 uur, met een sluiting van 16.45 tot 17.30 uur. Die dag worden HPV- en meningokokken ACWY-prikken aangeboden. Op 10 november, van 12.00 tot 17.00 uur, gaat het om HPV- en BMR-prikken. Kijk in de uitnodigingsbrief hoe laat je wordt verwacht en raadpleeg het GGD-overzicht bij vragen over de afspraak. De locatie is de sporthal aan de J.J. van Deinselaan 22, dus een ander huisnummer dan het zwembad. Dit is een vooruitblik voor gezinnen, geen activiteit van de komende week.",
+          "label": "Varvik-Diekman · sporthal Het Diekman, J.J. van Deinselaan 22",
+          "location": "Varvik-Diekman · sporthal Het Diekman, J.J. van Deinselaan 22",
+          "display_date": "Vooruitblik · donderdag 5 en dinsdag 10 november",
+          "source": "GGD Twente",
+          "url": "https://www.ggdtwente.nl/onderwerpen/kinderen/vaccinaties/vaccinatiedagen",
+          "label_style": "green",
+          "slug": "2026-10-17-alvast-in-de-agenda-vaccinatiedagen-in-de-diekmanhal",
+          "page_url": "berichten/2026-10-17-alvast-in-de-agenda-vaccinatiedagen-in-de-diekmanhal/index.html",
+          "image_url": "/assets/berichten/2026-10-17-alvast-in-de-agenda-vaccinatiedagen-in-de-diekmanhal.jpg",
+          "image_path": "assets/berichten/2026-10-17-alvast-in-de-agenda-vaccinatiedagen-in-de-diekmanhal.jpg",
+          "image_credit": "bottomlayercz0",
+          "image_page_url": "https://pixabay.com/photos/child-soccer-playing-kick-613199/",
+          "pixabay_query": "community sports field"
+        }
+      ]
+    },
+    {
+      "id": "meedoen",
+      "title": "Meedoen",
+      "items": [
+        {
+          "title": "Woensdagochtend handwerken voor een goed doel",
+          "summary": "Op 21 oktober komt Draadkracht van 10.30 tot 12.00 uur bijeen in de Ontmoetingskerk. Garen, naalden en patronen zijn aanwezig.",
+          "page_summary": "Bij Draadkracht worden onder meer babydekentjes en mutsjes voor Ghana en kinderkleding voor Moldavië gemaakt. De groep combineert haken, breien en borduren met koffie, thee en een praatje. Het oktoberblad nodigt belangstellenden uit om op een woensdagochtend langs te komen en noemt 21 oktober als volgende datum. Er staat geen deelnameprijs bij; daarom noemen we de activiteit niet gratis.",
+          "label": "Varvik-Diekman · Ontmoetingskerk, dr. Joh. Wagenaarstraat 6",
+          "location": "Varvik-Diekman · Ontmoetingskerk, dr. Joh. Wagenaarstraat 6",
+          "display_date": "Woensdag 21 oktober · 10.30–12.00 uur",
+          "source": "Ontmoetingskerk · Kerk & Stad oktober 2026, p. 14",
+          "url": "https://www.pgenschede.nl/wp-content/uploads/2026/09/PGE-Magazine-OKT2026-website.pdf#page=14",
+          "label_style": "green",
+          "slug": "2026-10-17-woensdagochtend-handwerken-voor-een-goed-doel",
+          "page_url": "berichten/2026-10-17-woensdagochtend-handwerken-voor-een-goed-doel/index.html",
+          "image_url": "/assets/berichten/2026-10-17-woensdagochtend-handwerken-voor-een-goed-doel.jpg",
+          "image_path": "assets/berichten/2026-10-17-woensdagochtend-handwerken-voor-een-goed-doel.jpg",
+          "image_credit": "rmsep4",
+          "image_page_url": "https://pixabay.com/photos/south-korea-street-seoul-dusk-6918828/",
+          "pixabay_query": "road construction neighborhood"
+        }
+      ]
+    }
+  ]
+}
