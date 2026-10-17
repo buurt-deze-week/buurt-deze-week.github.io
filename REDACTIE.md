@@ -17,3 +17,5 @@ Rubrieken: Doen, Weten, Regelen en Meedoen. De eigenaar wil grondige broncontrol
 7. Gaten en reserves vóór oplevering vermelden. Bij onvolledige dekking geen “alles bekeken” of “allerbeste selectie” claimen.
 8. Pas na inhoudelijke controle vormgeven. Publiceren en nieuwsbrief verzenden zijn afzonderlijke handelingen.
 
+
+Beeldselectie: kies per bericht een aantoonbaar passend beeld en bekijk het daadwerkelijk, inclusief uitsnede op mobiel en desktop. Zoek eerst bij de oorspronkelijke bron; gebruik alleen beelden met bruikbare rechten, bronvermelding en eerlijke alttekst. Stockbeelden niet als lokale reportagefoto presenteren. Zet image_reviewed pas na visuele controle op true. Geen automatische keuze op populariteit of algemene buurtzoekwoorden; bij gebrek aan passend beeld liever geen afbeelding.

@@ -12,3 +12,5 @@ Lees eerst REDACTIE.md en bronnenregister.json. De actuele opdracht van de eigen
 - Publiceer pas na expliciet akkoord op die editie. Nieuwsbriefverzending vereist afzonderlijk akkoord; de bestaande workflow maakt alleen een Buttondown-concept.
 - Zet geen beschermde bronbestanden, privé-inzendingen of persoonsgegevens in deze openbare repository.
 
+
+Beeldselectie: kies per bericht een aantoonbaar passend beeld en bekijk het daadwerkelijk, inclusief uitsnede op mobiel en desktop. Zoek eerst bij de oorspronkelijke bron; gebruik alleen beelden met bruikbare rechten, bronvermelding en eerlijke alttekst. Stockbeelden niet als lokale reportagefoto presenteren. Zet image_reviewed pas na visuele controle op true. Geen automatische keuze op populariteit of algemene buurtzoekwoorden; bij gebrek aan passend beeld liever geen afbeelding.
