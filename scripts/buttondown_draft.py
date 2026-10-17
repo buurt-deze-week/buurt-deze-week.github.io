@@ -228,7 +228,7 @@ def build_body(data, parsed_date):
       Doorgestuurd gekregen?
     </div>
     <div style="font-size:14px;line-height:1.55;color:#59635d;margin-bottom:14px;">
-      Krijg Buurt deze week iedere donderdag gratis in je inbox.
+      Krijg Buurt deze week wekelijks gratis in je inbox.
     </div>
     <a href="https://www.buurtdezeweek.nl/"
        style="display:inline-block;background:#155eef;color:#ffffff !important;

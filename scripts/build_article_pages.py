@@ -336,7 +336,7 @@ def build_article_page(edition, section, item):
         '<header><nav><a class="brand" href="/" style="text-decoration:none;color:inherit">Buurt deze week<span style="color:#155eef">.</span></a>'
         '<a class="topnav" href="/#inschrijven">In je mailbox →</a></nav></header><main>'
         '<a class="detail-back" href="/">← Terug naar de editie</a>'
-        '<div class="edition-strip"><span>Donderdag-editie</span><span>' + esc(human_date(edition["date"])) + '</span><span>Zuidoost-Enschede</span></div>'
+        '<div class="edition-strip"><span>Wekelijkse editie</span><span>' + esc(human_date(edition["date"])) + '</span><span>Zuidoost-Enschede</span></div>'
         '<article class="detail-article"><div class="tag">' + esc(section.get("title")) + '</div><h1 class="detail-title">' + title + '</h1>'
         '<div class="detail-facts"><strong>' + esc(item.get("display_date") or human_date(edition["date"])) + '</strong><br>' +
         esc(item.get("location") or item.get("label")) + '</div><div class="detail-layout"><div class="detail-text">' + paragraphs + '</div>' + image + '</div>'
