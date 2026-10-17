@@ -160,147 +160,14 @@ def get_pixabay_image(
     existing_item=None,
     used_image_keys=None,
 ):
-    if used_image_keys is None:
-        used_image_keys = set()
-
-    manual_url = (item.get("image_url") or "").strip()
-    if manual_url:
-        manual_page_url = (item.get("image_page_url") or "").strip()
-        manual_key = image_identity(manual_page_url, manual_url)
-
-        if not manual_key or manual_key not in used_image_keys:
-            remember_image(used_image_keys, manual_page_url, manual_url)
-            if manual_url.startswith("https://cdn.pixabay.com/"):
-                IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-                destination = IMAGES_DIR / f"{edition_date}-{slug}.jpg"
-                try:
-                    if not destination.exists() or (existing_item or {}).get("image_source_url") != manual_url:
-                        download_file(manual_url, destination)
-                    local_path = destination.relative_to(ROOT).as_posix()
-                    return {"image_url": "/" + local_path, "image_path": local_path, "image_source_url": manual_url,
-                            "image_credit": item.get("image_credit", ""), "image_page_url": manual_page_url,
-                            "pixabay_query": item.get("pixabay_query") or normalize_query(item, section_title)}
-                except Exception as exc:
-                    print(f"Afbeelding blijft extern voor '{item.get('title')}': {exc}")
-            return {
-                "image_url": manual_url,
-                "image_path": item.get("image_path", ""),
-                "image_credit": item.get("image_credit", ""),
-                "image_page_url": manual_page_url,
-                "pixabay_query": item.get("pixabay_query") or normalize_query(item, section_title),
-            }
-
-        print(
-            f"Dubbele handmatige afbeelding overgeslagen voor "
-            f"'{item.get('title')}'"
-        )
-
-    if existing_item:
-        image_url = (existing_item.get("image_url") or "").strip()
-        image_path = (existing_item.get("image_path") or "").strip()
-        image_page_url = (existing_item.get("image_page_url") or "").strip()
-        existing_key = image_identity(image_page_url, image_url)
-
-        if (
-            image_path
-            and (ROOT / image_path).exists()
-            and (not existing_key or existing_key not in used_image_keys)
-        ):
-            remember_image(used_image_keys, image_page_url, image_url)
-            return {
-                "image_url": image_url or f"/{image_path}",
-                "image_path": image_path,
-                "image_credit": existing_item.get("image_credit", ""),
-                "image_page_url": image_page_url,
-                "pixabay_query": existing_item.get("pixabay_query") or normalize_query(item, section_title),
-            }
-
-    api_key = os.getenv("PIXABAY_API_KEY", "").strip()
-    query = normalize_query(item, section_title)
-    if not api_key:
-        print(f"Geen PIXABAY_API_KEY: geen afbeelding voor {item.get('title')}")
-        return {"pixabay_query": query}
-
-    params = {
-        "key": api_key,
-        "q": query,
-        "image_type": "photo",
-        "orientation": "horizontal",
-        "safesearch": "true",
-        "per_page": 20,
-        "min_width": 800,
-    }
-    api_url = "https://pixabay.com/api/?" + urllib.parse.urlencode(params)
-
-    try:
-        data = request_json(api_url)
-    except Exception as exc:
-        print(f"Pixabay-fout voor '{item.get('title')}': {exc}")
-        return {"pixabay_query": query}
-
-    hits = data.get("hits") or []
-    if not hits:
-        print(f"Geen Pixabay-resultaat voor '{query}'")
-        return {"pixabay_query": query}
-
-    unique_hits = []
-    for candidate in hits:
-        candidate_url = candidate.get("webformatURL") or candidate.get("largeImageURL") or ""
-        candidate_key = image_identity(candidate.get("pageURL", ""), candidate_url)
-        if candidate_key and candidate_key in used_image_keys:
-            continue
-        unique_hits.append(candidate)
-
-    if not unique_hits:
-        print(
-            f"Alle Pixabay-resultaten voor '{query}' zijn al gebruikt in deze editie; "
-            f"geen dubbele afbeelding geplaatst."
-        )
-        return {"pixabay_query": query}
-
-    # Kies op populariteit/gebruik en gebruik resolutie alleen als laatste tie-breaker.
-    # De oude code zette breedte op 1, waardoor een grote maar inhoudelijk zwakke foto
-    # onbedoeld kon winnen.
-    hit = max(
-        unique_hits,
-        key=lambda value: (
-            int(value.get("likes") or 0),
-            int(value.get("downloads") or 0),
-            int(value.get("views") or 0),
-            int(value.get("webformatWidth") or 0),
-        )
-    )
-
-    source_url = hit.get("webformatURL") or hit.get("largeImageURL")
-    if not source_url:
-        return {"pixabay_query": query}
-
-    selected_page_url = hit.get("pageURL", "")
-    remember_image(used_image_keys, selected_page_url, source_url)
-
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    filename = f"{edition_date}-{slug}.jpg"
-    destination = IMAGES_DIR / filename
-
-    try:
-        download_file(source_url, destination)
-    except Exception as exc:
-        print(f"Downloadfout Pixabay voor '{item.get('title')}': {exc}")
-        return {
-            "image_url": source_url,
-            "pixabay_query": query,
-            "image_credit": hit.get("user", ""),
-            "image_page_url": selected_page_url,
-        }
-
-    relative_path = destination.relative_to(ROOT).as_posix()
-    return {
-        "image_url": f"/{relative_path}",
-        "image_path": relative_path,
-        "image_credit": hit.get("user", ""),
-        "image_page_url": selected_page_url,
-        "pixabay_query": query,
-    }
+    # Publiceer alleen expliciet gekozen en visueel gecontroleerde beelden.
+    # Een zoekterm of populariteitsscore bewijst geen inhoudelijke relevantie.
+    if not item.get("image_reviewed") or not item.get("image_url"):
+        return {}
+    return {key: item.get(key, "") for key in (
+        "image_url", "image_path", "image_source_url", "image_credit",
+        "image_page_url", "image_alt", "image_reviewed"
+    )}
 
 
 def text_to_paragraphs(value):
@@ -325,7 +192,7 @@ def build_article_page(edition, section, item):
             '<figure class="detail-image"><img src="' + esc(item["image_url"]) + '" alt="' +
             esc(item.get("image_alt") or "Illustratief beeld bij dit bericht") +
             '" width="640" height="430"><figcaption>Illustratief beeld. Geen foto van de beschreven locatie.' +
-            ('<br><a href="' + esc(item["image_page_url"]) + '" target="_blank" rel="noopener">Beeld via Pixabay ↗</a>' if item.get("image_page_url") else '') +
+            ('<br><a href="' + esc(item["image_page_url"]) + '" target="_blank" rel="noopener">' + esc(item.get("image_credit") or "Beeldbron") + ' ↗</a>' if item.get("image_page_url") else '') +
             '</figcaption></figure>'
         )
     return (
